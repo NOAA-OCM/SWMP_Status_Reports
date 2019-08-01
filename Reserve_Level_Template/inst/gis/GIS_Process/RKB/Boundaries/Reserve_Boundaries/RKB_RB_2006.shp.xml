@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Rookery Bay NERR</origin>
+				<pubdate>2006</pubdate>
+				<title>Rookery Bay NERR Managed Boundary</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink>www.rookerybay.org</onlink>
+				<ftname Sync="TRUE">RKB_RB_2006</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>The boundary represents the area managed by Rookery Bay NERR as described in the Florida Statutes (Chapter 258).  The managed area is composed of the Rookery Bay Aquatic Preserve, Cape Romano/Ten Thousand Islands Aquatic Preserve and Deltona Settlement Agreement Lands.</abstract>
+			<purpose>To provide visual representation of the legal description for the areas managed by Rookery Bay NERR.</purpose>
+			<supplinf>none</supplinf>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>2006</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-81.804560</westbc>
+				<eastbc Sync="TRUE">-81.451908</eastbc>
+				<northbc Sync="TRUE">26.098746</northbc>
+				<southbc Sync="TRUE">25.826509</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">619761.304895</leftbc><rightbc Sync="TRUE">654460.044258</rightbc><bottombc Sync="TRUE">205120.295583</bottombc><topbc Sync="TRUE">234667.877054</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>none</themekt>
+				<themekey>Aquatic Preserve Boundaries</themekey>
+				<themekey>Cape Romano/Ten Thousand Islands Aquatic Preserve</themekey>
+				<themekey>Rookery Bay Aquatic Preserve</themekey>
+				<themekey>Rookery Bay NERR managed boundary</themekey>
+				<themekey>Deltona land</themekey>
+			</theme>
+			<place>
+				<placekey>United States</placekey>
+				<placekey>Southeast</placekey>
+				<placekey>Florida</placekey>
+				<placekey>Collier County</placekey>
+				<placekey>Naples</placekey>
+				<placekey>Rookery Bay NERR</placekey>
+			</place>
+		</keywords>
+		<accconst>none</accconst>
+		<useconst>Not for legal use.  For illustrative purposes only. Proper citation of the data is required.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>Jill Schmid</cntper>
+					<cntorg>Rookery Bay NERR</cntorg>
+				</cntperp>
+				<cntpos>GIS Specialist</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>300 Tower Road</address>
+					<city>Naples</city>
+					<state>FL</state>
+					<postal>34113</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>(239) 417-6310</cntvoice>
+				<cntfax>(239) 417-6315</cntfax>
+				<cntemail>jill.schmid@dep.state.fl.us</cntemail>
+				<hours>Monday - Friday, 8:30 am - 5:00 pm, Eastern Time</hours>
+			</cntinfo>
+		</ptcontac>
+		<datacred>Rookery Bay National Estuarine Research Reserve</datacred>
+		<secinfo>
+			<secclass>Unclassified</secclass>
+		</secinfo>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3000</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>not applicable</attraccr>
+		</attracc>
+		<logic>Although no tests were performed, the data are believed to be logically consistent.</logic>
+		<complete>All lines of boundaries have been included to the best of our knowledge.</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>These are not legally binding boundaries since neither survey nor GPS of boundary corners has been completed.</horizpar>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<pubdate>1995</pubdate>
+						<title>Florida Statutes</title>
+					</citeinfo>
+				</srccite>
+				<typesrc>paper</typesrc>
+				<srccitea>Florida Statutes</srccitea>
+				<srccontr>legal description of the Aquatic Preserve boundaries.</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>Based on the legal descriptions in the Statutes, appropriate section lines were hand digitized following the section/township/range map which were digitized from the USGS Quad map.  Deltona settlement property boundary was then merged to the Statute boundary.  The high tide line in the vicinity of the Ten Thousand Islands was derived from an FGDL file.  This high tide line was merged to the Statute boundary and the upper statute line in the eastern half of the original boundary was removed.  This was done since there has not been a survey to determine the official high tide line in the Ten Thousand Islands.</procdesc>
+				<procdate>2000</procdate>
+				<proccont>
+					<cntinfo>
+						<cntperp>
+							<cntper>Jill Schmid</cntper>
+							<cntorg>Rookery Bay NERR</cntorg>
+						</cntperp>
+						<cntpos>GIS Specialist</cntpos>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>300 Tower Road</address>
+							<city>Naples</city>
+							<state>FL</state>
+							<postal>34113</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntvoice>(239) 417-6310 ext 406</cntvoice>
+						<cntfax>(239) 417-6315</cntfax>
+						<cntemail>jill.schmid@dep.state.fl.us</cntemail>
+						<hours>Monday - Friday, 8:30am - 5:00pm, Eastern Time</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">C:\Documents and Settings\chris.clement\Desktop\rookery bay latest from Jill\RKB_RB_2006</srcused><procdate Sync="TRUE">20100105</procdate><proctime Sync="TRUE">08452100</proctime></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="RKB_RB_2006">
+				<sdtstype Sync="TRUE">G-polygon</sdtstype>
+				<ptvctcnt Sync="TRUE">3</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="RKB_RB_2006"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">3</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.000000</absres>
+						<ordres Sync="TRUE">0.000000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+				<mapproj><mapprojn Sync="TRUE">Albers Conical Equal Area</mapprojn><albers><stdparll Sync="TRUE">24.000000</stdparll><stdparll Sync="TRUE">31.500000</stdparll><longcm Sync="TRUE">-84.000000</longcm><latprjo Sync="TRUE">24.000000</latprjo><feast Sync="TRUE">400000.000000</feast><fnorth Sync="TRUE">0.000000</fnorth></albers></mapproj></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">D_North_American_1983_HARN</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn><projcsn Sync="TRUE">Custom</projcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="RKB_RB_2006">
+			<enttyp>
+				<enttypl Sync="TRUE">RKB_RB_2006</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">3</enttypc></enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">FID</attrlabl>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr><attrlabl Sync="TRUE">NAME</attrlabl><attalias Sync="TRUE">NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">64</attwidth></attr><attr><attrlabl Sync="TRUE">DATE</attrlabl><attalias Sync="TRUE">DATE</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">10</attwidth></attr><attr><attrlabl Sync="TRUE">FILENAME</attrlabl><attalias Sync="TRUE">FILENAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">24</attwidth></attr><attr><attrlabl Sync="TRUE">Acres</attrlabl><attalias Sync="TRUE">Acres</attalias><attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr><attr><attrlabl Sync="TRUE">Hectares</attrlabl><attalias Sync="TRUE">Hectares</attalias><attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntperp>
+					<cntper>Jill Schmid</cntper>
+					<cntorg>Rookery Bay NERR</cntorg>
+				</cntperp>
+				<cntpos>GIS Specialist</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>300 Tower Road</address>
+					<city>Naples</city>
+					<state>FL</state>
+					<postal>34113</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>239-417-6310</cntvoice>
+				<cntfax>239-417-6315</cntfax>
+				<cntemail>jill.schmid@dep.state.fl.us</cntemail>
+				<hours>Monday - Friday, 8:30 am - 5:00 pm, Eastern Time</hours>
+			</cntinfo>
+		</distrib>
+		<resdesc Sync="TRUE">Downloadable Data</resdesc>
+		<distliab>Not for legal use.  For illustrative purposes only.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize Sync="TRUE">0.088</transize>
+					<dssize Sync="TRUE">0.088</dssize></digtinfo>
+			</digform>
+			<fees>none</fees>
+			<ordering>Contact the Reserve's GIS Specialist or download from www.rookerybay.org.</ordering>
+			<turnarnd>1 day - 1 week</turnarnd>
+		</stdorder>
+		<custom>Contact the Reserve's GIS Specialist for either a shapefile or digital map of the managed boundary.</custom>
+		<techpreq>GIS software</techpreq>
+		<availabl>
+			<timeinfo>
+				<sngdate>
+					<caldate>2006</caldate>
+				</sngdate>
+			</timeinfo>
+		</availabl>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20100105</metd>
+		<metc>
+			<cntinfo>
+				<cntperp>
+					<cntper>Jill Schmid</cntper>
+					<cntorg>Rookery Bay NERR</cntorg>
+				</cntperp>
+				<cntpos>GIS Specialist</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>300 Tower Road</address>
+					<city>Naples</city>
+					<state>Florida</state>
+					<postal>34113</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>(239) 417-6310 ext 406</cntvoice>
+				<cntfax>(239) 417-6315</cntfax>
+				<cntemail>jill.schmid@dep.state.fl.us</cntemail>
+				<hours>Monday - Friday, 8:30 am - 5:00 pm, Eastern Time</hours>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metac>none</metac>
+		<metuc>Not for legal use.</metuc>
+		<metsi>
+			<metsc>Unclassified</metsc>
+		</metsi>
+		<langmeta Sync="TRUE">en</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><CreaDate>20100105</CreaDate><CreaTime>08452100</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20100105</SyncDate><SyncTime>08452300</SyncTime><ModDate>20100105</ModDate><ModTime>08452300</ModTime><MetaID>{54F0D865-43D5-4015-8A22-A6FE15C4E057}</MetaID></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3000</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">RKB_RB_2006</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">619761.304895</westBL><eastBL Sync="TRUE">654460.044258</eastBL><northBL Sync="TRUE">234667.877054</northBL><southBL Sync="TRUE">205120.295583</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-81.80456</westBL><eastBL Sync="TRUE">-81.451908</eastBL><northBL Sync="TRUE">26.098746</northBL><southBL Sync="TRUE">25.826509</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\AAMB-L-1766140\C\LandCover\forCDMO\RKB\RKB\Boundaries\Reserve_Boundaries\RKB_RB_2006.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">0.088</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">Custom</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="RKB_RB_2006"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">3</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20100105</mdDateSt></metadata>

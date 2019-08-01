@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>GTM NERR</origin>
+				<pubdate>20040414</pubdate>
+				<title Sync="TRUE">GRB_RB_2006</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink Sync="TRUE">\\AAMB-L-1766140\C\LandCover\forCDMO\GRB\GRB\Boundaries\Reserve_Boundaries\GRB_RB_2006</onlink>
+				<ftname Sync="TRUE">GRB_RB_2006</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>The Great Bay (GTB) National Estuarine Research Reserve (NERR) digital boundary was created as part of the Protected Areas GeographicInformation System (PAGIS) project. An updated digital version of GTB's boundary is critical to the PAGIS project and to the NERR. The digital boundary was delineated from management and research areas within the Reserve. It was not based on legal definitions.</abstract>
+			<purpose>The PAGIS project provided each National Estuarine Research Reserve (NERR) with a fully integrated geographic information system (GIS), encompassing spatial data and Internet capabilities. One of the essential GIS data layers being compiled for each Reserve is a digital boundary. The Reserve boundary was delineated based on management and research areas and is not meant to be a legal description of the Reserve.</purpose>
+			<supplinf>This boundary is not to be taken as a legal definition of the NERR boundary. It was created based on management and research areas of the Reserve.</supplinf>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate><caldate>REQUIRED: The year (and optionally month, or month and day) for which the data set corresponds to the ground.</caldate></sngdate>
+			</timeinfo>
+			<current>Complete</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>Unknown</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-70.951875</westbc>
+				<eastbc Sync="TRUE">-70.822633</eastbc>
+				<northbc Sync="TRUE">43.179094</northbc>
+				<southbc Sync="TRUE">42.980941</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">1175523.103317</leftbc><rightbc Sync="TRUE">1209387.031695</rightbc><bottombc Sync="TRUE">176404.997528</bottombc><topbc Sync="TRUE">248317.826154</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>National Estuarine Research Reserve</themekey>
+			</theme>
+			<place>
+				<placekey>USA</placekey>
+			</place>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>NOT FOR LEGAL USE</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp></cntperp>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+				</cntaddr>
+			</cntinfo>
+		</ptcontac>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3000</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>The original attributes provided with the original digital file could not be tested for accuracy, but are believed to be accurate. All attributes created during the editing process were verified by displaying the lines in both the database and the spatial coverage.</attraccr>
+		</attracc>
+		<logic>These data are believed to be logically consistent, though no tests were performed. Polygon geometry is topologically clean.</logic>
+		<posacc>
+			<horizpa></horizpa>
+			<vertacc></vertacc>
+		</posacc>
+		<lineage>
+			<procstep>
+				<srcused Sync="TRUE">C:\DOCUME~1\UPCHUR~2\LOCALS~1\Temp\xml1A6.tmp</srcused>
+				<time Sync="TRUE">15380500</time>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Metadata imported.</procdesc>
+				<srcused Sync="TRUE">C:\ACE_GIS_projects\NERRS_GIS_Data\Great_Bay\GTBNERRboundary2006_old.shp.xml</srcused>
+				<procdate Sync="TRUE">20090416</procdate>
+				<proctime Sync="TRUE">16483300</proctime>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Dataset copied.</procdesc>
+				<srcused Sync="TRUE">C:\ACE_GIS_projects\NERRS_GIS_Data\Great_Bay\GTBNERRboundary_2006</srcused>
+				<procdate Sync="TRUE">20090513</procdate>
+				<proctime Sync="TRUE">10185200</proctime>
+			</procstep>
+			<procstep>
+				<procdesc Sync="TRUE">Dataset copied.</procdesc>
+				<srcused Sync="TRUE">I:\MB7\Projects\SITB\NERRS_Clement\CDMO Transfer\Bundled_boundaries\Bundled_boundaries\GRENERRboundary_2006</srcused>
+				<procdate Sync="TRUE">20091013</procdate>
+				<proctime Sync="TRUE">08375100</proctime>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\CHRIS~1.CLE\LOCALS~1\Temp\xml1B0.tmp</srcused><procdate Sync="TRUE">20100119</procdate><proctime Sync="TRUE">09212500</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset moved.</procdesc><srcused Sync="TRUE">C:\LandCover\forCDMO\GRB\GRB_RB_2006</srcused><procdate Sync="TRUE">20100119</procdate><proctime Sync="TRUE">09224500</proctime></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="GRB_RB_2006">
+				<sdtstype Sync="TRUE">G-polygon</sdtstype>
+				<ptvctcnt Sync="TRUE">5</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="GRB_RB_2006"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">5</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.000000</absres>
+						<ordres Sync="TRUE">0.000000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">survey feet</plandu>
+				</planci>
+				<mapproj><mapprojn Sync="TRUE">Transverse Mercator</mapprojn><transmer><sfctrmer Sync="TRUE">0.999967</sfctrmer><longcm Sync="TRUE">-71.666667</longcm><latprjo Sync="TRUE">42.500000</latprjo><feast Sync="TRUE">984250.000000</feast><fnorth Sync="TRUE">0.000000</fnorth></transmer></mapproj></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">North American Datum of 1983</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><projcsn Sync="TRUE">NAD_1983_StatePlane_New_Hampshire_FIPS_2800_Feet</projcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="GRB_RB_2006">
+			<enttyp>
+				<enttypl Sync="TRUE">GRB_RB_2006</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">5</enttypc></enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">FID</attrlabl>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">ID</attrlabl>
+				<attalias Sync="TRUE">ID</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth></attr>
+			<attr>
+				<attrlabl Sync="TRUE">AREA</attrlabl>
+				<attalias Sync="TRUE">AREA</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">3</atnumdec></attr>
+			<attr>
+				<attrlabl Sync="TRUE">PERIMETER</attrlabl>
+				<attalias Sync="TRUE">PERIMETER</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">3</atnumdec></attr>
+			<attr>
+				<attrlabl Sync="TRUE">ACRES</attrlabl>
+				<attalias Sync="TRUE">ACRES</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">3</atnumdec></attr>
+			<attr><attrlabl Sync="TRUE">HECTARES</attrlabl><attalias Sync="TRUE">HECTARES</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">16</attwidth><atnumdec Sync="TRUE">3</atnumdec></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc Sync="TRUE">Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize Sync="TRUE">0.049</transize>
+					<dssize Sync="TRUE">0.049</dssize></digtinfo>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20100119</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg>
+					<cntper>REQUIRED: The person responsible for the metadata information.</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype>
+					<city>REQUIRED: The city of the address.</city>
+					<state>REQUIRED: The state or province of the address.</state>
+					<postal>REQUIRED: The ZIP or other postal code of the address.</postal>
+				</cntaddr>
+				<cntvoice>REQUIRED: The telephone number by which individuals can speak to the organization or individual.</cntvoice>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<langmeta Sync="TRUE">en</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<metadata>
+		<idinfo></idinfo>
+		<dataqual></dataqual>
+		<spdoinfo></spdoinfo>
+		<spref></spref>
+		<eainfo></eainfo>
+		<distinfo></distinfo>
+		<metainfo></metainfo>
+	</metadata>
+	<citation></citation>
+	<citeinfo></citeinfo>
+	<origin>NOAA Coastal Services Center</origin>
+	<origin>Guana-Tolomato-Matanzas National Estuarine Research Reserve</origin>
+	<pubdate>20040414</pubdate>
+	<title>Guana-Tolomato-Matanzas (GTM) National Estuarine Research Reserve Digital</title>
+	<edition>4</edition>
+	<geoform>Map</geoform>
+	<pubinfo></pubinfo>
+	<pubplace>Marineland, Florida</pubplace>
+	<publish>Guana-Tolomato-Matanzas National Estuarine Research Reserve</publish>
+	<othercit>Updated boundary information by GTMNERR.</othercit>
+	<onlink>&lt;http://www.csc.noaa.gov&gt;</onlink>
+	<lworkcit></lworkcit>
+	<citeinfo></citeinfo>
+	<origin>NOAA Coastal Services Center</origin>
+	<pubdate>20000811</pubdate>
+	<title>Protected Areas Geographic Information System</title>
+	<pubinfo></pubinfo>
+	<pubplace>Charleston, South Carolina</pubplace>
+	<publish>NOAA Coastal Services Center</publish>
+	<onlink>&lt;http://www.csc.noaa.gov/pagis&gt;</onlink>
+	<descript></descript>
+	<abstract>The Guana-Tolomato-Matanzas (GTM) National Estuarine Research Reserve (NERR) digital boundary was created as part of the Protected Areas Geographic</abstract>
+	<purpose>The PAGIS project provided each National Estuarine Research Reserve (NERR) with a fully integrated geographic information system (GIS), encompassing spatial data and Internet capabilities. One of the essential GIS data layers being compiled for each Reserve is a digital boundary. The Reserve boundary was delineated based on management and research areas and is not meant to be a legal description of the Reserve.</purpose>
+	<supplinf>This boundary is not to be taken as a legal definition of the NERR boundary. It was created based on management and research areas of the Reserve.</supplinf>
+	<timeperd></timeperd>
+	<timeinfo></timeinfo>
+	<rngdates></rngdates>
+	<begdate>20000215</begdate>
+	<enddate>20040414</enddate>
+	<current>publication date</current>
+	<status></status>
+	<progress>Complete</progress>
+	<update>Continually</update>
+	<spdom></spdom>
+	<bounding></bounding>
+	<westbc>-81.3879</westbc>
+	<eastbc>-81.1965</eastbc>
+	<northbc>30.1628</northbc>
+	<southbc>29.6011</southbc>
+	<keywords></keywords>
+	<theme></theme>
+	<themekt>None</themekt>
+	<themekey>Boundary</themekey>
+	<themekey>Estuary</themekey>
+	<themekey>geographic information systems</themekey>
+	<themekey>GIS</themekey>
+	<themekey>National Estuarine Research Reserves</themekey>
+	<themekey>NERR</themekey>
+	<themekey>PAGIS</themekey>
+	<themekey>GTMNERR</themekey>
+	<place></place>
+	<placekt>None</placekt>
+	<placekey>Guana River</placekey>
+	<placekey>Tolomato River</placekey>
+	<placekey>Matanzas River</placekey>
+	<placekey>Northern Coastal Basin</placekey>
+	<placekey>Florida</placekey>
+	<placekey>Northeast</placekey>
+	<placekey>United States</placekey>
+	<accconst>none</accconst>
+	<useconst>See Description: Supplemental_Information</useconst>
+	<ptcontac></ptcontac>
+	<cntinfo></cntinfo>
+	<cntorgp></cntorgp>
+	<cntorg>Guana-Tolomato-Matanazas National Estuarine Research</cntorg>
+	<cntper>Kenneth D. Berk</cntper>
+	<cntpos>Environmental Administrator</cntpos>
+	<cntaddr></cntaddr>
+	<addrtype>mailing and physical address</addrtype>
+	<address>9741 Ocean Shore Blvd.</address>
+	<city>St. Augustine</city>
+	<state>Florida</state>
+	<postal>32080</postal>
+	<country>USA</country>
+	<cntvoice>904-461-4054</cntvoice>
+	<cntfax>904-461-4056</cntfax>
+	<cntemail>kenberk@bellsouth.net</cntemail>
+	<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+	<native></native>
+	<attracc></attracc>
+	<attraccr>The original attributes provided with the original digital file could not be tested for accuracy, but are believed to be accurate. All attributes created during the editing process were verified by displaying the lines in both the database and the spatial coverage.</attraccr>
+	<logic>These data are believed to be logically consistent, though no tests were performed. Polygon geometry is topologically clean.</logic>
+	<complete>The boundary of the Reserve is dependent on the shoreline and/or edges of rivers, bays, and marshes as delineated on 1995 Digital Orthophotos from the St. Johns River Water Management District and 1999 Digital Orthophotos from the St. Johns County Property Appraiser. The edges or borders of the boundary might change as the natural land changes or better maps and more current aerial photography become available. The boundary was not based on legal parcels or definitions; therefore, the core boundary is a management/research boundary not a legal, jurisdictional, or regulatory boundary.</complete>
+	<posacc></posacc>
+	<horizpa></horizpa>
+	<horizpar>The data were created by delineating the boundary off St. Johns River Water Management District 1995 Digital Orthophotos (USGS/NAPP) and St. Johns County Property Appraiser 1999 Orthophotos. The horizontal resolution of the digital orthophotos is 1 meter. The original scale of the aerial photographs was 1:40000.</horizpar>
+	<vertacc></vertacc>
+	<vertaccr>The data were created by delineating the boundary off St. Johns River Water Management District 1995 Digital Orthophotos (USGS/NAPP). The original scale of the aerial photographs 1:40000.</vertaccr>
+	<lineage></lineage>
+	<srcinfo></srcinfo>
+	<srccite></srccite>
+	<citeinfo>Originator: Guana-Tolomato-Matanzas National Estuarine Research Reserve</citeinfo>
+	<pubdate>1999</pubdate>
+	<title>National Estuarine Research Reserve (NERR) Boundaries</title>
+	<edition>NA</edition>
+	<geoform>map</geoform>
+	<pubinfo></pubinfo>
+	<pubplace>Florida</pubplace>
+	<publish>Guana-Tolomato-Matanzas National Estuarine Research Reserve;Florida Department of Environmental Protection</publish>
+	<othercit></othercit>
+	<onlink></onlink>
+	<lworkcit></lworkcit>
+	<citeinfo></citeinfo>
+	<origin></origin>
+	<pubdate></pubdate>
+	<title></title>
+	<pubinfo></pubinfo>
+	<pubplace></pubplace>
+	<publish></publish>
+	<onlink></onlink>
+	<srcscale>unknown</srcscale>
+	<typesrc>digital orthophotographs</typesrc>
+	<srctime></srctime>
+	<timeinfo></timeinfo>
+	<rngdates></rngdates>
+	<begdate>unknown</begdate>
+	<enddate>1999</enddate>
+	<srccurr>publication date</srccurr>
+	<srccitea></srccitea>
+	<srccontr></srccontr>
+	<procstep></procstep>
+	<procdesc>The original data from the Florida Department of Environmental Protection was converted from an ESRI ArcView shapefile to ESRI ArcInfo coverage. The coverage was then displayed on 1995 Digital Orthophotos (1 meter resolution) from the St. Johns River Water Management District. A printed map with the original boundary was plotted and presented to the Reserve Manager. Changes to the boundary were then drawn on the map. The digital file was then edited by the Coastal Services Center to reflect the updates. The corrections were made by on-screen digitizing with the Digital Orthophotos as the backdrop. Each arc of the boundary file was coded to reflect the change made and the source and confidence of that change. The new coverage was sent back to the Reserve and additional changes were done by the Reserve. Digital orthophotos and a property appraisal parcel line map were used to include and exclude certain properties in the Reserve area. The oceanfront boundary line was also adjusted to exclud the private lands on the beach. Many beach property lines were designated from the 1999 St.Johns County 1-foot resolution Digital Orthophotos. The final coverage was re-coded to reflect the changes. A polygon coverage was created and attributed as well.</procdesc>
+	<srcused></srcused>
+	<procdate>20000715</procdate>
+	<srcprod></srcprod>
+	<proccont></proccont>
+	<cntinfo></cntinfo>
+	<cntperp></cntperp>
+	<cntorg>NOAA Coastal Services Center</cntorg>
+	<cntper>PAGIS Specialist</cntper>
+	<cntpos>GIS Specialist</cntpos>
+	<cntaddr></cntaddr>
+	<addrtype>mailing and physical address</addrtype>
+	<address>2234 South Hobson Ave</address>
+	<city>Charleston</city>
+	<state>South Carolina</state>
+	<postal>29405</postal>
+	<country>USA</country>
+	<cntvoice>843-740-1200</cntvoice>
+	<cntfax>843-740-1224</cntfax>
+	<cntemail>csc@csc.noaa.gov</cntemail>
+	<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+	<procstep></procstep>
+	<procdesc>Changes to the latest boundary file were made using the NWF/DEM (Norcross Wildlife Foundation / Massachusetts Department of Environmental Management) Data Editing Extension in ARCVIEW. The NWF/DEM Data Editing Extension maintains topological accuracy. The southern and northern boundary (polygon) files were combined into one file for final editing. The 1999 DOQ, provided by the St. Johns River Water Management District (Palatka, FL), was used as a backdrop for the most recent changes.</procdesc>
+	<srcused></srcused>
+	<procdate>20020214</procdate>
+	<srcprod></srcprod>
+	<proccont></proccont>
+	<cntinfo></cntinfo>
+	<cntperp></cntperp>
+	<cntorg>Guana-Tolomato-Matanzas National Estuarine Research</cntorg>
+	<cntper>Kenneth Berk</cntper>
+	<cntpos>Environmental Administrator</cntpos>
+	<cntaddr></cntaddr>
+	<addrtype>mailing and physical address</addrtype>
+	<address>9741 Ocean Shore Blvd.</address>
+	<city>St. Augustine</city>
+	<state>Florida</state>
+	<postal>32080</postal>
+	<country>USA</country>
+	<cntvoice>904-461-4032</cntvoice>
+	<cntfax>904-461-4056</cntfax>
+	<cntemail>kenberk@bellsouth.net</cntemail>
+	<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+	<procdesc>Changes to the latest boundary file were made using the NWF/DEM (Norcross Wildlife Foundation / Massachusetts Department of Environmental Management) Data Editing Extension in ARCVIEW. The 2002 Digital Orthophotos (1 foot resolution), provided by St. Johns County, and the 2000 Digital Orthophotos (1 meter resolution), provided by St. Johns River Water Management District, (Palatka, FL), were used as a backdrop for the most recent changes. Digital orthophotos, management area boundaries, surveys of recently acquired land, and property appraisal parcel line maps were used to include and exclude certain properties in the Reserve area.</procdesc>
+	<srcused></srcused>
+	<procdate>20040414</procdate>
+	<srcprod></srcprod>
+	<proccont></proccont>
+	<cntinfo></cntinfo>
+	<cntperp></cntperp>
+	<cntorg>Guana-Tolomato-Matanzas National Estuarine Research</cntorg>
+	<cntper>Kenneth Berk</cntper>
+	<cntpos>Environmental Administrator</cntpos>
+	<cntaddr></cntaddr>
+	<addrtype>mailing and physical address</addrtype>
+	<address>9741 Ocean Shore Blvd.</address>
+	<city>St. Augustine</city>
+	<state>Florida</state>
+	<postal>32080</postal>
+	<country>USA</country>
+	<cntvoice>904-461-4032</cntvoice>
+	<cntfax>904-461-4056</cntfax>
+	<cntemail>kenberk@bellsouth.net</cntemail>
+	<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+	<direct>Vector</direct>
+	<ptvctinf></ptvctinf>
+	<sdtsterm></sdtsterm>
+	<sdtstype>GT-polygon composed of chains</sdtstype>
+	<ptvctcnt>2</ptvctcnt>
+	<horizsys></horizsys>
+	<planar></planar>
+	<gridsys></gridsys>
+	<gridsysn>Universal Transverse Mercator</gridsysn>
+	<utm></utm>
+	<utmzone>17</utmzone>
+	<transmer></transmer>
+	<sfctrmer>0.999600</sfctrmer>
+	<longcm>-81.000000</longcm>
+	<latprjo>0.000000</latprjo>
+	<feast>500000.000000</feast>
+	<fnorth>0.000000</fnorth>
+	<planci></planci>
+	<plance>Coordinate pair</plance>
+	<coordrep></coordrep>
+	<absres>1</absres>
+	<ordres>1</ordres>
+	<plandu>Meters</plandu>
+	<geodetic></geodetic>
+	<horizdn>North American Datum of 1983</horizdn>
+	<ellips>GRS 80</ellips>
+	<semiaxis>6378137.0000000</semiaxis>
+	<denflat>298.26</denflat>
+	<vertdef></vertdef>
+	<altsys></altsys>
+	<altdatum>National Geodetic Vertical Datum of 1929</altdatum>
+	<altres></altres>
+	<altunits></altunits>
+	<altenc>Implicit coordinate</altenc>
+	<depthsys></depthsys>
+	<depthdn></depthdn>
+	<depthres></depthres>
+	<depthdu></depthdu>
+	<depthem></depthem>
+	<detailed></detailed>
+	<enttyp></enttyp>
+	<enttypl>gtmnerr_poly_bd_04_2004.dbf</enttypl>
+	<enttypd>Shapefile Attribute Table</enttypd>
+	<enttypds>None</enttypds>
+	<attr></attr>
+	<attrlabl>Area</attrlabl>
+	<attrdef>Area of polygon</attrdef>
+	<attrdefs>Software generated</attrdefs>
+	<attrdomv></attrdomv>
+	<udom>Software computed</udom>
+	<attr></attr>
+	<attrlabl>Perimeter</attrlabl>
+	<attrdef>Perimeter of polygon</attrdef>
+	<attrdefs>Software generated</attrdefs>
+	<attrdomv></attrdomv>
+	<udom>Software computed</udom>
+	<attr></attr>
+	<attrlabl>Name</attrlabl>
+	<attrdef></attrdef>
+	<attrdefs></attrdefs>
+	<attrdomv></attrdomv>
+	<udom>Character Field</udom>
+	<attr></attr>
+	<attrlabl>Zones</attrlabl>
+	<attrdef></attrdef>
+	<attrdefs></attrdefs>
+	<attrdomv></attrdomv>
+	<udom>Character Field</udom>
+	<attr></attr>
+	<attrlabl>Hectares</attrlabl>
+	<attrdef></attrdef>
+	<attrdefs></attrdefs>
+	<attrdomv></attrdomv>
+	<rdom></rdom>
+	<rdommin>8138.90</rdommin>
+	<rdommax>17958.1</rdommax>
+	<attr></attr>
+	<attrlabl>Acres</attrlabl>
+	<attrdef></attrdef>
+	<attrdefs></attrdefs>
+	<attrdomv></attrdomv>
+	<rdom></rdom>
+	<rdommin>20111.6</rdommin>
+	<rdommax>44375.3</rdommax>
+	<overview></overview>
+	<eaover></eaover>
+	<eadetcit></eadetcit>
+	<distrib></distrib>
+	<cntinfo></cntinfo>
+	<cntorgp></cntorgp>
+	<cntorg>NOAA Coastal Services Center</cntorg>
+	<cntper>PAGIS Specialist</cntper>
+	<cntpos>GIS Specialist</cntpos>
+	<cntaddr></cntaddr>
+	<addrtype>mailing and physical address</addrtype>
+	<address>2234 South Hobson Ave</address>
+	<city>Charleston</city>
+	<state>South Carolina</state>
+	<postal>29405</postal>
+	<country>USA</country>
+	<cntvoice>843-740-1200</cntvoice>
+	<cntfax>843-740-1224</cntfax>
+	<cntemail>csc@csc.noaa.gov</cntemail>
+	<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+	<resdesc></resdesc>
+	<distliab>Users must assume responsibility to determine the appropriate use of these data. The boundary is not to be used for a LEGAL definition. Please contact individual Estuarine Research Reserves for more detailed information if required.</distliab>
+	<custom>Contact NOAA Coastal Services Center PAGIS Specialist for a printed copy of the boundary map or for an ESRI coverage or shapefile of the boundary.</custom>
+	<metd>20040414</metd>
+	<metrd>20040414</metrd>
+	<metc></metc>
+	<cntinfo></cntinfo>
+	<cntorgp></cntorgp>
+	<cntorg>NOAA Coastal Services Center</cntorg>
+	<cntper>Metadata Specialist</cntper>
+	<cntpos>Metadata Specialist</cntpos>
+	<cntaddr></cntaddr>
+	<addrtype>Mailing and physical address</addrtype>
+	<address>2234 South Hobson</address>
+	<city>Charleston</city>
+	<state>South Carolina</state>
+	<postal>29405</postal>
+	<country>USA</country>
+	<cntvoice>843-740-1200</cntvoice>
+	<cntfax>843-740-1224</cntfax>
+	<cntemail>metadata@csc.noaa.gov</cntemail>
+	<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+	<metstdn>FGDC CSDGM</metstdn>
+	<metstdv>FGDC-STD-001-1998</metstdv>
+	<Esri><MetaID>{74F3EE99-A13E-4376-A9B6-9063DDE1573F}</MetaID><CreaDate>20100119</CreaDate><CreaTime>09212500</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20100119</SyncDate><SyncTime>09223500</SyncTime><ModDate>20100119</ModDate><ModTime>09223500</ModTime></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3000</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">GRB_RB_2006</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">1175523.103317</westBL><eastBL Sync="TRUE">1209387.031695</eastBL><northBL Sync="TRUE">248317.826154</northBL><southBL Sync="TRUE">176404.997528</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-70.951875</westBL><eastBL Sync="TRUE">-70.822633</eastBL><northBL Sync="TRUE">43.179094</northBL><southBL Sync="TRUE">42.980941</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\AAMB-L-1766140\C\LandCover\forCDMO\GRB\GRB\Boundaries\Reserve_Boundaries\GRB_RB_2006</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">0.049</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">NAD_1983_StatePlane_New_Hampshire_FIPS_2800_Feet</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="GRB_RB_2006"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">5</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20100119</mdDateSt></metadata>
