@@ -16,9 +16,9 @@ wb_name <- 'figure_files/Reserve_Level_Plotting_Variables.xlsx'
 sheets <- c('Flags', 'Years_of_Interest', 'Seasons', 'Mapping', 'Bonus_Settings'
             , 'Basic_Plotting', 'Threshold_Plots', 'Threshold_Identification')
 
-## DEFINE YEARS OF INTEREST ----
-if(!exists('year_range')) {year_range <- read_xlsx(path = wb_name, sheet = sheets[2])[[1]]}
-if(!exists('target_year')) {target_year <- read_xlsx(path = wb_name, sheet = sheets[2])[[2]][1]}
+## DEFINE YEARS OF INTEREST ---- DLE, 8/7/2019: Always read these two, even if already defined
+year_range <- read_xlsx(path = wb_name, sheet = sheets[2])[[1]]
+target_year <- read_xlsx(path = wb_name, sheet = sheets[2])[[2]][1]
 
 # DEFINE FLAGS TO KEEP ----
 keep_flags <- read_xlsx(path = wb_name, sheet = sheets[1])[[1]]
