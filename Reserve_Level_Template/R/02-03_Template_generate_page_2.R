@@ -2,15 +2,15 @@
 doc <- add_slide(doc, layout = "Page Two", master = "Office Theme")
 
 # Set text formatting ----
-format_trend_ttl <- fp_text(color = '#444E65', font.size = 18, font.family = "Calibri-Light", bold = T)
-format_trend_a <- fp_text(color = '#444E65', font.size = 16, font.family = "Garamond", bold = T)
-format_trend_b <- fp_text(color = '#404040', font.size = 16, font.family = "Garamond", bold = F)
-format_table_ttl <- fp_text(color = 'white', font.size = 18, font.family = "Calibri-Light", bold = F)
-format_table_caption <- fp_text(color = 'white', font.size = 10, font.family = "Garamond", italic = T, bold = F)
-format_map_ttl <- fp_text(color = '#444E65', font.size = 18, font.family = "Calibri-Light", bold = F)
-format_plot_ttl <- fp_text(color = '#444E65', font.size = 18, font.family = "Calibri-Light", bold = F)
-format_plot_subttl <- fp_text(color = '#444E65', font.size = 16, font.family = "Calibri-Light", bold = F)
-format_plot_caption <- fp_text(color = '#404040', font.size = 12, font.family = "Garamond", bold = F)
+format_trend_ttl <- fp_text(color = '#444E65', font.size = 18, font.family = "Calibri-Light", bold = TRUE)
+format_trend_a <- fp_text(color = '#444E65', font.size = 16, font.family = "Garamond", bold = TRUE)
+format_trend_b <- fp_text(color = '#404040', font.size = 16, font.family = "Garamond", bold = FALSE)
+format_table_ttl <- fp_text(color = 'white', font.size = 18, font.family = "Calibri-Light", bold = FALSE)
+format_table_caption <- fp_text(color = 'white', font.size = 10, font.family = "Garamond", italic = TRUE, bold = FALSE)
+format_map_ttl <- fp_text(color = '#444E65', font.size = 18, font.family = "Calibri-Light", bold = FALSE)
+format_plot_ttl <- fp_text(color = '#444E65', font.size = 18, font.family = "Calibri-Light", bold = FALSE)
+format_plot_subttl <- fp_text(color = '#444E65', font.size = 16, font.family = "Calibri-Light", bold = FALSE)
+format_plot_caption <- fp_text(color = '#404040', font.size = 12, font.family = "Garamond", bold = FALSE)
 
 # Add elements to template ----
 # Sampling map

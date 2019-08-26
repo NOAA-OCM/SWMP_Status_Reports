@@ -177,7 +177,7 @@ for(i in 1:length(ls_par)) {
                                                        , threshold_cols = as.character(par_criteria_cols[j, ])
                                                        , crit_threshold = par_crit_threshold[j]
                                                        , log_trans = par_log_transform[j]
-                                                       , free_y = par_free_y[j]
+#                                                       , free_y = par_free_y[j]
                                                        , monthly_smooth = par_month_smooth[j]
                                                        , plot_title = include_station_ttl)
       
@@ -196,7 +196,7 @@ for(i in 1:length(ls_par)) {
                                                        , crit_threshold = par_crit_threshold[j]
                                                        , log_trans = par_log_transform[j]
                                                        , monthly_smooth = par_month_smooth[j]
-                                                       , free_y = par_free_y[j]
+#                                                       , free_y = par_free_y[j]
                                                        , plot_title = include_station_ttl)
       
       ggsave(filename = threshold_ts_ttl, plot = threshold_crit_plt_ts, height = 4, width = 6, units = 'in', dpi = 300)
@@ -299,8 +299,8 @@ for(i in 1:length(ls_par)) {
     seas_dot <- seasonal_dot(dat
                              , param = par_inst[j]
                              , lm_trend = trnd_lab
-                             , lm_lab = trnd_lab
-                             , free_y = par_free_y[j]
+                             , lm_lab = FALSE # trnd_lab  #DLE: Keep false by defaulr until resolve font issue
+ #                            , free_y = par_free_y[j]
                              , converted = converted_par
                              , plot_title = include_station_ttl
                              , plot = TRUE
@@ -341,7 +341,7 @@ if(length(par_cumulative) > 0) {
                                          , bar_position = 'stack'
                                          , season_facet = FALSE
                                          , plot_title = include_station_ttl
-                                         , free_y = par_free_y[j]
+#                                         , free_y = par_free_y[j]
                                          , converted = converted_par)
       
       ggsave(filename = seas_bar_stack_ttl, plot = seas_bar_stack, height = 4, width = 6, units = 'in', dpi = 300)
@@ -358,7 +358,7 @@ if(length(par_cumulative) > 0) {
                                          , hist_avg = include_hist_avg
                                          , bar_position = 'dodge'
                                          , season_facet = FALSE
-                                         , free_y = par_free_y[j]
+#                                         , free_y = par_free_y[j]
                                          , plot_title = include_station_ttl
                                          , converted = converted_par)
       
@@ -376,7 +376,7 @@ if(length(par_cumulative) > 0) {
                                          , hist_avg = include_hist_avg
                                          , season_facet = TRUE
                                          , plot_title = include_station_ttl
-                                         , free_y = par_free_y[j]
+#                                         , free_y = par_free_y[j]
                                          , converted = converted_par)
       
       ggsave(filename = seas_bar_facet_ttl, plot = seas_bar_facet, height = 2 * length(barplot_season_names), width = 6, units = 'in', dpi = 300)

@@ -3,13 +3,13 @@ doc <- read_pptx('template_files/empty_template/Reserve_Level_Template.pptx')
 doc <- add_slide(doc, layout = "Page One", master = "Office Theme")
 
 # Set text formatting ----
-format_ttl <- fp_text(color = "white", font.size = 24, font.family = "Calibri-Light", bold = F)
-format_subttl <- fp_text(color = "white", font.size = 16, font.family = "Calibri-Light", bold = F)
-format_nerr_nm <- fp_text(color = "white", font.size = 18, font.family = "Calibri-Light", bold = F)
-format_nerr_desc <- fp_text(color = "white", font.size = 14, font.family = "Garamond", bold = F)
-format_nerr_web <- fp_text(color = "white", font.size = 14, font.family = "Garamond", bold = T)
-format_highlight_ttl <- fp_text(color = '#595959', font.size = 24, font.family = "Calibri-Light", bold = F)
-format_highlight <- fp_text(color = '#404040', font.size = 14, font.family = "Garamond", bold = F)
+format_ttl <- fp_text(color = "white", font.size = 24, font.family = "Calibri-Light", bold = FALSE)
+format_subttl <- fp_text(color = "white", font.size = 16, font.family = "Calibri-Light", bold = FALSE)
+format_nerr_nm <- fp_text(color = "white", font.size = 18, font.family = "Calibri-Light", bold = FALSE)
+format_nerr_desc <- fp_text(color = "white", font.size = 14, font.family = "Garamond", bold = FALSE)
+format_nerr_web <- fp_text(color = "white", font.size = 14, font.family = "Garamond", bold = TRUE)
+format_highlight_ttl <- fp_text(color = '#595959', font.size = 24, font.family = "Calibri-Light", bold = FALSE)
+format_highlight <- fp_text(color = '#404040', font.size = 14, font.family = "Garamond", bold = FALSE)
 
 # Add elements to template ----
 # Add cover image

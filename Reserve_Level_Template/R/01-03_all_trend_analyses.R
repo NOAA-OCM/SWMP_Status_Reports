@@ -78,5 +78,6 @@ for(i in 1:length(par)) {
                        , station_labs = sk_map_station_labels
                        , scale_pos = scale_pos, lab_loc = par_trend_labs, shp = res_spatial)
   
-  mapview::mapshot(sk_map, file = sk_map_ttl, remove_url = T, selfcontained = F, vwidth = 250, vheight = 250) 
+  mapview::mapshot(sk_map, file = sk_map_ttl, remove_url = TRUE, selfcontained = FALSE
+                       , vwidth = 250, vheight = 250) 
 }
