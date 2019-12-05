@@ -95,9 +95,9 @@ par_type <- wb_basic %>% .[[3]]
 par_threshold <- wb_basic %>% .[[5]]
 par_log_transform<- wb_basic %>% .[[4]] %>% as.logical
 if(length(wb_basic) >= 6) {
-  par_zero <- as.logical(wb_basic[[6]]) 
+  par_free_y <- as.logical(wb_basic[[6]]) 
 } else {                                   #If user has an older version of the spreadsheet
-  par_zero <- rep(FALSE,length(wb_basic))
+  par_free_y <- rep(FALSE,length(wb_basic))
 }
 
 #### Which criteria should be used for threshold_plot?
