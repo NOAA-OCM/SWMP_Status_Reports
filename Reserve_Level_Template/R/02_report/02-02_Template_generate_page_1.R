@@ -1,5 +1,5 @@
 # Initialize template and add first slide -------
-doc <- read_pptx('../template_files/empty_template/Reserve_Level_Template.pptx')
+doc <- read_pptx('template_files/empty_template/Reserve_Level_Template.pptx')
 doc <- add_slide(doc, layout = "Page One", master = "Office Theme")
 
 # Set text formatting ----

@@ -31,49 +31,59 @@ doc <- doc %>% ph_with(value = external_img(src = img_cs_background, width = 3.2
                        location = ph_location(left =  5.08, top = 5.36))
 
 # Add case study title
-doc <- doc %>% ph_empty_at(left = 0.14, top = 0.18, width = 7, height = 0.4)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 0.14, top = 0.18, width = 7, height = 0.4))
 doc <- doc %>% ph_add_par(id_chr = "6") %>% 
   ph_add_text(str = txt_cs_ttl, type = 'body', id_chr = "6", style = format_cs_title)
 
 # Add case study intro description
-doc <- doc %>% ph_empty_at(left = 0.15, top = 0.8, width = 8.1, height = 1.3)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 0.15, top = 0.8, width = 8.1, height = 1.3))
 doc <- doc %>% ph_add_par(id_chr = "7") %>% 
   ph_add_text(str = txt_cs_intro, type = 'body', id_chr = "7", style = format_cs_intro)
 
 # Add plot 1 title and caption
-doc <- doc %>% ph_empty_at(left = 0.15, top = 2.16, width = 2, height = 0.34)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 0.15, top = 2.16, width = 2, height = 0.34))
 doc <- doc %>% ph_add_par(id_chr = "8") %>% 
   ph_add_text(str = txt_cs_plot_ttl_1, type = 'body', id_chr = "8", style = format_cs_plot_ttl)
 
-doc <- doc %>% ph_empty_at(left = 0.16, top = 4.45, width = 4.6, height = 1.43)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 0.16, top = 4.45, width = 4.6, height = 1.43))
 doc <- doc %>% ph_add_par(id_chr = "9") %>% 
   ph_add_text(str = txt_cs_plot_caption_1, type = 'body', id_chr = "9", style = format_cs_plot_caption)
 
 # Add plot 2 title and caption
-doc <- doc %>% ph_empty_at(left = 0.15, top = 5.8, width = 2, height = 0.34)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 0.15, top = 5.8, width = 2, height = 0.34))
 doc <- doc %>% ph_add_par(id_chr = "10") %>% 
   ph_add_text(str = txt_cs_plot_ttl_2, type = 'body', id_chr = "10", style = format_cs_plot_ttl)
 
-doc <- doc %>% ph_empty_at(left = 0.16, top = 8.09, width = 4.6, height = 1.43)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 0.16, top = 8.09, width = 4.6, height = 1.43))
 doc <- doc %>% ph_add_par(id_chr = "11") %>% 
   ph_add_text(str = txt_cs_plot_caption_2, type = 'body', id_chr = "11", style = format_cs_plot_caption)
 
 # Add trend map title and caption
-doc <- doc %>% ph_empty_at(left = 5.08, top = 2.15, width = 3.2, height = 0.49)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 5.08, top = 2.15, width = 3.2, height = 0.49))
 doc <- doc %>% ph_add_par(id_chr = "12") %>% 
   ph_add_text(str = txt_cs_map_ttl, type = 'body', id_chr = "12", style = format_cs_map_ttl)
 
-doc <- doc %>% ph_empty_at(left = 5.08, top = 2.95, width = 2.11, height = 1.36)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 5.08, top = 2.95, width = 2.11, height = 1.36))
 doc <- doc %>% ph_add_par(id_chr = "13") %>% 
   ph_add_text(str = txt_cs_map_caption, type = 'body', id_chr = "13", style = format_cs_map_caption)
 
 # Add outreach title
-doc <- doc %>% ph_empty_at(left = 5.08, top = 5.53, width = 3.25, height = 0.71)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 5.08, top = 5.53, width = 3.25, height = 0.71))
 doc <- doc %>% ph_add_par(id_chr = "14") %>% 
   ph_add_text(str = txt_cs_outreach_ttl, type = 'body', id_chr = "14", style = format_cs_outreach_ttl)
 
 # Add outreach points
-doc <- doc %>% ph_empty_at(left = 5.14, top = 6.18, width = 3.05, height = 3.4)
+doc <- doc %>% ph_with(value = empty_content(),
+                       location = ph_location(left = 5.14, top = 6.18, width = 3.05, height = 3.4))
 doc <- doc %>% ph_add_par(id_chr = "15") %>% 
   ph_add_text(str = txt_cs_outreach_point_1, type = 'body', id_chr = "15", style = format_cs_outreach_point) %>% 
   ph_add_par(id_chr = "15") %>% 

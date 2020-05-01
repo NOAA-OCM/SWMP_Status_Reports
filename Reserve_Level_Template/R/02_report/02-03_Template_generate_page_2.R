@@ -32,41 +32,45 @@ doc <- doc %>% ph_with(value = empty_content(),
 doc <- doc %>% ph_add_par(id_chr = "5") %>% 
   ph_add_text(str = txt_trend_ttl, type = 'body', id_chr = "5", style = format_trend_ttl)
 
-# Add trend facts
+#Add trend facts
 doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.15, top = 0.79, 
+                       location = ph_location(left = 0.15, top = 0.79,
                                               width = 4.8, height = 0.55))
-doc <- doc %>% ph_add_par(id_chr = "6") %>% 
-  ph_add_text(str = txt_trend_1_a, type = 'body', id_chr = "6", style = format_trend_a) %>% 
-  ph_add_text(str = txt_trend_1_b, type = 'body', id_chr = "6", style = format_trend_b)
+doc <- doc %>% ph_add_par(id_chr = "6") %>%
+  ph_add_text(str = txt_trend_1_b, type = 'body', id_chr = "6", style = format_trend_b) %>%
+  ph_add_text(str = txt_trend_1_a, type = 'body', id_chr = "6", style = format_trend_a)
+
+# doc <- ph_with(doc, fpar(ftext(txt_trend_1_a,format_trend_a)," ", ftext(txt_trend_1_b,format_trend_b)),
+#                # location = ph_location_label("Content Placeholder 17")[[1]])
+#                location = foobar)
 
 doc <- doc %>% ph_with(value = empty_content(),
                        location = ph_location(left = 0.15, top = 1.32, 
                                               width = 4.8, height = 0.55))
 doc <- doc %>% ph_add_par(id_chr = "7") %>% 
-  ph_add_text(str = txt_trend_2_a, type = 'body', id_chr = "7", style = format_trend_a) %>% 
-  ph_add_text(str = txt_trend_2_b, type = 'body', id_chr = "7", style = format_trend_b)
+  ph_add_text(str = txt_trend_2_b, type = 'body', id_chr = "7", style = format_trend_b) %>% 
+  ph_add_text(str = txt_trend_2_a, type = 'body', id_chr = "7", style = format_trend_a)
 
 doc <- doc %>% ph_with(value = empty_content(),
                        location = ph_location(left = 0.15, top = 1.85, 
                                               width = 4.8, height = 0.55))
 doc <- doc %>% ph_add_par(id_chr = "8") %>% 
-  ph_add_text(str = txt_trend_3_a, type = 'body', id_chr = "8", style = format_trend_a) %>% 
-  ph_add_text(str = txt_trend_3_b, type = 'body', id_chr = "8", style = format_trend_b)
-
+  ph_add_text(str = txt_trend_3_b, type = 'body', id_chr = "8", style = format_trend_b) %>% 
+  ph_add_text(str = txt_trend_3_a, type = 'body', id_chr = "8", style = format_trend_a)
+  
 doc <- doc %>% ph_with(value = empty_content(),
                        location = ph_location(left = 0.15, top = 2.37, 
                                               width = 4.8, height = 0.55))
 doc <- doc %>% ph_add_par(id_chr = "9") %>% 
-  ph_add_text(str = txt_trend_4_a, type = 'body', id_chr = "9", style = format_trend_a) %>% 
-  ph_add_text(str = txt_trend_4_b, type = 'body', id_chr = "9", style = format_trend_b)
+  ph_add_text(str = txt_trend_4_b, type = 'body', id_chr = "9", style = format_trend_b) %>% 
+  ph_add_text(str = txt_trend_4_a, type = 'body', id_chr = "9", style = format_trend_a)
 
 doc <- doc %>% ph_with(value = empty_content(),
                        location = ph_location(left = 0.15, top = 2.89, 
                                               width = 4.8, height = 0.55))
 doc <- doc %>% ph_add_par(id_chr = "10") %>% 
-  ph_add_text(str = txt_trend_5_a, type = 'body', id_chr = "10", style = format_trend_a) %>% 
-  ph_add_text(str = txt_trend_5_b, type = 'body', id_chr = "10", style = format_trend_b)
+  ph_add_text(str = txt_trend_5_b, type = 'body', id_chr = "10", style = format_trend_b) %>% 
+  ph_add_text(str = txt_trend_5_a, type = 'body', id_chr = "10", style = format_trend_a)
 
 # Add trend table title
 doc <- doc %>% ph_with(value = empty_content(),
@@ -119,13 +123,13 @@ doc <- doc %>% ph_add_par(id_chr = "17") %>%
 
 # Add flextables for trends
 ## met table
-doc <- doc %>% ph_with_flextable_at(value = ls_met_ft[[1]], left = 0.27, top = 3.86)
-doc <- doc %>% ph_with_flextable_at(value = ls_met_ft[[2]], left = 1.94, top = 3.86)
+doc <- doc %>% ph_with(value = ls_met_ft[[1]], location = ph_location(left = 0.27, top = 3.86))
+doc <- doc %>% ph_with(value = ls_met_ft[[2]], location = ph_location(left = 1.94, top = 3.86))
 
 ## wq table
-doc <- doc %>% ph_with_flextable_at(value = ls_wq_ft[[1]], left = 0.27, top = 4.38)
-doc <- doc %>% ph_with_flextable_at(value = ls_wq_ft[[2]], left = 1.94, top = 4.38)
+doc <- doc %>% ph_with(value = ls_wq_ft[[1]], location = ph_location(left = 0.27, top = 4.38))
+doc <- doc %>% ph_with(value = ls_wq_ft[[2]], location = ph_location(left = 1.94, top = 4.38))
 
 ## nut table
-doc <- doc %>% ph_with_flextable_at(value = ls_nut_ft[[1]], left = 0.27, top = 5.5)
-doc <- doc %>% ph_with_flextable_at(value = ls_nut_ft[[2]], left = 1.94, top = 5.5)
+doc <- doc %>% ph_with(value = ls_nut_ft[[1]], location = ph_location(left = 0.27, top = 5.5))
+doc <- doc %>% ph_with(value = ls_nut_ft[[2]], location = ph_location(left = 1.94, top = 5.5))
