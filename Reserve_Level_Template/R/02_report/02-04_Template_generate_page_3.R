@@ -13,24 +13,22 @@ format_cs_outreach_point <- fp_text(color = 'white', font.size = 14, font.family
 
 # Add elements to template ----
 # trend map
-doc <- doc %>% ph_with_img_at(src = img_cs_map
-                              , left = 5.08, top = 2.19
-                              , width = 3.2, height = 3.21)
-
+doc <- doc %>% ph_with(value = external_img(src = img_cs_map, width = 3.2, height = 3.21),
+                       use_loc_size = FALSE,
+                       location = ph_location(left =  5.08, top = 2.19))
 # plot 1
-doc <- doc %>% ph_with_img_at(src = img_cs_plot_1
-                              , left = 0.26, top = 2.5
-                              , width = 3.26, height = 1.9)
-
+doc <- doc %>% ph_with(value = external_img(src = img_cs_plot_1, width = 3.26, height = 1.9),
+                       use_loc_size = FALSE,
+                       location = ph_location(left =  0.26, top = 2.5))
 # plot 2
-doc <- doc %>% ph_with_img_at(src = img_cs_plot_2
-                              , left = 0.26, top = 6.16
-                              , width = 3.26, height = 1.9)
+doc <- doc %>% ph_with(value = external_img(src = img_cs_plot_2, width = 3.26, height = 1.9),
+                       use_loc_size = FALSE,
+                       location = ph_location(left =  0.26, top = 6.16))
 
 # background image for outreach section
-doc <- doc %>% ph_with_img_at(src = img_cs_background
-                              , left = 5.08, top = 5.36
-                              , width = 3.2, height = 4.27)
+doc <- doc %>% ph_with(value = external_img(src = img_cs_background, width = 3.2, height = 4.27),
+                       use_loc_size = FALSE,
+                       location = ph_location(left =  5.08, top = 5.36))
 
 # Add case study title
 doc <- doc %>% ph_empty_at(left = 0.14, top = 0.18, width = 7, height = 0.4)
