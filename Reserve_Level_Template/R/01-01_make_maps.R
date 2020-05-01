@@ -29,4 +29,4 @@ res_map <- res_local_map(nerr_site_id = res_abb
                          , lab_loc = map_labels
                          , scale_pos = scale_pos)
 
-mapview::mapshot(res_map, file = res_map_ttl, remove_url = T, selfcontained = F, vwidth = 250, vheight = 250)
+tmap::tmap_save(res_map, file = res_map_ttl, width = 250, height = 250)
