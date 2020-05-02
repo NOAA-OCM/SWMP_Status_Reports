@@ -1,5 +1,5 @@
 # Source files ------------
-source('R/00_load_global_decisions_variables.R')
+source('R/00_setup/00_load_global_decisions_variables.R')
 
 # Get reserve stations by type -------
 wq_sites <- get_sites(data.file = data.loc, type = 'wq')
@@ -13,7 +13,7 @@ end <- paste(year_range[2], '-12-31 23:45', sep = '')
 # ----------------------------------------------
 # Make basic maps         ----------------------
 # ----------------------------------------------
-source('R/01-01_make_maps.R')
+source('R/01_plots/01-01_make_maps.R')
 
 # ----------------------------------------------
 # Load water quality data ----------------------
@@ -21,7 +21,7 @@ source('R/01-01_make_maps.R')
 
 ## load, clean, and filter data
 data_type <- 'wq'
-source('R/00_Load_Analyses_Variables.R')
+source('R/00_setup/00_Load_Analyses_Variables.R')
 
 ls_par <- lapply(wq_sites, SWMPr::import_local, path = 'data')
 ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
@@ -32,8 +32,8 @@ if(convert_temp) ls_par <- lapply(ls_par, function(x) {x$temp <- x$temp * 9 / 5 
 if(convert_depth) ls_par <- lapply(ls_par, function(x) {x$depth <- x$depth * 3.28; x})
 
 # Do water quality analyses ---------
-source('R/01-02_all_plot_analyses.R')
-source('R/01-03_all_trend_analyses.R')
+source('R/01_plots/01-02_all_plot_analyses.R')
+source('R/01_plots/01-03_all_trend_analyses.R')
 
 # Unload the water quality data -----
 rm(ls_par)
@@ -42,7 +42,7 @@ rm(ls_par)
 # Load meterological data ----------------------
 # ----------------------------------------------
 data_type <- 'met'
-source('R/00_Load_Analyses_Variables.R')
+source('R/00_setup/00_Load_Analyses_Variables.R')
 
 ls_par <- lapply(met_sites, SWMPr::import_local, path = 'data')
 ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
@@ -53,8 +53,8 @@ if(convert_precip) ls_par <- lapply(ls_par, function(x) {x$totprcp <- x$totprcp 
 
 
 # Do meterological analyses ---------
-source('R/01-02_all_plot_analyses.R')
-source('R/01-03_all_trend_analyses.R')
+source('R/01_plots/01-02_all_plot_analyses.R')
+source('R/01_plots/01-03_all_trend_analyses.R')
 
 # Unload the meterological data -----
 rm(ls_par)
@@ -63,7 +63,7 @@ rm(ls_par)
 # Load nutrient data ---------------------------
 # ----------------------------------------------
 data_type <- 'nut'
-source('R/00_Load_Analyses_Variables.R')
+source('R/00_setup/00_Load_Analyses_Variables.R')
 
 ls_par <- lapply(nut_sites, import_local_nut, path = 'data', collMethd = 1)
 ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
@@ -85,8 +85,8 @@ for(i in 1:length(ls_par)) {
 }
 
 # Do nutrient analyses ---------
-source('R/01-02_all_plot_analyses.R')
-source('R/01-03_all_trend_analyses.R')
+source('R/01_plots/01-02_all_plot_analyses.R')
+source('R/01_plots/01-03_all_trend_analyses.R')
 
 # Unload the nutrient data -----
 rm(ls_par)
@@ -94,4 +94,4 @@ rm(ls_par)
 # ----------------------------------------------
 # Reformat/prepare handoff files ---------------
 # ----------------------------------------------
-source('R/01-04_prepare_handoff_files.R')
+source('R/01_plots/01-04_prepare_handoff_files.R')

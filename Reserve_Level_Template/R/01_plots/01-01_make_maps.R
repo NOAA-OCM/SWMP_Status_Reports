@@ -10,7 +10,7 @@
 
 # GENERATE RESERVE MAPS ---------
 ## National map
-us_map_ttl <- paste('output/maps/NERR_system_map_', res_abb, '.png', sep = '')
+us_map_ttl <- paste(getwd(),'/output/maps/NERR_system_map_', res_abb, '.png', sep = '')
 nerr_states <- c('01', '02', '06', '10', '12', '13', '15'
                  , '23', '24', '25', '28', '33', '34', '36', '37', '39'
                  , '41', '44', '45', '48', '51', '53', '55', '72')
