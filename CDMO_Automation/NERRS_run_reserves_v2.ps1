@@ -88,7 +88,7 @@ $Rlines = New-Object System.Collections.ArrayList
 [void]$Rlines.Add("target_year = c(" + $targ_year + ")")
 [void]$Rlines.Add("year_range = c(" + $year_start + "," + $year_end + ")")
 #[void]$Rlines.Add("source('R/00_load_global_decisions_variables.R')")
-[void]$Rlines.Add("source('R/01_Load_Wrangle_Run_test.R')")
+[void]$Rlines.Add("source('R/01_Load_Wrangle_Run.R')")
 [void]$Rlines.Add("closeAllConnections()")
 
 #-----------------------------------------------------------------------
