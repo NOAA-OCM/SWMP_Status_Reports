@@ -46,6 +46,7 @@ for(i in 1:length(ls_par)) {
     if(is.na(par_threshold[j])) par_threshold[j] <- list(NULL)
     
     # RAW BOXPLOT ----
+    message("Creating boxplot_raw")
     # Make plot name
     raw_box_ttl <- paste('output/', data_type, '/boxplot_raw/raw_boxplot_', sta, '_', par_inst[j], '_yr.png', sep = '')
     
@@ -64,6 +65,7 @@ for(i in 1:length(ls_par)) {
     ggsave(filename = raw_box_ttl, plot = raw_box, height = 4, width = 6, units = 'in', dpi = 300)
     
     # SEASONAL BOXPLOT ----
+    message("Creating boxplot_seasonal")
     # Make plot name
     seasonal_box_ttl <- paste('output/', data_type, '/boxplot_seasonal/seasonal_boxplot_', sta, '_', par_inst[j], '_yr.png', sep = '')
     
@@ -87,6 +89,7 @@ for(i in 1:length(ls_par)) {
     ggsave(filename = seasonal_box_ttl, plot = seasonal_box, height = 4, width = 6, units = 'in', dpi = 300)
     
     # SEASONAL BOXPLOT WITH TARGET YEAR----
+    message("Creating boxplot_seasonal_w_target_yr")
     # Make plot name
     seasonal_yr_box_ttl <- paste('output/', data_type, '/boxplot_seasonal_w_target_yr/seasonal_boxplot_', sta, '_', par_inst[j], '_yr.png', sep = '')
     
@@ -106,6 +109,7 @@ for(i in 1:length(ls_par)) {
     ggsave(filename = seasonal_yr_box_ttl, plot = seasonal_yr_box, height = 4, width = 6, units = 'in', dpi = 300)
     
     # ANNUAL RANGE ----
+    message("Creating range_annual")
     annual_rng_ttl <- paste('output/', data_type, '/range_annual/annual_range_', sta, '_', par_inst[j], '_yr.png', sep = '')
     
     annual_range <- annual_range(dat
@@ -125,6 +129,7 @@ for(i in 1:length(ls_par)) {
     ggsave(filename = annual_rng_ttl, plot = annual_range, height = 4, width = 6, units = 'in', dpi = 300)
     
     # HISTORICAL DAILY RANGE ----
+    message("Creating range_historical_daily")
     if(data_type != 'nut') {
       hist_daily_rng_ttl <- paste('output/', data_type, '/range_historical_daily/historical_daily_', sta, '_', par_inst[j], '_yr.png', sep = '')
       
@@ -147,6 +152,7 @@ for(i in 1:length(ls_par)) {
     }
     
     # HISTORICAL SEASONAL RANGE ----
+    message("Creating range_historical_seasonal")
     hist_seas_rng_ttl <- paste('output/', data_type, '/range_historical_seasonal/historical_seasonal_', sta, '_', par_inst[j], '.png', sep = '')
     
     hist_seas_rng <- historical_range(dat
@@ -170,6 +176,7 @@ for(i in 1:length(ls_par)) {
     if(par_criteria_type[j] == 'criteria') {
       
       # THRESHOLD PLOTS for TARGET YEAR ----
+      message("Creating threshold_criteria for target year")
       threshold_yr_ttl <- paste('output/', data_type, '/threshold_criteria/threshold_criteria_plot_', sta, '_', par_inst[j], '_yr.png', sep = '')
       
       threshold_crit_plt_yr <- threshold_criteria_plot(dat
@@ -188,6 +195,7 @@ for(i in 1:length(ls_par)) {
       
       
       # THRESHOLD PLOTS for TIME SERIES ----
+      message("Creating threshold_criteria all years")
       threshold_ts_ttl <- paste('output/', data_type, '/threshold_criteria/threshold_criteria_plot_', sta, '_', par_inst[j], '_ts.png', sep = '')
       
       threshold_crit_plt_ts <- threshold_criteria_plot(dat
@@ -209,6 +217,7 @@ for(i in 1:length(ls_par)) {
     if(par_criteria_type[j] == 'percentile') {
       
       # THRESHOLD PLOTS for TARGET YEAR ---
+      message("Creating threshold_percentile target year")
       threshold_perc_ttl <- paste('output/', data_type, '/threshold_percentile/threshold_percentile_', sta, '_', par_inst[j], '_yr.png', sep = '')
       
       threshold_perc_plt_yr <- threshold_percentile_plot(dat
@@ -225,6 +234,7 @@ for(i in 1:length(ls_par)) {
       ggsave(filename = threshold_perc_ttl, plot = threshold_perc_plt_yr, height = 4, width = 6, units = 'in', dpi = 300)
       
       # THRESHOLD PLOTS for TIME SERIES ----
+      message("Creating threshold_percentile all years")
       threshold_perc_ttl <- paste('output/', data_type, '/threshold_percentile/threshold_percentile_', sta, '_', par_inst[j], '_ts.png', sep = '')
       
       threshold_perc_plt_ts <- threshold_percentile_plot(dat
@@ -244,6 +254,7 @@ for(i in 1:length(ls_par)) {
     if(!is.na(par_threshold_val[j])) {
       
       # THRESHOLD IDENTIFICATION ----
+      message("Creating threshold_identification year")
       threshold_id_ttl <- paste('output/', data_type, '/threshold_identification/threshold_id_', sta, '_', par_inst[j], '.csv', sep = '')
       
       # a temporary data frame is used for setstep
@@ -264,6 +275,7 @@ for(i in 1:length(ls_par)) {
       write.csv(threshold_id_tbl, file = threshold_id_ttl, row.names = FALSE)
       
       # THRESHOLD IDENTIFICATION SUMMARY by month and season----
+      message("Creating threshold_identification month")
       if(nrow(threshold_id_tbl) > 0) {
         threshold_id_summ_ttl <- paste('output/', data_type, '/threshold_identification/threshold_id_summary_', sta, '_', par_inst[j], '_month.png', sep = '')
         
@@ -276,6 +288,7 @@ for(i in 1:length(ls_par)) {
         
         ggsave(filename = threshold_id_summ_ttl, plot = threshold_id_summ, height = 4, width = 6, units = 'in', dpi = 300)
         
+        message("Creating threshold_identification season")
         threshold_id_summ_ttl <- paste('output/', data_type, '/threshold_identification/threshold_id_summary_', sta, '_', par_inst[j], '_season.png', sep = '')
         
         threshold_id_summ <- threshold_summary(df_temp, param = par_inst[j]
@@ -294,6 +307,7 @@ for(i in 1:length(ls_par)) {
     }
     
     # SEASONAL DOT PLOT ----
+    message("Creating trend_dot_plot")
     seas_dot_ttl <- paste('output/', data_type, '/trend_dot_plot/seasonal_dot_', sta, '_', par_inst[j], '.png', sep = '')
     
     # Check for than one year of data
@@ -317,6 +331,7 @@ for(i in 1:length(ls_par)) {
 
 # Perform analyses for cumulative parameters --------
 if(length(par_cumulative) > 0) {
+  message("Analyse cumulative parameters")
   for(i in 1:length(ls_par)) {
     
     # select a station data frame
@@ -334,7 +349,8 @@ if(length(par_cumulative) > 0) {
       
       # Determine plot conversion
       converted_par <- ifelse(convert_temp && par_cumulative[j] == 'totprcp', TRUE, FALSE)
-      
+
+      message("Create barplot_seasonal")      
       seas_bar_stack_ttl <- paste('output/', data_type, '/barplot_seasonal/seas_bar_stack_', sta, '_', par_cumulative[j], '_yr.png', sep = '')
       
       seas_bar_stack <- seasonal_barplot(dat
@@ -352,6 +368,7 @@ if(length(par_cumulative) > 0) {
       
       ggsave(filename = seas_bar_stack_ttl, plot = seas_bar_stack, height = 4, width = 6, units = 'in', dpi = 300)
       
+      message("Create barplot_seasonal dodge")      
       
       seas_bar_dodge_ttl <- paste('output/', data_type, '/barplot_seasonal/seas_bar_dodge_', sta, '_', par_cumulative[j], '_yr.png', sep = '')
       
@@ -371,6 +388,7 @@ if(length(par_cumulative) > 0) {
       ggsave(filename = seas_bar_dodge_ttl, plot = seas_bar_dodge, height = 4, width = 6, units = 'in', dpi = 300)
       
       
+      message("Create barplot_seasonal facet")      
       seas_bar_facet_ttl <- paste('output/', data_type, '/barplot_seasonal/raw_boxplot_', sta, '_', par_cumulative[j], '_yr.png', sep = '')
       
       seas_bar_facet <- seasonal_barplot(dat
