@@ -10,6 +10,8 @@
 $previous_year_path = "E:\SWMP\2018_reserves" # Absolute path for old site directories
 $data_path = "E:\SWMP\data2019\swmp_data_archives"    # Absolute path to data directory, where all
                                           # reserve data are kept
+$reserve_updates_path = "E:\SWMP\Updated_reserve_var_sheets" # Absolute path to where any new 
+#       Reserve_Level_Plotting_Variables_XXX_YYYY.xlsx files are found.  XXX is reserve, YYYY is year.
 
 # *****!!!!! End of User Input.  No modification should be needed below here !!!!!*****                                        
 
@@ -18,8 +20,6 @@ $root = $PSScriptRoot ## Use of batch processing
 Set-Location $root
 
 # Define input directories
-$update_path = "$root\00_Annual_Update"
-$vars_folder = "$update_path\Updated_reserve_var_sheets"
 
 #    Source files for new site template
 $site_template = "$update_path\Reserve_Level_Template"
@@ -125,10 +125,10 @@ Foreach ($site in $site_lst) {
     # Copy all  data files for this site to "data" subfolder (force overwrite):
     Get-ChildItem -Path $data_path -filter "$site*.csv" | Copy-Item -Destination "$work_folder\$site\data" -Force
 
-    # Copy any annual updates from the "00_Annual_Update" folder and subfolders
+    # Copy any annual updates from the Updated_Reserve_Variables folder and subfolders
 
     #     Copy the reserve plotting spreadsheet if an update exists
-    $new_res_vars = "$vars_folder\Reserve_Level_Plotting_Variables_$($site)_$targ_year.xlsx"
+    $new_res_vars = "$reserve_updates_path\Reserve_Level_Plotting_Variables_$($site)_$targ_year.xlsx"
     if (Test-Path -Path $new_res_vars) {
         $var_dest_path = "$work_folder\$site\figure_files"
         if( -not (Test-Path $var_dest_path)) {
@@ -195,7 +195,7 @@ Foreach ($site in $site_lst) {
     Write-Output ""
 }
 
-break
+# break
 
 ####   NOTE: Skipping National Processing for now   DLE on 8/31/2020
 
