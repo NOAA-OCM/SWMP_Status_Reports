@@ -62,6 +62,7 @@ if (Test-Path -Path $nat_folder) {
     Move-Item -Path $nat_folder  "$nat_folder.Backup" -Force  #Backup existing national files
 }
 New-Item -ItemType Directory -Force -Path $nat_folder
+New-Item -ItemType Directory -Force -Path $nat_folder/$hout_folder
 
 #-----------------------------------------------------------------------
 # Read User Inputs from CSV Files:
