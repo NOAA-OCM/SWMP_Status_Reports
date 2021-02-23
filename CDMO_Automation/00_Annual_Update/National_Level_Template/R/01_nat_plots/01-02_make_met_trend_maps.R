@@ -27,7 +27,7 @@ for(i in 1:length(par$Parameter)) {
   x$LOC.1 <- gsub('\u2014', 'insig', x$LOC.1)
   x$LOC.1 <- gsub('x', 'insuff', x$LOC.1)
   
-  hi <- data.frame(Reserve = 'He\'eia', LOC.1 = 'insuff', NERR.Site.ID = 'HEA')
+  hi <- data.frame(Reserve = 'He\'eia', LOC.1 = 'insuff', NERR.Site.ID = 'HEE')
   
   x <- rbind(x, hi)
   

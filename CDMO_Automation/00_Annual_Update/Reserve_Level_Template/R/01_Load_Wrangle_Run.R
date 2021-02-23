@@ -118,7 +118,9 @@ source('R/01_plots/01-04_prepare_handoff_files.R')
 
 message("End load_wrangle_run, closing log files")
 # End output and message redirection
-for(i in seq_len(sink.number())){
+sink(NULL, type = "output")
+sink(NULL, type = "message")
+for(i in seq_len(sink.number())){  # Just in case there are more
   sink(NULL)
 }
 close(logout)
