@@ -26,7 +26,7 @@ source('R/01_plots/01-01_make_maps.R')
 # ----------------------------------------------
 
 ## load, clean, and filter data
-message("Begin wq")
+message("Begin wq -------------------------------------------")
 data_type <- 'wq'
 source('R/00_setup/00_Load_Analyses_Variables.R')
 
@@ -44,12 +44,12 @@ source('R/01_plots/01-03_all_trend_analyses.R')
 
 # Unload the water quality data -----
 rm(ls_par)
-message("End wq")
+message("End wq -------------------------------------------")
 
 # ----------------------------------------------
 # Load meteorological data ---------------------
 # ----------------------------------------------
-message("Begin met")
+message("Begin met -------------------------------------------")
 data_type <- 'met'
 source('R/00_setup/00_Load_Analyses_Variables.R')
 
@@ -73,13 +73,13 @@ source('R/01_plots/01-03_all_trend_analyses.R')
 
 # Unload the meteorological data -----
 rm(ls_par)
-message("End met")
+message("End met -------------------------------------------")
 
 # ----------------------------------------------
 # Load nutrient data ---------------------------
 # ----------------------------------------------
 
-message("Begin nut")
+message("Begin nut -------------------------------------------")
 data_type <- 'nut'
 source('R/00_setup/00_Load_Analyses_Variables.R')
 
@@ -108,7 +108,7 @@ source('R/01_plots/01-03_all_trend_analyses.R')
 
 # Unload the nutrient data -----
 rm(ls_par)
-message("End nut")
+message("End nut -------------------------------------------")
 
 # ----------------------------------------------
 # Reformat/prepare handoff files ---------------
@@ -116,7 +116,7 @@ message("End nut")
 
 source('R/01_plots/01-04_prepare_handoff_files.R')
 
-message("End load_wrangle_run, closing log files")
+message("End load_wrangle_run, closing log files ===================")
 # End output and message redirection
 sink(NULL, type = "output")
 sink(NULL, type = "message")
