@@ -6,7 +6,7 @@ library(readxl)
 library(dplyr)
 
 # Load variables ----
-source('R/00_Setup/00_load_national_template_variables.R')
+source('R/00_nat_setup/00_load_national_template_variables.R')
 
 # GENERATE FLEXTABLES -----
 source('R/02_nat_report/02-01_make_national_flextables.R')

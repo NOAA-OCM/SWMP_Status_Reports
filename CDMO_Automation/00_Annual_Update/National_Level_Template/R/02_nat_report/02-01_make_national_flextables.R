@@ -24,7 +24,8 @@ for(i in 1:length(par$Parameter)) {
   x$NERR.Site.ID <- abbrev
   
   # Removing the 5th location for easier formatting, make this optional
-  tbl <- left_join(reserve, x) %>% select(-NERR.Site.ID, -Region, -Reserve, -LOC.5)
+  # tbl <- left_join(reserve, x) %>% select(-NERR.Site.ID, -Region, -Reserve, -LOC.5)
+  tbl <- left_join(reserve, x) %>% select(Reserve.Name, num_range("LOC.",1:4))
   
   # Replace NA values with X values
   tbl[is.na(tbl)] <- 'x'
