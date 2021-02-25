@@ -30,7 +30,8 @@ handoff_summary <- lapply(handoff_summary, function(x) left_join(unique_regions,
 handoff_summary <- do.call(rbind, handoff_summary)
 
 # fill in missing parameter values
-handoff_summary$parameter <- na.locf(handoff_summary$parameter)
+#handoff_summary$parameter <- na.locf(handoff_summary$parameter, na.rm = FALSE)
+handoff_summary$parameter <- array(t(replicate(nrow(unique_regions), unique_params)))
 
 # write csv to file
 write.csv(handoff_summary, file = 'output/NERRS_Trend_Summary_From_Handoff_Files.csv', row.names = F)
