@@ -17,7 +17,7 @@ format_highlight <- fp_text(color = '#404040', font.size = 14, font.family = "Ga
 #                               , width = 8.1, height = 4.75
 #                               , left = 0.21, top = 0.29)
 doc <- ph_with(doc, value = external_img(src = img_intro),
-                       location = ph_location_label("Picture Placeholder 10"))
+               location = ph_location_label("Picture Placeholder 10"))
 
 # Add  template title
 # doc <- doc %>% ph_with(value = empty_content(), 
@@ -45,7 +45,7 @@ doc <- ph_with(doc, fpar(c(txt_sub_ttl_1, txt_sub_ttl_2), fp_t = format_subttl),
 doc <- doc %>% ph_with(value = empty_content(), 
                        location = ph_location(left = 0.18, top = 5.08, 
                                               width = 4.1, height = 0.62))
-text_format <- doc <- doc %>% ph_add_par(id_chr = "5") %>% 
+text_format <- doc %>% ph_add_par(id_chr = "5") %>% 
   ph_add_text(str = txt_nerr_name, type = 'body',
               id_chr = "5", style = format_nerr_nm)
 
