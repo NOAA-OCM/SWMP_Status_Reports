@@ -20,6 +20,7 @@ $root = $PSScriptRoot ## Use of batch processing
 Set-Location $root
 
 # Define input directories
+$update_path = "$root\00_Annual_Update"
 
 #    Source files for new site template
 $site_template = "$update_path\Reserve_Level_Template"
