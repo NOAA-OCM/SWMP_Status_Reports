@@ -32,8 +32,9 @@ $Site_custom = New-Object System.Collections.ArrayList
 [void]$Site_custom.Add("template_files\images")
 
 # Define output directories
-$nat_folder = "$root\01_National_Report"    # National template folder to move result files to
-$dist_folder = "$root\01_Reserve_distrib_files"
+$nat_folder_local = "01_National_Report"    # local National template folder to move result files to
+$nat_folder = "$root\$nat_folder_local"    # full path National template folder to move result files to
+$dist_folder = "$root\01_Zipped_distrib_files"
 $work_folder = "$root\01_Reserve_working_files"
 $hout_folder = "handoff_files"				# Subfolder in reserve folder to retrieve result files from
 
@@ -175,7 +176,7 @@ Foreach ($site in $site_lst) {
     # Move reserve handoff files to national handoff folder:
 	Set-Location $root			#back to main folder
 
-	Copy-Item $work_folder\$site\$hout_folder\* "$nat_folder\$hout_folder" -Force
+	Copy-Item $work_folder\$site\$hout_folder\* "$nat_folder\$hout_folder\" -Force
 	# Move-Item $root\$site\$hout_folder\* $root\$nat_folder\$hout_folder -Force
 	
     # Zip up all reserve files:
@@ -224,7 +225,7 @@ Set-Location $root     #back to root level
 
 # Zip national level reports:
 $zsrc = "$($nat_folder)"
-$zdest = "$($dist_folder)\$($nat_folder).zip"
+$zdest = "$($dist_folder)\$($nat_folder_local).zip"
 
 if (Test-Path $zdest) {
     Remove-Item $zdest -Force
