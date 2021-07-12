@@ -1,4 +1,4 @@
-pkg_data_wrangle <- c('broom', , 'lubridate', 'readxl')
+pkg_data_wrangle <- c('broom', 'lubridate', 'readxl')
 
 pkg_analysis <- c('EnvStats', 'ggthemes', 'RColorBrewer')
 
