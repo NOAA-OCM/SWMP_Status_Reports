@@ -1,9 +1,26 @@
 #-----------------------------------------------------------------------
-# Initializing Path and File Name Variables:
+# Initializing Path and begin logging:
+#  DO NOT CHANGE THIS BIT
 #-----------------------------------------------------------------------
 
+$root = $PSScriptRoot ## Use of batch processing
+# $root = Get-Location # Use for interactive testing
+Set-Location $root
+$proc_log = "$root\01_process_log.txt"
+
+# Set up a logging session to capture all PowerShell output
+$ErrorActionPreference="SilentlyContinue"
+Stop-Transcript | out-null
+$ErrorActionPreference = "Continue"
+if (Test-Path -Path $proc_log) {  # If log file already exists, back it up
+    Move-Item -Path $proc_log  "$proc_log.Backup" -Force 
+}
+Start-Transcript -path $proc_log -append
+
+#-----------------------------------------------------------------------
 # *****!!!!! USER INPUT REQUIRED !!!!!*****
 # Change the below paths for your system.  
+#-----------------------------------------------------------------------
 
 # $previous_year_path = "C:\tmp\2018_reserves" # Absolute path for old site directories
 # $data_path = "C:\SWMP\CDMO_V2\00_Data"    # Absloute path to data directory, where all
@@ -13,11 +30,9 @@ $data_path = "E:\SWMP\data2019\swmp_data_archives"    # Absolute path to data di
 $reserve_updates_path = "E:\SWMP\Updated_reserve_var_sheets" # Absolute path to where any new 
 #       Reserve_Level_Plotting_Variables_XXX_YYYY.xlsx files are found.  XXX is reserve, YYYY is year.
 
+#-----------------------------------------------------------------------
 # *****!!!!! End of User Input.  No modification should be needed below here !!!!!*****                                        
-
-$root = $PSScriptRoot ## Use of batch processing
-# $root = Get-Location # Use for interactive testing
-Set-Location $root
+#-----------------------------------------------------------------------
 
 # Define input directories
 $update_path = "$root\00_Annual_Update"
@@ -31,6 +46,8 @@ $Site_custom = New-Object System.Collections.ArrayList
 [void]$Site_custom.Add("figure_files\Reserve_Level_Plotting_Variables.xlsx")
 [void]$Site_custom.Add("template_files\text\Reserve_Level_Template_Text_Entry.xlsx")
 [void]$Site_custom.Add("template_files\images")
+# Write-Output $Site_custom
+# Break
 
 # Define output directories
 $nat_folder_local = "01_National_Report"    # local National template folder to move result files to
@@ -54,6 +71,7 @@ if (Test-Path -Path $work_folder) {
     Move-Item -Path $work_folder  "$work_folder.Backup" -Force  #Backup existing working files
 }
 New-Item -ItemType Directory -Force -Path $work_folder
+New-Item -ItemType Directory -Force -Path "$work_folder\all_logs"
 
 if (Test-Path -Path $dist_folder) {
     Move-Item -Path $dist_folder  "$dist_folder.Backup" -Force  #Backup existing distribution files
@@ -104,7 +122,7 @@ Foreach ($site in $site_lst) {
     Write-Output ""
     Write-Output "********************************************************"
 	Write-Output "* Processing reserve '$($site)'"
-    Write-Output "********************************************************"
+    Write-Output "*"
     Write-Output ""
 
     # Copy updated version of Reserve_Level_Template to site directory
@@ -121,7 +139,7 @@ Foreach ($site in $site_lst) {
             }
        }
     } else {
-           Write-Output "  *** No customized content at all for $site ***"
+           Write-Output "  *** No $site reserve-specific files from previous year ***"
     }
 
 
@@ -141,6 +159,7 @@ Foreach ($site in $site_lst) {
         # Copy for a backup and rename for use
         Copy-Item -Path $var_dest_path\Reserve_Level_Plotting_Variables_$($site)_$targ_year.xlsx `
         -Destination $var_dest_path\Reserve_Level_Plotting_Variables.xlsx
+        Write-Output " *** Using updated spreadsheet: $new_res_vars *** "
     } else {
         Write-Output " *** No updated spreadsheet, using previous version *** "
     }
@@ -159,10 +178,10 @@ Foreach ($site in $site_lst) {
 	# Run master R script:
 	$Rcommand = "R.exe --vanilla -f $($Rmaster)"
 	Try { 
-        Invoke-Expression $Rcommand      
+        Invoke-Expression $Rcommand  
+        Write-Output "`R call succeeded for $($site)` ------------"
+        Write-Output ""    
     }Catch{
-        Write-Output ""
-        Write-Output ""
         Write-Output "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         Write-Output "X                                                      X"
         Write-Output "X       ERROR in R processing of reserve '$($site)'         X"
@@ -180,6 +199,9 @@ Foreach ($site in $site_lst) {
 	Copy-Item $work_folder\$site\$hout_folder\* "$nat_folder\$hout_folder\" -Force
 	# Move-Item $root\$site\$hout_folder\* $root\$nat_folder\$hout_folder -Force
 	
+    # Copy log files to top level all_logs directory
+    Copy-Item $work_folder\$site\*.log "$work_folder\all_logs\" -Force
+	
     # Zip up all reserve files:
     $zsrc = "$($work_folder)\$($site)\"
     $zdest = "$($dist_folder)\$($site).zip"
@@ -190,17 +212,24 @@ Foreach ($site in $site_lst) {
     [System.IO.Compression.ZipFile]::CreateFromDirectory($zsrc, $zdest)
 
     # Write completion message:
-    Write-Output ""
-    Write-Output ""
-    Write-Output "********************************************************"
+    Write-Output "*"
 	Write-Output "* Completed reserve '$($site)'"
     Write-Output "********************************************************"
     Write-Output ""
 }
 
-# break
+Write-Output "********************************************************"
+Write-Output "Check for Reserve-level processing errors"
+Write-Output ""
+Set-Location $work_folder\all_logs\
+Select-String -Pattern "Error" *.log
+Set-Location $root
+Write-Output ""
+Write-Output "End of Reserve-level processing error check"
+Write-Output "********************************************************"
+Write-Output ""
 
-####   NOTE: Skipping National Processing for now   DLE on 8/31/2020
+# break  ####   NOTE: Skipping National Processing for now   DLE on 8/31/2020
 
 #-----------------------------------------------------------------------
 # Run national level analyses (based on reserve-specific output):
@@ -208,10 +237,9 @@ Foreach ($site in $site_lst) {
 
 # Write initialization message:
 Write-Output ""
-Write-Output ""
 Write-Output "********************************************************"
 Write-Output "* Processing national level reports"
-Write-Output "********************************************************"
+Write-Output "*"
 Write-Output ""
 
 # Copy updated code to National Folder
@@ -221,6 +249,10 @@ Copy-Item -Path "$natl_template\*" -Destination $nat_folder -Recurse -Force
 Set-Location $nat_folder
 $Rcommand = "R.exe --vanilla -f R\01_Generate_National_Summaries.R"
 Invoke-Expression $Rcommand
+
+Write-Output "Check for National-level processing errors"
+Write-Output ""
+Select-String -Pattern "Error" *.log
 
 Set-Location $root     #back to root level
 
@@ -233,9 +265,12 @@ if (Test-Path $zdest) {
 }
 [System.IO.Compression.ZipFile]::CreateFromDirectory($zsrc, $zdest)
 
-
 # Write completion message:
 Write-Output ""
-Write-Output "********************************************************"
+Write-Output "*"
 Write-Output "* National level reports have been completed"
 Write-Output "********************************************************"
+
+
+# Stop logging script output
+Stop-Transcript

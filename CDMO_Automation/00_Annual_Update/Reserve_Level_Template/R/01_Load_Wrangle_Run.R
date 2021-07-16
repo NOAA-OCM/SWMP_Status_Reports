@@ -1,6 +1,7 @@
-# Start redirecting output
-logout <- file("log_out.txt", open = "wt")
-logmess <- file("log_mess.txt", open = "wt")
+this_dir <- getwd()
+log_prefix <- substring(this_dir, nchar(this_dir) - 2)
+logout <- file(paste0(log_prefix,"_output.log"), open = "wt")
+logmess <- file(paste0(log_prefix,"_message.log"), open = "wt")
 sink(logout, append = FALSE, type = "output", split = FALSE)
 sink(logmess, append = FALSE, type = "message", split = FALSE)
 
