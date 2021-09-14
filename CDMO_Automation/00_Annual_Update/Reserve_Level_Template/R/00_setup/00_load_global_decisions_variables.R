@@ -65,7 +65,8 @@ res_bbox <- wb[[1]] %>% .[complete.cases(.)]
 sk_bbox <- wb[[2]] %>% .[complete.cases(.)]
 
 #### shapefile parameters
-res_gis_loc <- paste('inst/gis/GIS_Process/', toupper(res_abb), '/Boundaries/Reserve_Boundaries', sep = '')
+# res_gis_loc <- paste('inst/gis/GIS_Process/', toupper(res_abb), '/Boundaries/Reserve_Boundaries', sep = '')
+res_gis_loc <- paste('inst/gis/', toupper(res_abb), sep = '')
 res_gis_shp <- get_shp_name(res_gis_loc)
 
 # Load spatial data
