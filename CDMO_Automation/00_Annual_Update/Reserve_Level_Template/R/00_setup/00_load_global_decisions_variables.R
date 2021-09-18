@@ -7,6 +7,38 @@ suppressPackageStartupMessages({
   library(readxl)
 })
 
+# Internal functions for workflow -----------
+
+check_make_dir <- function(fname) {
+  if(!dir.exists(dirname(fname))) {
+    dir.create(dirname(fname), recursive = TRUE)
+    return(TRUE)
+  }
+}
+
+check_site_validity <- function(possible_sites, time_range) {
+  good_sites <- NULL
+  for (this_site in possible_sites) {
+    site_files <- as.data.frame(list.files(path = "data/", pattern = this_site))
+    if(nrow(site_files) >= 1) {
+      colnames(site_files) <- "file"
+      site_files <- site_files %>% 
+        mutate(len = nchar(file),
+               year = substring(file, len-7, len-4),
+               valid = (year >= time_range[1] & 
+                          year <= time_range[2]))
+      if(any(site_files$valid)) {
+        good_sites <- c(good_sites, this_site)
+      }  
+    }
+  }
+  if(length(good_sites) > 0) {
+    return(good_sites)
+  } else {
+    return("")
+  }
+}
+
 # Set common variables -----
 #### Reserve related 
 data.loc <- 'data/'

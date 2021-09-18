@@ -9,9 +9,9 @@ sink(logmess, append = FALSE, type = "message", split = FALSE)
 source('R/00_setup/00_load_global_decisions_variables.R')
 
 # Get reserve stations by type -------
-wq_sites <- get_sites(data.file = data.loc, type = 'wq')
-met_sites <- get_sites(data.file = data.loc, type = 'met')
-nut_sites <- get_sites(data.file = data.loc, type = 'nut')
+wq_sites_pot <- get_sites(data.file = data.loc, type = 'wq')
+met_sites_pot <- get_sites(data.file = data.loc, type = 'met')
+nut_sites_pot <- get_sites(data.file = data.loc, type = 'nut')
 
 # Build start and end dates for filtering ----
 start <- paste(year_range[1], '-01-01 0:00', sep = '')
@@ -30,6 +30,8 @@ source('R/01_plots/01-01_make_maps.R')
 message("Begin wq -------------------------------------------")
 data_type <- 'wq'
 source('R/00_setup/00_Load_Analyses_Variables.R')
+
+wq_sites <- check_site_validity(wq_sites_pot, year_range)
 
 ls_par <- lapply(wq_sites, SWMPr::import_local, path = 'data')
 ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
@@ -53,6 +55,7 @@ message("End wq -------------------------------------------")
 message("Begin met -------------------------------------------")
 data_type <- 'met'
 source('R/00_setup/00_Load_Analyses_Variables.R')
+met_sites <- check_site_validity(met_sites_pot, year_range)
 
 ls_par <- lapply(met_sites, SWMPr::import_local, path = 'data')
 ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
@@ -83,6 +86,7 @@ message("End met -------------------------------------------")
 message("Begin nut -------------------------------------------")
 data_type <- 'nut'
 source('R/00_setup/00_Load_Analyses_Variables.R')
+nut_sites <- check_site_validity(nut_sites_pot, year_range)
 
 ls_par <- lapply(nut_sites, import_local_nut, path = 'data', collMethd = 1)
 ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)

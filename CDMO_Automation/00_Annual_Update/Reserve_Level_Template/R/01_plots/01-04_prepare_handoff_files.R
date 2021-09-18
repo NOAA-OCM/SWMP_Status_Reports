@@ -35,6 +35,7 @@ for(i in 1:length(vars)){
   trnd_reformat <- lapply(trnd_reformat, function(x) {x$Reserve <- res; x})
   
   # print each data.frame in the list
+  if(!dir.exists('handoff_files')) dir.create('handoff_files', recursive = TRUE)
   sapply(names(trnd_reformat), 
          function (x) write.csv(trnd_reformat[[x]]
                                 , file = paste('handoff_files/', res_abb, '_', x, '.csv', sep='')
