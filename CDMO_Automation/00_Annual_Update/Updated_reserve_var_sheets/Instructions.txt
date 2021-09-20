@@ -1,0 +1,4 @@
+Copy all the new Reserve_Level_Plotting_Template files (from separate zip archive) to this 
+subdirectory.  They should be named "Reserve_Level_Plotting_Template_xxx_YYYY.xlsx", 
+where xxx is the reserve abbreviation (in lower case) and YYYY is the year.  
+This naming convention will make it easier for reserves to identify their different analyses.

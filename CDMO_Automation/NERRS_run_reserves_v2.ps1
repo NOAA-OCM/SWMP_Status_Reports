@@ -27,7 +27,7 @@ Start-Transcript -path $proc_log -append
 $previous_year_path = "E:\SWMP\2018_reserves" # Absolute path for old site directories
 $data_path = "E:\SWMP\data2019\swmp_data_archives"    # Absolute path to data directory, where all
                                           # reserve data are kept
-$reserve_updates_path = "E:\SWMP\Updated_reserve_var_sheets" # Absolute path to where any new 
+$reserve_updates_path = "E:\SWMP\2020_SWMP_Updated_reserve_var_sheets" # Absolute path to where any new 
 #       Reserve_Level_Plotting_Variables_XXX_YYYY.xlsx files are found.  XXX is reserve, YYYY is year.
 
 #-----------------------------------------------------------------------
@@ -218,15 +218,19 @@ Foreach ($site in $site_lst) {
     Write-Output ""
 }
 
-Write-Output "********************************************************"
-Write-Output "Check for Reserve-level processing errors"
+Write-Output ""
+Write-Output "  ========== END OF RESERVE LOOP ==========="
+Write-Output ""
+Write-Output ""
+Write-Output "---------------------------------------------------------"
+Write-Output "    Check for Reserve-level processing errors"
 Write-Output ""
 Set-Location $work_folder\all_logs\
 Select-String -Pattern "Error" *.log
 Set-Location $root
 Write-Output ""
-Write-Output "End of Reserve-level processing error check"
-Write-Output "********************************************************"
+Write-Output "    End of Reserve-level processing error check"
+Write-Output "---------------------------------------------------------"
 Write-Output ""
 
 # break  ####   NOTE: Skipping National Processing for now   DLE on 8/31/2020
@@ -237,7 +241,7 @@ Write-Output ""
 
 # Write initialization message:
 Write-Output ""
-Write-Output "********************************************************"
+Write-Output "---------------------------------------------------------"
 Write-Output "* Processing national level reports"
 Write-Output "*"
 Write-Output ""
@@ -269,7 +273,7 @@ if (Test-Path $zdest) {
 Write-Output ""
 Write-Output "*"
 Write-Output "* National level reports have been completed"
-Write-Output "********************************************************"
+Write-Output "---------------------------------------------------------"
 
 
 # Stop logging script output
