@@ -27,8 +27,6 @@ Start-Transcript -path $proc_log -append
 $previous_year_path = "E:\SWMP\2018_reserves" # Absolute path for old site directories
 $data_path = "E:\SWMP\data2019\swmp_data_archives"    # Absolute path to data directory, where all
                                           # reserve data are kept
-$reserve_updates_path = "E:\SWMP\2020_SWMP_Updated_reserve_var_sheets" # Absolute path to where any new 
-#       Reserve_Level_Plotting_Variables_XXX_YYYY.xlsx files are found.  XXX is reserve, YYYY is year.
 
 #-----------------------------------------------------------------------
 # *****!!!!! End of User Input.  No modification should be needed below here !!!!!*****                                        
@@ -40,6 +38,8 @@ $update_path = "$root\00_Annual_Update"
 #    Source files for new site template
 $site_template = "$update_path\Reserve_Level_Template"
 $natl_template = "$update_path\National_Level_Template"
+$reserve_updates_path = "$update_path\Updated_reserve_var_sheets" # Absolute path to where any new 
+#       Reserve_Level_Plotting_Variables_XXX_YYYY.xlsx files are found.  XXX is reserve, YYYY is year.
 
 #    List of subdirectories that contain customized content.  These will be copied to updated site dir.
 $Site_custom = New-Object System.Collections.ArrayList
