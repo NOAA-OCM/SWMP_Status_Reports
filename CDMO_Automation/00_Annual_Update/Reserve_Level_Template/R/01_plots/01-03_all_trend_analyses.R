@@ -86,8 +86,6 @@ for(i in 1:length(par)) {
                        , scale_pos = scale_pos, lab_loc = par_trend_labs, shp = res_spatial)
   
   new_dir_result <- check_make_dir(sk_map_ttl)
-  mapview::mapshot(sk_map, file = sk_map_ttl, remove_url = TRUE, selfcontained = FALSE
-                       , vwidth = 250, vheight = 250) 
+  tmap_save(sk_map, file = sk_map_ttl, width = 5, height = 5, units = "in")
 }
-
 message("all_trend_analysis completed")

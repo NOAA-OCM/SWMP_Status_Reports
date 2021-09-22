@@ -34,6 +34,5 @@ res_map <- res_local_map(nerr_site_id = res_abb
                          , scale_pos = scale_pos)
 
 new_dir_result <- check_make_dir(res_map_ttl)
-# mapview::mapshot(res_map, file = res_map_ttl, remove_url = T, selfcontained = F, vwidth = 250, vheight = 250)
-tmap::tmap_save(res_map, file = res_map_ttl, width = 5, height = 5, units = "in")
+tmap_save(res_map, file = res_map_ttl, width = 5, height = 5, units = "in")
 message("End of maps")
