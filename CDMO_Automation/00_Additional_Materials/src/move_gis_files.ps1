@@ -1,10 +1,11 @@
-# $gis_root_old = ".\inst\gis"
-$gis_root_old = ".\inst\gis\GIS_Process"
+# Change gis_relative depending on location this script is run from.
+$gis_relative = "..\..\00_Annual_Update\Reserve_Level_Template"
+$gis_root_old = "$gis_relative\inst\gis\GIS_Process"
 $site_lst = Get-ChildItem -Path $gis_root_old
 # echo $site_lst
 Foreach ($site in $site_lst) {
     $old_dir = "$gis_root_old\$site\Boundaries\Reserve_Boundaries"
-    $new_dir = ".\inst\gis\$site\"
+    $new_dir = "$gis_relative\inst\gis\$site\"
     if (Test-Path -Path $new_dir) {
         Move-Item -Path $new_dir  "Backup.$new_dir" -Force  #Backup existing distribution files
     }
