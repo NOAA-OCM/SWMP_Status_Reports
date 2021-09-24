@@ -7,10 +7,17 @@ suppressPackageStartupMessages({
   library(janitor)
 })
 
+# N.B.: This path is hard coded, since there is no expectation that 
+# annual updates will reside within this package during the QA/QC process.
+# In fact, I recommend against it.  Instead copy them into the 
+# ../../00_Annual_Update/Updated_reserve_var_sheets directory when they have
+# passed QA/QC.  That should be a cleaner process, IMO.
 reserve_updates_path <- "E:/SWMP/2020_SWMP_Updated_reserve_var_sheets"
+
 site_files <- (list.files(path = reserve_updates_path, pattern = "xlsx"))
 
-report_file <- "Reserve_var_checks.txt"
+test_year <- 2020
+report_file <- paste0("check_results/reserve_var_checks_", test_year,".txt")
 
 sheets <- c('Flags', 'Years_of_Interest', 'Seasons', 'Mapping',
             'Bonus_Settings', 'Basic_Plotting', 'Threshold_Plots',
