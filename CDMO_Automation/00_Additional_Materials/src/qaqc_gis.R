@@ -51,14 +51,6 @@ county_file <- paste0("check_results/reserve-county_intersections_",test_year,".
 #
 # Get state outlines ------
 #
-# state_raw  <-  get_acs(geography = "county", 
-#                        variables = "B01003_001", 
-#                        year = 2019, 
-#                        output = "wide", 
-#                        geometry = TRUE)
-# 
-# 
-
 
 cnty_raw <- get("us_4269") %>% select(-area)
 cnty_fips <- tidycensus::fips_codes %>% 
@@ -107,7 +99,9 @@ for(res in reserves) {
   res_gis_shp <- list.files(path = res_gis_loc, pattern = '.shp$')
   
   # Load spatial data
-  res_spatial <- read_sf(dsn = paste(res_gis_loc, res_gis_shp, sep ='/'))
+  res_spatial <- read_sf(dsn = paste(res_gis_loc, res_gis_shp, sep ='/')) %>% 
+    st_zm(drop = TRUE)  # Drop any Z coordinate
+  
   
   # check shapefile validity ----
   
@@ -181,11 +175,11 @@ for(res in reserves) {
     map <- tm_shape(res_spatial) +
       tm_borders() +
       tm_fill(col = "green") +
-      tm_shape(state_local) +
+      tm_shape(state_res) +
       tm_borders() +
       tm_shape(c_inters) +
       tm_borders() +
-      tm_fill(col = "yellow", alpha = 1) 
+      tm_fill(col = "yellow", alpha = 0.05) 
     # tm_shape(c_overlap) +
     # tm_borders() +
     # tm_fill(col = "red", alpha = 0.5)
@@ -199,16 +193,22 @@ for(res in reserves) {
     
     map
   }
-  
-  # Compare bounding boxes ----
-  
-  wb_name <- paste0(reserve_updates_path,"Reserve_Level_Plotting_Variables_", res, "_", test_year, ".xlsx") 
-  wb <- read_xlsx(path = wb_name, sheet = "Mapping")
-  #### Reserve bounding box
-  res_bbox <- wb[[1]] %>% .[complete.cases(.)]
-  sk_bbox <- wb[[2]] %>% .[complete.cases(.)]
-  
-  
+  # 
+  # # Compare bounding boxes ----
+  # 
+  # wb_name <- paste0(reserve_updates_path,"Reserve_Level_Plotting_Variables_", res, "_", test_year, ".xlsx") 
+  # wb <- read_xlsx(path = wb_name, sheet = "Mapping")
+  # #### Reserve bounding box
+  # res_bbox <- wb[[1]] %>% .[complete.cases(.)]
+  # sk_bbox <- wb[[2]] %>% .[complete.cases(.)]
+  # 
+  # 
 }
+msg <- paste0("QA/QC successful.  Writing csv file of county intersections.\n")
+write(msg, file = report_file,  append = TRUE)
 
 write.csv(df, file = county_file, row.names = FALSE)
+
+msg <- paste0("Output successfully written.  QA/QC complete.")
+write(msg, file = report_file,  append = TRUE)
+
