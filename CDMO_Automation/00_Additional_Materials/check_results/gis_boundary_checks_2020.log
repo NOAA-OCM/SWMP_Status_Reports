@@ -1,0 +1,78 @@
+Begin check at 2021-09-24 17:06:44
+
+
+--------------------------
+Checking ACE at 2021-09-24 17:06:44
+   Bad shapefile for ACE, record 1
+Ring Self-intersection[552641.7131 3585108.7076]
+Record 1 repaired for ACE
+   Initial ACE crs is NAD83 / UTM zone 17N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_ACE_RB_2012.shp
+
+
+--------------------------
+Checking APA at 2021-09-24 17:06:48
+   Bad shapefile for APA, record 1
+Ring Self-intersection[304654.97403815 644214.783799263]
+Record 1 repaired for APA
+   Initial APA crs is Custom
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_APA_RB_2014.shp
+
+
+--------------------------
+Checking CBM at 2021-09-24 17:06:51
+   Initial CBM crs is NAD83 / UTM zone 17N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_CBM_RB_2013.shp
+
+
+--------------------------
+Checking CBV at 2021-09-24 17:06:54
+   Initial CBV crs is NAD83 / UTM zone 18N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_CBV_RB_1998.shp
+
+
+--------------------------
+Checking DEL at 2021-09-24 17:06:58
+   Initial DEL crs is Albers Conical Equal Area
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_DEL_RB_2000.shp
+
+
+--------------------------
+Checking ELK at 2021-09-24 17:07:01
+   Initial ELK crs is WGS 84 / UTM zone 10N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_ELK_RB_2000.shp
+
+
+--------------------------
+Checking GND at 2021-09-24 17:07:03
+   Initial GND crs is WGS 84 / UTM zone 16N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_GND_RB_2003.shp
+
+
+--------------------------
+Checking GRB at 2021-09-24 17:07:05
+   Initial GRB crs is NAD83 / New Hampshire (ftUS)
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_GRB_RB_2006.shp
+
+
+--------------------------
+Checking GTM at 2021-09-24 17:07:08
+   Initial GTM crs is NAD83 / UTM zone 17N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_GTM_2021.shp
+
+
+--------------------------
+Checking HEE at 2021-09-24 17:07:10
+   Bad shapefile for HEE, record 10
+Ring Self-intersection[625379.556900001 2370558.6543 0]
+Record 10 repaired for HEE
+   Initial HEE crs is NAD83 / UTM zone 4N
