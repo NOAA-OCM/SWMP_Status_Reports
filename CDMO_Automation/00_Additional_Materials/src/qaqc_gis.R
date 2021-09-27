@@ -51,28 +51,30 @@ county_file <- paste0("check_results/reserve-county_intersections_",test_year,".
 #
 # Get state outlines ------
 #
-state_raw  <-  get_acs(geography = "county", 
-                       variables = "B01003_001", 
-                       year = 2019, 
-                       output = "wide", 
-                       geometry = TRUE)
+# state_raw  <-  get_acs(geography = "county", 
+#                        variables = "B01003_001", 
+#                        year = 2019, 
+#                        output = "wide", 
+#                        geometry = TRUE)
+# 
+# 
 
-# add abbreviations, first create a temp df then join it
-abbrevs <- cbind("state" = state.name, 
-                 "state_abb" = state.abb) %>% 
-  rbind(c("Puerto Rico", "PR"), 
-        c("District of Columbia","DC")) %>% 
-  as.data.frame()
 
-state_pop  <-  select(state_raw, name = NAME, fips = GEOID) %>% 
-  separate(name, into = c("county","state"), sep = ", ") %>% 
-  left_join(abbrevs, by = 'state')
+cnty_raw <- get("us_4269") %>% select(-area)
+cnty_fips <- tidycensus::fips_codes %>% 
+  transmute(county, state,
+            county_fips = paste0(state_code, county_code))
 
-st_crs(state_pop) <- 4326  # Set the projection information
+cnty_boundaries  <- cnty_raw %>% 
+  left_join(cnty_fips, by = 'county_fips') %>% 
+  select(county, state, state_fips, county_fips)
+ 
+st_crs(cnty_boundaries) <- 4326  # Set the projection information
 
 #Project the state data into our Albers EA projection, epsg = 5072.
-state_5072 <- st_transform(state_pop, crs = 5072)
-# us_4269 <- st_transform(state_pop, crs = 4269)  # Get county outlines from census data 
+# state_5072 <- st_transform(cnty_boundaries, crs = 5072)
+# us_4269 <- st_transform(cnty_boundaries, crs = 4269)  # Get county outlines from census data
+
 
 # Begin testing ------ 
 # 
@@ -86,8 +88,8 @@ df <- data.frame(reserve = character(),
                  relationship = character(),
                  county = character(),
                  state = character(),
-                 fips = character(),
-                 state_abb = character())
+                 state_fips = character(),
+                 county_fips = character())
 df_col <- colnames(df)
 
 
@@ -138,12 +140,15 @@ for(res in reserves) {
                 # , " \n With WKS:\n", st_crs(res_spatial)$wkt
   )
   write(msg, file = report_file,  append = TRUE)
-  res_5072 <- st_transform(res_spatial, crs = 5072)
+  # res_5072 <- st_transform(res_spatial, crs = 5072)
   # res_4269 <- st_transform(res_spatial, crs = 4269)
+  # c_inters <- state_5072[as.data.frame(st_intersects(state_5072, res_5072))[, 1], ]
+  # c_touch <- state_5072[as.data.frame(st_touches(state_5072, res_5072))[, 1], ]
   
-  c_inters <- state_5072[as.data.frame(st_intersects(state_5072, res_5072))[, 1], ]
-  
-  c_touch <- state_5072[as.data.frame(st_touches(state_5072, res_5072))[, 1], ]
+  # Do intersection in CRS of Reserve shapefile
+  state_res <- st_transform(cnty_boundaries, st_crs(res_spatial))
+  c_inters <- state_res[as.data.frame(st_intersects(state_res, res_spatial))[, 1], ]
+  c_touch <- state_res[as.data.frame(st_touches(state_res, res_spatial))[, 1], ]
   
   inters <- cbind(res, "intersects", 
                   unique(st_drop_geometry(c_inters)))
@@ -160,7 +165,7 @@ for(res in reserves) {
   # Write out good shapefile into new location -----
   
   if(file_is_good) {
-    fixed_name <- paste0(gis_final_base, res, "qa_",res_gis_shp) 
+    fixed_name <- paste0(gis_final_base, res, "/qa_",res_gis_shp) 
     new_dir_result <- check_make_dir(fixed_name)
     msg <- paste0("   Saving good shapefile as \n       ", fixed_name)
     write(msg, file = report_file,  append = TRUE)
@@ -171,7 +176,7 @@ for(res in reserves) {
     write(msg, file = report_file,  append = TRUE)
   }
   #  Tmap ----
-XXXXXXXXXXXXXX  Fix so everything done in local CRS
+  
   if(FALSE){  
     map <- tm_shape(res_spatial) +
       tm_borders() +
