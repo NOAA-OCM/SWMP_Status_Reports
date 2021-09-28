@@ -1,78 +1,222 @@
-Begin check at 2021-09-24 17:06:44
+Begin check at 2021-09-27 13:47:37
 
 
 --------------------------
-Checking ACE at 2021-09-24 17:06:44
+Checking ACE at 2021-09-27 13:47:37
    Bad shapefile for ACE, record 1
 Ring Self-intersection[552641.7131 3585108.7076]
 Record 1 repaired for ACE
    Initial ACE crs is NAD83 / UTM zone 17N
    Saving good shapefile as 
-       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_ACE_RB_2012.shp
+       ../00_Annual_Update/Reserve_level_template/inst/gis/ACE/qa_ACE_RB_2012.shp
 
 
 --------------------------
-Checking APA at 2021-09-24 17:06:48
+Checking APA at 2021-09-27 13:47:38
    Bad shapefile for APA, record 1
 Ring Self-intersection[304654.97403815 644214.783799263]
 Record 1 repaired for APA
    Initial APA crs is Custom
    Saving good shapefile as 
-       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_APA_RB_2014.shp
+       ../00_Annual_Update/Reserve_level_template/inst/gis/APA/qa_APA_RB_2014.shp
 
 
 --------------------------
-Checking CBM at 2021-09-24 17:06:51
+Checking CBM at 2021-09-27 13:47:39
    Initial CBM crs is NAD83 / UTM zone 17N
    Saving good shapefile as 
-       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_CBM_RB_2013.shp
+       ../00_Annual_Update/Reserve_level_template/inst/gis/CBM/qa_CBM_RB_2013.shp
 
 
 --------------------------
-Checking CBV at 2021-09-24 17:06:54
+Checking CBV at 2021-09-27 13:47:40
    Initial CBV crs is NAD83 / UTM zone 18N
    Saving good shapefile as 
-       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_CBV_RB_1998.shp
+       ../00_Annual_Update/Reserve_level_template/inst/gis/CBV/qa_CBV_RB_1998.shp
 
 
 --------------------------
-Checking DEL at 2021-09-24 17:06:58
+Checking DEL at 2021-09-27 13:47:42
    Initial DEL crs is Albers Conical Equal Area
    Saving good shapefile as 
-       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_DEL_RB_2000.shp
+       ../00_Annual_Update/Reserve_level_template/inst/gis/DEL/qa_DEL_RB_2000.shp
 
 
 --------------------------
-Checking ELK at 2021-09-24 17:07:01
+Checking ELK at 2021-09-27 13:47:43
    Initial ELK crs is WGS 84 / UTM zone 10N
    Saving good shapefile as 
-       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_ELK_RB_2000.shp
+       ../00_Annual_Update/Reserve_level_template/inst/gis/ELK/qa_ELK_RB_2000.shp
 
 
 --------------------------
-Checking GND at 2021-09-24 17:07:03
+Checking GND at 2021-09-27 13:47:43
    Initial GND crs is WGS 84 / UTM zone 16N
    Saving good shapefile as 
-       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_GND_RB_2003.shp
+       ../00_Annual_Update/Reserve_level_template/inst/gis/GND/qa_GND_RB_2003.shp
 
 
 --------------------------
-Checking GRB at 2021-09-24 17:07:05
+Checking GRB at 2021-09-27 13:47:44
    Initial GRB crs is NAD83 / New Hampshire (ftUS)
    Saving good shapefile as 
-       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_GRB_RB_2006.shp
+       ../00_Annual_Update/Reserve_level_template/inst/gis/GRB/qa_GRB_RB_2006.shp
 
 
 --------------------------
-Checking GTM at 2021-09-24 17:07:08
+Checking GTM at 2021-09-27 13:47:44
    Initial GTM crs is NAD83 / UTM zone 17N
    Saving good shapefile as 
-       ../00_Annual_Update/Reserve_level_template/inst/gis/qa_GTM_2021.shp
+       ../00_Annual_Update/Reserve_level_template/inst/gis/GTM/qa_GTM_2021.shp
 
 
 --------------------------
-Checking HEE at 2021-09-24 17:07:10
-   Bad shapefile for HEE, record 10
-Ring Self-intersection[625379.556900001 2370558.6543 0]
-Record 10 repaired for HEE
-   Initial HEE crs is NAD83 / UTM zone 4N
+Checking HEE at 2021-09-27 13:47:45
+   Initial HEE crs is WGS 84
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/HEE/qa_HEE_RB_2017.shp
+
+
+--------------------------
+Checking HUD at 2021-09-27 13:47:46
+   Initial HUD crs is NAD83 / UTM zone 18N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/HUD/qa_HUD_RB_1998.shp
+
+
+--------------------------
+Checking JAC at 2021-09-27 13:47:46
+   Initial JAC crs is NAD83 / UTM zone 18N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/JAC/qa_JAC_RB_2008.shp
+
+
+--------------------------
+Checking JOB at 2021-09-27 13:47:54
+   Initial JOB crs is NAD83 / Puerto Rico & Virgin Is.
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/JOB/qa_JOB_RB_2006.shp
+
+
+--------------------------
+Checking KAC at 2021-09-27 13:47:55
+   Initial KAC crs is Alaska_Albers_Equal_Area_Conic
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/KAC/qa_KAC_RB_1999.shp
+
+
+--------------------------
+Checking LKS at 2021-09-27 13:47:56
+   Initial LKS crs is NAD83(HARN) / Wisconsin Transverse Mercator
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/LKS/qa_LKS_RB_2010.shp
+
+
+--------------------------
+Checking MAR at 2021-09-27 13:47:57
+   Initial MAR crs is WGS 84
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/MAR/qa_MAR_RB_2021_dle.shp
+
+
+--------------------------
+Checking NAR at 2021-09-27 13:47:57
+   Bad shapefile for NAR, record 2
+Ring Self-intersection[373549.763175068 200726.557248611]
+Record 2 repaired for NAR
+   Initial NAR crs is NAD83 / Rhode Island (ftUS)
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/NAR/qa_NAR_RB_2008.shp
+
+
+--------------------------
+Checking NIW at 2021-09-27 13:47:59
+   Bad shapefile for NIW, record 2
+Ring Self-intersection[668793.103759766 3692226.83660889]
+Record 2 repaired for NIW
+   Initial NIW crs is NAD83 / UTM zone 17N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/NIW/qa_NIW_RB_2010.shp
+
+
+--------------------------
+Checking NOC at 2021-09-27 13:48:00
+   Initial NOC crs is NAD83 / North Carolina (ftUS)
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/NOC/qa_NOC_RB_2006.shp
+
+
+--------------------------
+Checking OWC at 2021-09-27 13:48:00
+   Initial OWC crs is NAD83 / Ohio North (ftUS)
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/OWC/qa_OWC_RB_2009.shp
+
+
+--------------------------
+Checking PDB at 2021-09-27 13:48:01
+   Initial PDB crs is NAD83(HARN) / Washington North (ftUS)
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/PDB/qa_PDB_RB_1999.shp
+
+
+--------------------------
+Checking RKB at 2021-09-27 13:48:02
+   Initial RKB crs is NAD83 / UTM zone 17N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/RKB/qa_RKB_RB_2011.shp
+
+
+--------------------------
+Checking SAP at 2021-09-27 13:48:02
+   Initial SAP crs is NAD83 / UTM zone 17N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/SAP/qa_SAP_RB_1994.shp
+
+
+--------------------------
+Checking SFB at 2021-09-27 13:48:03
+   Initial SFB crs is Albers Conical Equal Area
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/SFB/qa_SFB_RB_2009.shp
+
+
+--------------------------
+Checking SOS at 2021-09-27 13:48:04
+   Initial SOS crs is WGS 84 / UTM zone 10N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/SOS/qa_SOS_RB_2008.shp
+
+
+--------------------------
+Checking TJR at 2021-09-27 13:48:04
+   Initial TJR crs is WGS 84
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/TJR/qa_TJR_RB_2021_dle.shp
+
+
+--------------------------
+Checking WEL at 2021-09-27 13:48:05
+   Bad shapefile for WEL, record 31
+Ring Self-intersection[372904.750006683 4796157.99999588]
+Record 31 repaired for WEL
+   Initial WEL crs is NAD83 / UTM zone 19N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/WEL/qa_WEL_RB_2006.shp
+
+
+--------------------------
+Checking WKB at 2021-09-27 13:48:07
+   Initial WKB crs is NAD83 / UTM zone 16N
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/WKB/qa_WKB_RB_2007.shp
+
+
+--------------------------
+Checking WQB at 2021-09-27 13:48:08
+   Initial WQB crs is WGS 84
+   Saving good shapefile as 
+       ../00_Annual_Update/Reserve_level_template/inst/gis/WQB/qa_WQB_RB_2021_dle.shp
+QA/QC successful.  Writing csv file of county intersections.
+
+Output successfully written.  QA/QC complete.
