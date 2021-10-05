@@ -24,7 +24,7 @@ Start-Transcript -path $proc_log -append
 
 # $previous_year_path = "C:\tmp\2018_reserves" # Absolute path for old site directories
 # $data_path = "C:\SWMP\CDMO_V2\00_Data"    # Absloute path to data directory, where all
-$previous_year_path = "E:\SWMP\2018_reserves" # Absolute path for old site directories
+$old_zip_dir = "E:\SWMP\2018_reserves" # Absolute path for ZIPPED old site directories
 $data_path = "E:\SWMP\data2019\swmp_data_archives"    # Absolute path to data directory, where all
                                           # reserve data are kept
 
@@ -54,6 +54,7 @@ $nat_folder_local = "01_National_Report"    # local National template folder to 
 $nat_folder = "$root\$nat_folder_local"    # full path National template folder to move result files to
 $dist_folder = "$root\01_Zipped_distrib_files"
 $work_folder = "$root\01_Reserve_working_files"
+$previous_year_path= "$root\01_last_years_extracted_files"
 $hout_folder = "handoff_files"				# Subfolder in reserve folder to retrieve result files from
 
 # Define temporary variables and intialize as needed
@@ -111,6 +112,16 @@ $Rlines = New-Object System.Collections.ArrayList
 #[void]$Rlines.Add("source('R/00_load_global_decisions_variables.R')")
 [void]$Rlines.Add("source('R/01_Load_Wrangle_Run.R')")
 [void]$Rlines.Add("closeAllConnections()")
+
+#-----------------------------------------------------------------------
+# Run R program to extract all needed files from zipped archives:
+#-----------------------------------------------------------------------
+$dest_dir_root = previous_year_path
+# Run script:
+Set-Location $nat_folder
+$Rcommand = "R.exe --vanilla -f '$root\00_Additional_Materials\src\move_old_report_files.R'"
+Invoke-Expression $Rcommand
+
 
 #-----------------------------------------------------------------------
 # Process reserve sites & run reserve analyses:
