@@ -18,7 +18,7 @@ using <- function(...) {
   }
 }
 
-pkg_data_wrangle <- c('broom', 'lubridate', 'openxlsx', 'readxl')
+pkg_data_wrangle <- c('broom', 'janitor', 'lubridate', 'openxlsx', 'readxl')
 
 pkg_analysis <- c('EnvStats', 'ggthemes', 'RColorBrewer')
 
