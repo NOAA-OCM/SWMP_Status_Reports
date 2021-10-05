@@ -26,7 +26,10 @@ good_reserve_updates_path <- "C:/SWMP/2020_QAQC_reserve_var_sheets"
 # the qaqc_gis.R process
 gis_final_base <- "../00_Annual_Update/Reserve_level_template/inst/gis"
 
+# Location for data files.  Beginning year will be taken from available data.
 #
+data_dir <- "d:/SWMP/data2020"
+
 # Functions ----
 #
 check_make_dir <- function(fname) {
@@ -99,14 +102,18 @@ sheets <- c('Flags', 'Years_of_Interest', 'Seasons', 'Mapping',
 
 min_rows <- c(5, 2, 13, 5, 11, 21, 21, 21)
 min_cols <- c(1, 2,  7, 6,  2,  6, 14,  5)
-
-# Begin testing
+flags <- c("0","3", "5", "<-4> \\[SBL\\]", "1")
+windTF <- c("Convert winds from m/s to mph?", "T")
+Free_Y <- c("T","T","F", "T","T","F", "T","T","T", "T","T","F", "F",
+            "T","T","T","T","T","T","T","T")   
+# Begin testing ----
 # 
 
 msg <- paste0("Begin check at ", Sys.time())
 write.table(msg, report_file, col.names = FALSE,
             row.names = FALSE, quote = FALSE, append = FALSE)
 
+# Workbook loop ----
 for(wb_name in site_files) {
   print(wb_name)
   xl_path <- paste0(reserve_updates_path, "/", wb_name)
@@ -125,21 +132,62 @@ for(wb_name in site_files) {
     wks <- (read.xlsx(xl_path, sheet) )
     wks <- remove_empty(wks, which = "rows")
     if(nrow(wks) < min_rows[i]) {
-      good_sheets <- FALSE
-      msg <- paste0("! -- Missing rows on sheet *", sheet,
-                    "*, has ", nrow(wks), " needs ", min_rows[i])
+      if(i == 1) {
+        # Needs 1 flag ----
+        wks <- rbind(wks, "1")
+        writeData(wb, sheet = "Flags", wks, rowNames = FALSE)
+        msg <- paste0("  -- Missing rows on sheet *", sheet,
+                      "*, has ", nrow(wks)-1, " needs ", min_rows[i], 
+                      "\n      * 1 flag added")
+      } else {
+        if(i == 5) {
+          # wIND t/f ROW NEEDED ----
+          wks <- rbind(wks, windTF)
+          writeData(wb, sheet = "Bonus_Settings", wks, rowNames = FALSE)
+          msg <- paste0("  -- Missing rows on sheet *", sheet,
+                        "*, has ", nrow(wks)-1, " needs ", min_rows[i], 
+                        "\n      * Wind T/F row added")
+        } else {
+          good_sheets <- FALSE
+          msg <- paste0("! -- Missing rows on sheet *", sheet,
+                        "*, has ", nrow(wks), " needs ", min_rows[i])
+        }
+      }
       # print(msg)
       write.table(msg, report_file, col.names = FALSE,
                   row.names = FALSE, quote = FALSE, append = TRUE)
     }
     if(ncol(wks) < min_cols[i]) {
-      good_sheets <- FALSE
-      msg <- paste0("! -- Missing columns on sheet *", sheet,
-                    "*, has ", ncol(wks), " needs ", min_cols[i])
+      if(i == 6) {
+        # Free_Y needed ----
+        wks <- cbind(wks, Free_Y)
+        writeData(wb, sheet = sheet, wks, rowNames = FALSE)
+        msg <- paste0("  -- Missing columns on sheet *", sheet,
+                      "*, has ", ncol(wks)-1, " needs ", min_cols[i],
+                      "\n      * Free_Y column added")
+        
+      } else {
+        good_sheets <- FALSE
+        msg <- paste0("! -- Missing columns on sheet *", sheet,
+                      "*, has ", ncol(wks), " needs ", min_cols[i])
+      }
       # print(msg)
       write.table(msg, report_file, col.names = FALSE,
                   row.names = FALSE, quote = FALSE, append = TRUE)
     }
+    
+    # Find years ----
+    if(i == 2) {
+      res_abb <- tolower(substr(wb_name, 34, 36))
+      years_avail <- list.files(data_dir, pattern = res_abb) %>% 
+        str_sub(-8, -5) %>% 
+        range(na.rm = TRUE)
+      wks[ ,1] <- c(max(2000, years_avail[1]), test_year)
+      wks[1, 2] <- test_year
+      writeData(wb, sheet = "Years_of_Interest", wks, rowNames = FALSE)
+    }
+    
+    
     # Compare bounding boxes given vs. shapefile bounding boxes ----
     
     
@@ -168,9 +216,9 @@ for(wb_name in site_files) {
         if(substr(msg2,4,4) == "!"){
           newbb1 <- buff_bb(res_spatial, 0.20)
         } else
-        if(substr(msg3,4,4) == "!"){
-          newbb2 <- buff_bb(res_spatial, 0.10)
-        }
+          if(substr(msg3,4,4) == "!"){
+            newbb2 <- buff_bb(res_spatial, 0.10)
+          }
         # wb <- loadWorkbook(xl_path)
         if(!is.null(newbb1)) {
           wks[ , 1] <- c(round(newbb1, 4), rep(NA, length(wks[ , 1]) - 4))
