@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>NOAA Coastal Services Center</origin>
+				<pubdate>19990215</pubdate>
+				<title>Padilla Bay National Estuarine Research Reserve Boundary</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<pubinfo>
+					<pubplace>Charleston, South Carolina</pubplace>
+					<publish>NOAA Coastal Services Center</publish>
+				</pubinfo>
+				<othercit>none</othercit>
+				<onlink>http://www.csc.noaa.gov</onlink>
+				<lworkcit>
+					<citeinfo>
+						<origin>NOAA Coastal Services Center</origin>
+						<pubdate>19990215</pubdate>
+						<title>Protected Areas Geographic Information System</title>
+						<pubinfo>
+							<pubplace>Charleston, South Carolina</pubplace>
+							<publish>NOAA Coastal Services Center</publish>
+						</pubinfo>
+						<onlink>http://www.csc.noaa.gov/pagis</onlink>
+					</citeinfo>
+				</lworkcit>
+				<ftname Sync="TRUE">PDBNERRboundary</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>The Padilla Bay National Estuarine Research Reserve (NERR) digital boundary was created as part of the Protected Areas Geographic Information System (PAGIS) project. An updated digital version of Padilla Bay's boundary was critical to the PAGIS project. The digital boundary was delineated from management and research areas within the Reserve. It was not based on legal definitions. See "Data Quality" field for more details on boundary delineation.</abstract>
+			<purpose>The PAGIS project provided each NERR with a fully integrated geographic information system (GIS), encompassing spatial data and Internet capabilities. One of the essential GIS data layers being compiled for each Reserve was a digital boundary. The Reserve boundary was delineated based on management and research areas and is not meant to be a legal description of the Reserve.</purpose>
+			<supplinf>This boundary is not to be taken as a legal definition of the NERR boundary. It was created based on management and research areas of the Reserve.</supplinf>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<rngdates>
+					<begdate>19980918</begdate>
+					<enddate>19990211</enddate>
+				</rngdates>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>Unknown</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-122.562095</westbc>
+				<eastbc Sync="TRUE">-122.465210</eastbc>
+				<northbc Sync="TRUE">48.575524</northbc>
+				<southbc Sync="TRUE">48.446926</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">1221922.175962</leftbc><rightbc Sync="TRUE">1244398.369708</rightbc><bottombc Sync="TRUE">532493.402026</bottombc><topbc Sync="TRUE">578928.754273</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>Boundary</themekey>
+				<themekey>Estuary</themekey>
+				<themekey>geographic information systems</themekey>
+				<themekey>GIS</themekey>
+				<themekey>National Estuarine Research Reserves</themekey>
+				<themekey>NERR</themekey>
+				<themekey>PAGIS</themekey>
+			</theme>
+			<place>
+				<placekt>None</placekt>
+				<placekey>United States</placekey>
+				<placekey>Northwest</placekey>
+				<placekey>Washington</placekey>
+				<placekey>Padilla Bay</placekey>
+			</place>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>NOT FOR LEGAL USE</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>NOAA Coastal Services Center</cntorg>
+					<cntper>PAGIS Specialist</cntper>
+				</cntorgp>
+				<cntpos>GIS Specialist</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>2234 South Hobson Ave</address>
+					<city>Charleston</city>
+					<state>South Carolina</state>
+					<postal>29405</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>800-789-2234</cntvoice>
+				<cntfax>843-740-1224</cntfax>
+				<cntemail>gis@csc.noaa.gov</cntemail>
+				<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+			</cntinfo>
+		</ptcontac>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3000</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>All attributes created during the creation process were verified by displaying the lines in both the database and the spatial coverage, but no formal tests were performed.</attraccr>
+		</attracc>
+		<logic>These data are believed to be logically consistent, though no tests were performed. Polygon geometry is topologically clean.</logic>
+		<complete>The boundary of the Reserve is dependent on the shoreline and/or edges of rivers and bays as delineated on a USGS 7.5 minute Topographic Map. The edges or borders of the boundary might change as the natural land changes or better maps and aerial photography become available. The boundary was not based on legal parcels or definitions; therefore, the core boundary is a management/research boundary not a legal boundary.</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>The data were created by delineating the boundary off a USGS 7.5 minute Topographic Map at 1:24000 scale.
+Therefore, the horizontal accuracy is assumed to be within National Map Accuracy Standards, with a horizontal accuracy of 45.6 feet at the 95% confidence level.</horizpar>
+			</horizpa>
+			<vertacc>
+				<vertaccr>The data were delineated off a USGS 7.5 minute Topographic Map at 1:24000 scale. Therefore, the vertical accuracy is assumed to be within National Map Accuracy Standards, with a vertical accuracy of 11.9 feet at the 95% confidence level.</vertaccr>
+			</vertacc>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<origin>NOAA Coastal Services Center</origin>
+						<pubdate>19990215</pubdate>
+						<title>Padilla Bay National Estuarine Research Reserve</title>
+						<geoform>map</geoform>
+						<pubinfo>
+							<pubplace>Charleston, South Carolina</pubplace>
+							<publish>NOAA Coastal Services Center</publish>
+						</pubinfo>
+						<othercit>none</othercit>
+						<onlink>http://www.csc.noaa.gov</onlink>
+						<lworkcit>
+							<citeinfo>
+								<origin>NOAA Coastal Services Center</origin>
+								<pubdate>19990215</pubdate>
+								<title>Protected Areas Geographic Information System</title>
+								<pubinfo>
+									<pubplace>Charleston, South Carolina</pubplace>
+									<publish>NOAA Coastal Services Center</publish>
+								</pubinfo>
+								<onlink>http://www.csc.noaa.gov/pagis</onlink>
+							</citeinfo>
+						</lworkcit>
+					</citeinfo>
+				</srccite>
+				<srcscale>24000</srcscale>
+				<typesrc>USGS topographic map</typesrc>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+							<begdate>19980918</begdate>
+							<enddate>19990211</enddate>
+						</rngdates>
+					</timeinfo>
+					<srccurr>unknown</srccurr>
+				</srctime>
+				<srccitea>none</srccitea>
+				<srccontr>NOAA Coastal Services Center was the original creator of the dataset.</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>Since no previous digital boundary existed for Padilla Bay, one had to be created. A USGS 7.5 minute topographic map was sent to the Reserve as a reference map. The Reserve then delineated their boundary by drawing on the printed map. The printed map was then sent back to the NOAA Coastal Services Center and a digital file was created. The digital file was created with on-screen digitization with the USGS topographic map as the backdrop. The polygon coverage was then attributed and then projected to the final projection used by the individual Reserve.</procdesc>
+				<procdate>19980918</procdate>
+				<proccont>
+					<cntinfo>
+						<cntperp>
+							<cntper>PAGIS Specialist</cntper>
+							<cntorg>NOAA Coastal Services Center</cntorg>
+						</cntperp>
+						<cntpos>GIS Specialist</cntpos>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>2234 South Hobson Ave</address>
+							<city>Charleston</city>
+							<state>South Carolina</state>
+							<postal>29405</postal>
+							<country>USA</country>
+						</cntaddr>
+						<cntvoice>800-789-2234</cntvoice>
+						<cntfax>843-740-1224</cntfax>
+						<cntemail>gis@csc.noaa.gov</cntemail>
+						<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\SSUZ461\LOCALS~1\Temp\xml8A.tmp</srcused><procdate Sync="TRUE">20081015</procdate><proctime Sync="TRUE">11203900</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">C:\ACE_GIS_projects\NERRS_GIS_Data\Padilla_Bay\PDBNERRboundary</srcused><procdate Sync="TRUE">20090513</procdate><proctime Sync="TRUE">10204700</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">Z:\MB7\Projects\SITB\NERRS_Clement\CDMO Transfer\Bundled_boundaries\Bundled_boundaries\PDBNERRboundary</srcused><procdate Sync="TRUE">20091016</procdate><proctime Sync="TRUE">09261000</proctime></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="PDBNERRboundary">
+				<sdtstype Sync="TRUE">G-polygon</sdtstype>
+				<ptvctcnt Sync="TRUE">7</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="PDBNERRboundary"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">7</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.000000</absres>
+						<ordres Sync="TRUE">0.000000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">survey feet</plandu>
+				</planci>
+				<mapproj><mapprojn Sync="TRUE">Lambert Conformal Conic</mapprojn><lambertc><stdparll Sync="TRUE">47.500000</stdparll><stdparll Sync="TRUE">48.733333</stdparll><longcm Sync="TRUE">-120.833333</longcm><latprjo Sync="TRUE">47.000000</latprjo><feast Sync="TRUE">1640416.666667</feast><fnorth Sync="TRUE">0.000000</fnorth></lambertc></mapproj></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">D_North_American_1983_HARN</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_North_American_1983_HARN</geogcsn><projcsn Sync="TRUE">NAD_1983_HARN_StatePlane_Washington_North_FIPS_4601_Feet</projcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="PDBNERRboundary">
+			<attr>
+				<attrlabl>Name</attrlabl>
+				<attrdef>Name of Estuarine Reserve</attrdef>
+				<attrdefs>none</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>PDB</edomv>
+						<edomvd>Padilla Bay Nation Estuarine Research Reserve</edomvd>
+						<edomvds>none</edomvds>
+					</edom>
+					<udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>Zones</attrlabl>
+				<attrdef>Areas within the Reserve boundary</attrdef>
+				<attrdefs>none</attrdefs>
+				<attrdomv>
+					<edom>
+						<edomv>BUFFER</edomv>
+						<edomvd>Buffer area outside of core Reserve area</edomvd>
+						<edomvds>none</edomvds>
+					</edom>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv>
+				<attrdomv>
+					<edom>
+						<edomv>CORE</edomv>
+						<edomvd>Core or main part of Reserve boundary area</edomvd>
+						<edomvds>none</edomvds>
+					</edom>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv>
+				<attrdomv>
+					<edom>
+						<edomv>EXCLUDED</edomv>
+						<edomvd>Any excluded areas within the Reserve boundary</edomvd>
+						<edomvds>none</edomvds>
+					</edom>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv>
+				<attrdomv>
+					<edom>
+						<edomv>STATE PARK</edomv>
+						<edomvd>State Park lands within the Reserve boundary</edomvd>
+						<edomvds>none</edomvds>
+					</edom>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv>
+				<attrdomv>
+					<edom>
+						<edomv>UPLANDS</edomv>
+						<edomvd>Upland land within the Reserve boundary</edomvd>
+						<edomvds>none</edomvds>
+					</edom>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv>
+				<attrdomv>
+					<edom>
+						<edomv>UPLANDS DEMONSTRATION FARM</edomv>
+						<edomvd>Upland land designated a demonstration farm within the Reserve boundary</edomvd>
+						<edomvds>none</edomvds>
+					</edom>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv>
+				<attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr><attrlabl Sync="TRUE">AREA</attrlabl><attalias Sync="TRUE">AREA</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">5</atnumdec></attr><attr><attrlabl Sync="TRUE">Shape</attrlabl><attalias Sync="TRUE">PERIMETER</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv><atprecis Sync="TRUE">18</atprecis><attscale Sync="TRUE">5</attscale></attr><enttyp>
+				<enttypl Sync="TRUE">PDBNERRboundary</enttypl>
+				<enttypd>Polygon Attribute Table</enttypd>
+				<enttypds>None</enttypds>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">7</enttypc></enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">PDBNERRST_</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">11</attwidth><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv><atprecis Sync="TRUE">11</atprecis><attscale Sync="TRUE">0</attscale></attr><attr>
+				<attrlabl>Area</attrlabl>
+				<attrdef>Area of polygon</attrdef>
+				<attrdefs>Software generated</attrdefs>
+				<attrdomv>
+					<udom>Software computed</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">PDBNERRST1</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">11</attwidth><atprecis Sync="TRUE">11</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>Perimeter</attrlabl>
+				<attrdef>Perimeter of polygon</attrdef>
+				<attrdefs>Software generated</attrdefs>
+				<attrdomv>
+					<udom>Software computed</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr><attrlabl Sync="TRUE">PERIMETER</attrlabl><attalias Sync="TRUE">ZONES</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">5</atnumdec></attr><attr><attrlabl Sync="TRUE">PDBNERRST_</attrlabl><attalias Sync="TRUE">PDBNERRST_</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth></attr><attr><attrlabl Sync="TRUE">PDBNERRST1</attrlabl><attalias Sync="TRUE">PDBNERRST1</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth></attr><attr><attrlabl Sync="TRUE">NAME</attrlabl><attalias Sync="TRUE">NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">4</attwidth></attr><attr><attrlabl Sync="TRUE">ZONES</attrlabl><attalias Sync="TRUE">ZONES</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">50</attwidth></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>NOAA Coastal Services Center</cntorg>
+					<cntper>PAGIS Specialist</cntper>
+				</cntorgp>
+				<cntpos>GIS Specialist</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>2234 South Hobson Ave</address>
+					<city>Charleston</city>
+					<state>South Carolina</state>
+					<postal>29405</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>800-789-2234</cntvoice>
+				<cntfax>843-740-1224</cntfax>
+				<cntemail>gis@csc.noaa.gov</cntemail>
+				<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+			</cntinfo>
+		</distrib>
+		<resdesc>
+The Estuarine Research Reserve boundary was compiled as
+part of the PAGIS project.
+</resdesc>
+		<distliab>
+Users must assume responsibility to determine the
+appropriate use of these data.
+The boundary is not to be used for a LEGAL definition.
+"Be aware that there are and will continue to be private
+ownership within the proposed boundaries of the NERR.
+Please contact the Reserve Offices if more detailed
+information is required"
+</distliab>
+		<custom>
+Contact NOAA Coastal Services Center PAGIS Specialist for a
+printed copy of the boundary map or for an ESRI coverage or
+shapefile of the boundary.
+</custom>
+		<stdorder><digform><digtinfo><transize Sync="TRUE">0.007</transize><dssize Sync="TRUE">0.007</dssize></digtinfo></digform></stdorder></distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20091016</metd>
+		<metrd>19990215</metrd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>NOAA Coastal Services Center</cntorg>
+					<cntper>Metadata Specialist</cntper>
+				</cntorgp>
+				<cntpos>Metadata Specialist</cntpos>
+				<cntaddr>
+					<addrtype>Mailing and physical address</addrtype>
+					<address>2234 South Hobson Ave</address>
+					<city>Charleston</city>
+					<state>South Carolina</state>
+					<postal>29405</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>800-789-2234</cntvoice>
+				<cntfax>843-740-1224</cntfax>
+				<cntemail>metadata@csc.noaa.gov</cntemail>
+				<hours>Monday-Friday, 8am-5pm, Eastern Standard Time</hours>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<langmeta Sync="TRUE">en</langmeta><mettc Sync="TRUE">local time</mettc><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><CreaDate>20091016</CreaDate><CreaTime>09261000</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20091016</SyncDate><SyncTime>09262400</SyncTime><ModDate>20091016</ModDate><ModTime>09262400</ModTime><MetaID>{B111D15C-7C11-4ACB-A0D0-940331AEAA1D}</MetaID></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3000</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">PDBNERRboundary</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">1221922.175962</westBL><eastBL Sync="TRUE">1244398.369708</eastBL><northBL Sync="TRUE">578928.754273</northBL><southBL Sync="TRUE">532493.402026</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-122.562095</westBL><eastBL Sync="TRUE">-122.46521</eastBL><northBL Sync="TRUE">48.575524</northBL><southBL Sync="TRUE">48.446926</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\AAMB-L-1766140\C\LandCover\forCDMO\PDB\Boundaries\Reserve_Boundaries\PDBNERRboundary.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">0.007</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">NAD_1983_HARN_StatePlane_Washington_North_FIPS_4601_Feet</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="PDBNERRboundary"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">7</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20091016</mdDateSt></metadata>

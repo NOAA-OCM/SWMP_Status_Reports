@@ -1,0 +1,70 @@
+/3.1
+(ODB.1
+FirstRootClassName:	"Legend"
+Roots:	2
+Version:	31
+)
+(Legend.2
+	SymType:	0x02
+	LegType:	0x01
+	ClassType:	0x03
+	Symbols:	3
+	StdDevs:	1.00000000000000
+	NullSym:	10
+	NullValues:	14
+	StatValues:	15
+	Precision:	-3
+)
+(SymList.3
+	Child:	4
+)
+(BShSym.4
+	Color:	5
+	Outline:	1
+	OutlineColor:	6
+	OutlineWidth:	0.000000
+	BgColor:	7
+)
+(TClr.5
+
+	Green:	0xdc00
+	Blue:	0xdb00
+)
+(TClr.6
+
+	Green:	0xff
+	Blue:	0xff
+)
+(TClr.7
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+(LClass.8
+	IsNoData:	1
+	Label:	"No Data"
+	MaxNum:	-1.00000000000000
+	Precision:	-3
+)
+(BShSym.9
+	Color:	10
+	Outline:	1
+	OutlineColor:	11
+	OutlineWidth:	0.10000000000000
+	BgColor:	12
+)
+(TClr.10
+	Name:	"Transparent"
+)
+(TClr.11
+	Name:	"Transparent"
+)
+(TClr.12
+	Red:	0xffff
+	Green:	0xffff
+	Blue:	0xffff
+)
+(NameDict.13
+)
+(NameDict.14
+)

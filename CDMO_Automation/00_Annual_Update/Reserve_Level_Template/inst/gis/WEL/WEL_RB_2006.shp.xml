@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Susan Bickford</origin>
+				<pubdate>October 1, 2008</pubdate>
+				<title Sync="TRUE">WELNERRboundary_2006</title>
+				<edition>version 1</edition>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<ftname Sync="TRUE">WELNERRboundary_2006</ftname><onlink Sync="TRUE">\\AAMB-L-1766140\C\LandCover\forCDMO\WEL\Boundaries\Reserve_Boundaries\WELNERRboundary_2006</onlink></citeinfo>
+		</citation>
+		<descript>
+			<abstract>This is the boundary of the Wells National Estuarine Research Reserve located in Wells Maine. The boundary was delineated using polygons from the most current Town of Wells digitized tax parcel layer. These parcels were copied and pasted into the Wells Boundary layer at a scale of 1:12000 and then their individual polygon boundaries were merged to form one Reserve boundary.</abstract>
+			<purpose>It is used to delineate the outer boundary of the Wells National Estuarine Research Reserve</purpose>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>October 1, 2008</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>ground condition</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-70.598414</westbc>
+				<eastbc Sync="TRUE">-70.537557</eastbc>
+				<northbc Sync="TRUE">43.347074</northbc>
+				<southbc Sync="TRUE">43.262840</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">370448.937428</leftbc><rightbc Sync="TRUE">375212.468745</rightbc><bottombc Sync="TRUE">4791240.346215</bottombc><topbc Sync="TRUE">4800509.000000</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords.</themekt>
+				<themekey>Conservation</themekey>
+				<themekey>Federal</themekey>
+				<themekey>State</themekey>
+				<themekey>Town</themekey>
+				<themekey>Wells National Estuarine Reserch Reserve</themekey>
+				<themekey>Reserve Management Authority</themekey></theme>
+			<place>
+				<placekey>Wells</placekey>
+				<placekey>WNERR</placekey>
+				<placekey>Southern Maine</placekey>
+				<placekey>Maine</placekey>
+				<placekey>Wells National Esutarine Research Reserve</placekey>
+			</place>
+			<temporal>
+				<tempkey>October</tempkey><tempkey>2008</tempkey></temporal>
+		</keywords>
+		<useconst> ALL POLYGONS ARE APPROXIMATE. These polygons are not to be used for any legal matters.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>Susan Bickford</cntper>
+					<cntorg>Wells National Estuarine Research Reserve</cntorg>
+				</cntperp>
+				<cntpos>GIS/Natural Resource Specialist</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>342 Laudholm Farm Road</address>
+					<city>Wells</city>
+					<state>ME</state>
+					<postal>04090</postal>
+					<country>United States of America</country>
+				</cntaddr>
+				<cntvoice>(207) 646-1555</cntvoice>
+				<cntfax>(207) 646-2930</cntfax>
+				<cntemail>suebickford@wellsnerr.org</cntemail>
+			</cntinfo>
+		</ptcontac>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3000</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<dataqual>
+		<attracc>
+		</attracc>
+		<logic>Wells_ME_NERR was created using ArcView 9.2 software from the most recent Wells Tax Parcel map. </logic>
+		<complete>Wells_ME_NERR is current with information as of October 1, 2008</complete>
+		<posacc>
+			<horizpa>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdesc>Parcels were created from the most current Wells Tax Parcel gis layer.</procdesc>
+				<procdate>October 1, 2008</procdate>
+				<proccont>
+					<cntinfo>
+						<cntperp>
+							<cntper>Susan Bickford</cntper>
+							<cntorg>Wells National Estuarine Research Reserve</cntorg>
+						</cntperp>
+						<cntpos>GIS/Natural Resource Specialist</cntpos>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address>342 Laudholm Farm Road</address>
+							<city>Wells</city>
+							<state>ME</state>
+							<postal>04090</postal>
+							<country>United States of America</country>
+						</cntaddr>
+						<cntvoice>(207) 646-1555 x120</cntvoice>
+						<cntfax>(207) 646-2930</cntfax>
+						<cntemail>suesmith@wellsnerr.org</cntemail>
+						<hours>Mon-Thur 8am-4pm EST</hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\ssmith\LOCALS~1\Temp\xml79.tmp</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\ssmith\LOCALS~1\Temp\xml2B.tmp</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused>C:\GISWorkshop\ConservationLand\SoMeConlandSouth</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset moved.</procdesc>
+				<srcused>C:\GISWorkshop\ConlandBackUp\SoMeConlandSouthBK</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused>C:\GISWorkshop\ConservationLand\SoMeConlandSouth</srcused>
+			</procstep>
+			<procstep>
+				<procdesc>Dataset copied.</procdesc>
+				<srcused>H:\GISWorkshop\ConlandBackUp\SoMeConlandSouth_08_08</srcused>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\ssmith\LOCALS~1\Temp\xml31.tmp</srcused><date Sync="TRUE">20081015</date><time Sync="TRUE">13381900</time></procstep><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\ACE_GIS_projects\NERRS_GIS_Data\Wells\WelNERRboundary.shp.xml</srcused><procdate Sync="TRUE">20090415</procdate><proctime Sync="TRUE">14045600</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">C:\ACE_GIS_projects\NERRS_GIS_Data\Wells\WNERRboundary_2006</srcused><procdate Sync="TRUE">20090513</procdate><proctime Sync="TRUE">10245700</proctime></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">I:\MB7\Projects\SITB\NERRS_Clement\CDMO Transfer\Bundled_boundaries\Bundled_boundaries\WELNERRboundary_2006</srcused><procdate Sync="TRUE">20091026</procdate><proctime Sync="TRUE">09293500</proctime></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="WELNERRboundary_2006">
+				<sdtstype Sync="TRUE">G-polygon</sdtstype>
+				<ptvctcnt Sync="TRUE">33</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="WELNERRboundary_2006"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">33</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.000000</absres>
+						<ordres Sync="TRUE">0.000000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+				<gridsys><gridsysn Sync="TRUE">Universal Transverse Mercator</gridsysn><utm><utmzone Sync="TRUE">19</utmzone><transmer><sfctrmer Sync="TRUE">0.999600</sfctrmer><longcm Sync="TRUE">-69.000000</longcm><latprjo Sync="TRUE">0.000000</latprjo><feast Sync="TRUE">500000.000000</feast><fnorth Sync="TRUE">0.000000</fnorth></transmer></utm></gridsys></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">North American Datum of 1983</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><projcsn Sync="TRUE">NAD_1983_UTM_Zone_19N</projcsn></cordsysn></horizsys>
+		<vertdef>
+			<altsys>
+				<altres>0.000010</altres>
+				<altenc>Explicit elevation coordinate included with horizontal coordinates</altenc>
+			</altsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed Name="WELNERRboundary_2006">
+			<enttyp>
+				<enttypl Sync="TRUE">WELNERRboundary_2006</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">33</enttypc></enttyp>
+			<attr>
+				<attrlabl>FID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr><attrlabl Sync="TRUE">DISSOLVE</attrlabl><attalias Sync="TRUE">DISSOLVE</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">50</attwidth></attr><attr><attrlabl Sync="TRUE">COUNT</attrlabl><attalias Sync="TRUE">COUNT</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth></attr><attr><attrlabl Sync="TRUE">ET_ID</attrlabl><attalias Sync="TRUE">ET_ID</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>0.791</transize>
+					<dssize Sync="TRUE">0.058</dssize></digtinfo>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20091026</metd>
+		<metc>
+			<cntinfo>
+				<cntperp>
+					<cntper>Susan A. Bickford</cntper>
+					<cntorg>Wells National Estuarine Research Reserve</cntorg>
+				</cntperp>
+				<cntpos>GIS/Natural Resource Specialist</cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address>342 Laudholm Farm Road</address>
+					<city>Wells</city>
+					<state>ME</state>
+					<postal>04090</postal>
+					<country>United States of America</country>
+				</cntaddr>
+				<cntvoice>(207) 646-1555 x120</cntvoice>
+				<cntfax>(207) 646-2930</cntfax>
+				<cntemail>suesmith@wellsnerr.org</cntemail>
+				<hours>Mon-Thur 8am-4pm</hours>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">en</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><CreaDate>20091026</CreaDate><CreaTime>09293500</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20091026</SyncDate><SyncTime>09284900</SyncTime><ModDate>20091026</ModDate><ModTime>09284900</ModTime><MetaID>{0E8632B6-A3F4-4910-9B9A-4FD2F1F67B45}</MetaID></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3000</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">WELNERRboundary_2006</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">370448.937428</westBL><eastBL Sync="TRUE">375212.468745</eastBL><northBL Sync="TRUE">4800509</northBL><southBL Sync="TRUE">4791240.346215</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-70.598414</westBL><eastBL Sync="TRUE">-70.537557</eastBL><northBL Sync="TRUE">43.347074</northBL><southBL Sync="TRUE">43.26284</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\AAMB-L-1766140\C\LandCover\forCDMO\WEL\Boundaries\Reserve_Boundaries\WELNERRboundary_2006</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">0.058</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">NAD_1983_UTM_Zone_19N</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="WELNERRboundary_2006"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">33</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20091026</mdDateSt></metadata>
