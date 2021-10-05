@@ -32,10 +32,6 @@ wanted <- links[grepl(".csv", links)]
 wanted <- basename(wanted)
 GetMe <- paste(cdmo_url, wanted, sep = "")
 putHere <- paste0(local_dir, (wanted))
-```
-
-
-```{r download_all_files}
 lapply(seq_along(GetMe), 
        function(x) download.file(GetMe[x], putHere[x], mode = "wb"))
 ```

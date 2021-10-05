@@ -19,8 +19,8 @@ suppressPackageStartupMessages({
 # ../../00_Annual_Update/Updated_reserve_var_sheets directory 
 # when they have passed QA/QC.  That should be a cleaner process.
 # 
-reserve_updates_path <- "E:/SWMP/2020_SWMP_Updated_reserve_var_sheets"
-good_reserve_updates_path <- "E:/SWMP/2020_QAQC_reserve_var_sheets"
+reserve_updates_path <- "C:/SWMP/2019_raw_spreadsheets"
+good_reserve_updates_path <- "C:/SWMP/2020_QAQC_reserve_var_sheets"
 
 # Path for shapefiles after they have gone through 
 # the qaqc_gis.R process

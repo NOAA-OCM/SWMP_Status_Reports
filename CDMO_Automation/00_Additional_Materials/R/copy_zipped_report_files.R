@@ -1,6 +1,6 @@
 this_dir <- getwd()
-logout <- file("01_move_files_output.log", open = "wt")
-logmess <- file("01_move_files__message.log", open = "wt")
+logout <- file("01_copy_files_output.log", open = "wt")
+logmess <- file("01_copy_files__message.log", open = "wt")
 sink(logout, append = FALSE, type = "output", split = FALSE)
 sink(logmess, append = FALSE, type = "message", split = FALSE)
 

@@ -127,7 +127,7 @@ $Rlines2 = New-Object System.Collections.ArrayList
 [void]$Rlines2.Add("dest_dir_root = c('" + $previous_year_path_R + "')")
 [void]$Rlines2.Add("Old_zip_dir = c('" + $old_zip_dir_R+ "')")
 [void]$Rlines2.Add("getwd()")
-[void]$Rlines2.Add("source('./00_Additional_Materials/src/move_old_report_files.R')")
+[void]$Rlines2.Add("source('./00_Additional_Materials/src/copy_zipped_report_files.R')")
 [void]$Rlines2.Add("closeAllConnections()")
 
 # Create temporary master script ("temp.R") - must be encoded in UTF-8!:
