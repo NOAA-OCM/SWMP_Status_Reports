@@ -127,7 +127,7 @@ $Rlines2 = New-Object System.Collections.ArrayList
 [void]$Rlines2.Add("dest_dir_root = c('" + $previous_year_path_R + "')")
 [void]$Rlines2.Add("Old_zip_dir = c('" + $old_zip_dir_R+ "')")
 [void]$Rlines2.Add("getwd()")
-[void]$Rlines2.Add("source('./00_Additional_Materials/src/copy_zipped_report_files.R')")
+[void]$Rlines2.Add("source('./00_Additional_Materials/R/copy_zipped_report_files.R')")
 [void]$Rlines2.Add("closeAllConnections()")
 
 # Create temporary master script ("temp.R") - must be encoded in UTF-8!:
@@ -168,13 +168,14 @@ Foreach ($site in $site_lst) {
     } else {
            Write-Output "  *** No $site reserve-specific files from previous year ***"
     }
-
-
+  
     # Copy all  data files for this site to "data" subfolder (force overwrite):
+    if ( -not (Test-Path -Path $"$work_folder\$site\data")) {
+        New-Item -ItemType Directory -Force -Path $"$work_folder\$site\data"
+    }
     Get-ChildItem -Path $data_path -filter "$site*.csv" | Copy-Item -Destination "$work_folder\$site\data" -Force
 
     # Copy any annual updates from the Updated_Reserve_Variables folder and subfolders
-
     #     Copy the reserve plotting spreadsheet if an update exists
     $new_res_vars = "$reserve_updates_path\Reserve_Level_Plotting_Variables_$($site)_$targ_year.xlsx"
     if (Test-Path -Path $new_res_vars) {
@@ -221,10 +222,13 @@ Foreach ($site in $site_lst) {
 
 
     # Move reserve handoff files to national handoff folder:
-	Set-Location $root			#back to main folder
-
-	Copy-Item $work_folder\$site\$hout_folder\* "$nat_folder\$hout_folder\" -Force
-	# Move-Item $root\$site\$hout_folder\* $root\$nat_folder\$hout_folder -Force
+    if (Test-Path $work_folder\$site\$hout_folder\) {
+        Set-Location $root			#back to main folder
+    	Copy-Item $work_folder\$site\$hout_folder\* "$nat_folder\$hout_folder\" -Force
+    	# Move-Item $root\$site\$hout_folder\* $root\$nat_folder\$hout_folder -Force
+    } else {
+        Write-Output "No handoff folder created"
+    }
 	
     # Copy log files to top level all_logs directory
     Copy-Item $work_folder\$site\*.log "$work_folder\all_logs\" -Force
