@@ -31,7 +31,8 @@ res_map <- res_local_map(nerr_site_id = res_abb
                          , shp = res_spatial
                          , station_labs = res_map_station_labels
                          , lab_loc = map_labels
-                         , scale_pos = scale_pos)
+                         # , scale_pos = scale_pos
+                         )
 
 new_dir_result <- check_make_dir(res_map_ttl)
 tmap_save(res_map, file = res_map_ttl, width = 5, height = 5, units = "in")

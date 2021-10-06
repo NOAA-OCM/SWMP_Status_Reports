@@ -137,7 +137,7 @@ $tmpfile = "$($root)\$($Rmaster)"
 # Run master R script:
 $Rcommand = "R.exe --vanilla -f $($tmpfile)"
 Invoke-Expression $Rcommand
-#Remove-Item $tmpfile -Force
+Remove-Item $tmpfile -Force
 
 #-----------------------------------------------------------------------
 # Process reserve sites & run reserve analyses:
@@ -220,10 +220,10 @@ Foreach ($site in $site_lst) {
 
 	Remove-Item $tmpfile -Force
 
+    Set-Location $root			#back to main folder
 
     # Move reserve handoff files to national handoff folder:
     if (Test-Path $work_folder\$site\$hout_folder\) {
-        Set-Location $root			#back to main folder
     	Copy-Item $work_folder\$site\$hout_folder\* "$nat_folder\$hout_folder\" -Force
     	# Move-Item $root\$site\$hout_folder\* $root\$nat_folder\$hout_folder -Force
     } else {

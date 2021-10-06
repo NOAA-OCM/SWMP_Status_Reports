@@ -83,7 +83,9 @@ for(i in 1:length(par)) {
   sk_map <- res_sk_map(nerr_site_id = res_abb, stations = sk_res$station
                        , sk_result = sk_res$sig.trend, bbox = sk_bbox
                        , station_labs = sk_map_station_labels
-                       , scale_pos = scale_pos, lab_loc = par_trend_labs, shp = res_spatial)
+                       # , scale_pos = scale_pos
+                       , lab_loc = par_trend_labs
+                       , shp = res_spatial)
   
   new_dir_result <- check_make_dir(sk_map_ttl)
   ggsave(plot = sk_map, filename = sk_map_ttl, width = 5, height = 5, units = "in")

@@ -109,7 +109,7 @@ sites_to_map <- geographic_unique_stations(sites_to_map)
 sites_to_map <- c(sites_to_map, get_sites('data/') %>% .[grep('met', .)])
 sites_to_map <- sites_to_map[!duplicated(sites_to_map)]
 
-scale_pos <- 'bottomleft'
+scale_pos <- NULL #'bottomleft'
 map_labels <- wb[[3]] %>% .[complete.cases(.)]
 
 wq_trend_labs <- wb[[4]] %>% .[complete.cases(.)]
