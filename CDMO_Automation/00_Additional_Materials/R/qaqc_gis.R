@@ -6,7 +6,7 @@
 # ../../00_Annual_Update/Updated_reserve_var_sheets and the appropriate gis  directory when they have
 # passed QA/QC.  That should be a cleaner process, IMO.
 
-
+# Libraries ----
 suppressPackageStartupMessages({
   library(dplyr)
   library(tidyr)
@@ -20,13 +20,11 @@ suppressPackageStartupMessages({
 options(tigris_use_cache = TRUE)
 tmap_mode("view")
 
+# Path for new data ----
+#--  THIS NEEDS DEFINITION!!
 #
-#--  THESE TWO NEED DEFINITION!!
-#
-reserve_updates_path <- "E:/SWMP/2020_SWMP_Updated_reserve_var_sheets/"
-
 #gis_init_base <- "C:/Users/davee/Downloads/Nerrs_GIS/GIS_Process/"
-gis_init_base <- "E:/Nerrs_GIS/GIS_Process/"
+gis_init_base <- "D:/SWMP/CDMO_GIS_2021/GIS_Process/"
 
 # Internal functions for workflow -----------
 
@@ -52,14 +50,15 @@ county_file <- paste0("check_results/reserve-county_intersections_",test_year,".
 # Get state outlines ------
 #
 
-cnty_raw <- get("us_4269") %>% select(-area)
+cnty_raw <- get("counties_4269") %>% 
+  select(-area) 
 cnty_fips <- tidycensus::fips_codes %>% 
-  transmute(county, state,
+  transmute(county, state, state_fips = state_code,
             county_fips = paste0(state_code, county_code))
 
 cnty_boundaries  <- cnty_raw %>% 
   left_join(cnty_fips, by = 'county_fips') %>% 
-  select(county, state, state_fips, county_fips)
+  select(county, state, county_fips, state_fips)
  
 st_crs(cnty_boundaries) <- 4326  # Set the projection information
 
