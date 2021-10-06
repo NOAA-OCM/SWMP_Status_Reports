@@ -1,0 +1,2 @@
+Copy all reserve data here.
+This will automatically be done with NERRS_run_reserves powershell script.
