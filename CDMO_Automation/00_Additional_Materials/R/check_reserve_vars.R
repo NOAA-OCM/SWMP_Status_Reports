@@ -45,17 +45,17 @@ check_make_dir <- function(fname) {
 buff_bb <- function(gis_shape, percent){
   gis_5072 <- st_transform(gis_shape, crs = 5072) 
   bb_5072 <- st_bbox(gis_5072)
-  buff_dist <- (max(abs(bb_5072[2] - bb_5072[1]),   # Horizontal distance
-                    abs(bb_5072[2] - bb_5072[1])) * # Vertical distance
+  buff_dist <- (max(abs(bb_5072[3] - bb_5072[1]),   # Horizontal distance
+                    abs(bb_5072[4] - bb_5072[2])) * # Vertical distance
                   percent)                          # * percentage%
   buff_5072 <- st_buffer(gis_5072, buff_dist)
-  bb_buff_4092 <- st_bbox(st_transform(buff_5072, crs = 4269))
-  return(bb_buff_4092)
+  bb_buff_4269 <- st_bbox(st_transform(buff_5072, crs = 4269))
+  return(bb_buff_4269)
 }
 # 
 # Make bbox check ----
 # 
-bb_check <- function(xlbbx, gis_shape, percent, bb_buff_4092) { 
+bb_check <- function(xlbbx, gis_shape, percent, bb_buff_4269) { 
   this_bbox <- c(min(xlbbx[1], xlbbx[3]), min(xlbbx[2], xlbbx[4]),
                  max(xlbbx[1], xlbbx[3]), max(xlbbx[2], xlbbx[4]))
   
@@ -67,7 +67,7 @@ bb_check <- function(xlbbx, gis_shape, percent, bb_buff_4092) {
         this_bbox[3] >= gisbbx[3] &  # specified LL-long is correct
         this_bbox[4] >= gisbbx[4])   # specified LL-lat is correct
   ) { 
-    bb_buff_4092 <- buff_bb(gis_shape, percent)
+    bb_buff_4269 <- buff_bb(gis_shape, percent)
     msg <- paste0("   ! -- Bounding_Box ERROR: Specified coordinates of\n",
                   "       ", round(this_bbox[1], 4), ", ", 
                   round(this_bbox[2], 4), " for lower left, and \n", 
@@ -80,10 +80,10 @@ bb_check <- function(xlbbx, gis_shape, percent, bb_buff_4092) {
                   round(gisbbx[4], 4), " for upper right.,\n",
                   "  * --- For a relative ", round(100*percent),
                   "% buffer around shapefile, try: \n",
-                  "       ", round(bb_buff_4092[1], 4), ", ", 
-                  round(bb_buff_4092[2], 4), " for lower left, and \n", 
-                  "       ", round(bb_buff_4092[3], 4), ", ", 
-                  round(bb_buff_4092[4], 4), " for upper right." )
+                  "       ", round(bb_buff_4269[1], 4), ", ", 
+                  round(bb_buff_4269[2], 4), " for lower left, and \n", 
+                  "       ", round(bb_buff_4269[3], 4), ", ", 
+                  round(bb_buff_4269[4], 4), " for upper right." )
     # print(msg)
   } else {
     msg <- paste0("   Bounding box is appropriate." )
