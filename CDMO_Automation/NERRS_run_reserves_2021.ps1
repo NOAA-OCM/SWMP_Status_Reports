@@ -170,8 +170,8 @@ Foreach ($site in $site_lst) {
     }
   
     # Copy all  data files for this site to "data" subfolder (force overwrite):
-    if ( -not (Test-Path -Path $"$work_folder\$site\data")) {
-        New-Item -ItemType Directory -Force -Path $"$work_folder\$site\data"
+    if ( -not (Test-Path -Path "$work_folder\$site\data")) {
+        New-Item -ItemType Directory -Force -Path "$work_folder\$site\data"
     }
     Get-ChildItem -Path $data_path -filter "$site*.csv" | Copy-Item -Destination "$work_folder\$site\data" -Force
 
