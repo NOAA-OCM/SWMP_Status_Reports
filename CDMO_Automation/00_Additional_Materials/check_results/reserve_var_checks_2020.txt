@@ -1,12 +1,16 @@
-Begin check at 2021-10-06 09:23:05
+Begin check at 2021-10-06 16:23:04
 
 Processing: Reserve_Level_Plotting_Variables_ACE_2020.xlsx
   -- Missing rows on sheet *Flags*, has 4 needs 5
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -20,8 +24,12 @@ Processing: Reserve_Level_Plotting_Variables_APA_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -41,8 +49,8 @@ Processing: Reserve_Level_Plotting_Variables_CBM_2020.xlsx
        -76.7307, 38.1861 for lower left, and 
        -75.793, 39.455 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -77.245, 37.7912 for lower left, and 
-       -75.2824, 39.85 for upper right.
+       -77.0359, 37.9518 for lower left, and 
+       -75.49, 39.6894 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -53,8 +61,10 @@ Processing: Reserve_Level_Plotting_Variables_CBM_2020.xlsx
        -76.7307, 38.1861 for lower left, and 
        -75.793, 39.455 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -76.9879, 37.9886 for lower left, and 
-       -75.5377, 39.6525 for upper right.
+       -76.8833, 38.0689 for lower left, and 
+       -75.6415, 39.5722 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -68,8 +78,12 @@ Processing: Reserve_Level_Plotting_Variables_CBV_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -83,8 +97,12 @@ Processing: Reserve_Level_Plotting_Variables_DEL_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -98,8 +116,12 @@ Processing: Reserve_Level_Plotting_Variables_ELK_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -119,8 +141,8 @@ Processing: Reserve_Level_Plotting_Variables_GND_2020.xlsx
        -88.4804, 30.3169 for lower left, and 
        -88.3961, 30.4288 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -88.7146, 30.1144 for lower left, and 
-       -88.1617, 30.6312 for upper right.
+       -88.5075, 30.2935 for lower left, and 
+       -88.369, 30.4523 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -131,8 +153,10 @@ Processing: Reserve_Level_Plotting_Variables_GND_2020.xlsx
        -88.4804, 30.3169 for lower left, and 
        -88.3961, 30.4288 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -88.5975, 30.2157 for lower left, and 
-       -88.2789, 30.53 for upper right.
+       -88.4939, 30.3052 for lower left, and 
+       -88.3826, 30.4405 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -146,8 +170,12 @@ Processing: Reserve_Level_Plotting_Variables_GRB_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -161,8 +189,12 @@ Processing: Reserve_Level_Plotting_Variables_GTM_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -170,6 +202,41 @@ Processing: Reserve_Level_Plotting_Variables_GTM_2020.xlsx
       * Free_Y column added
 Workbook passed QA/QC, copying to 
 D:/SWMP/2020_QAQC_reserve_var_sheets/Reserve_Level_Plotting_Variables_GTM_2020.xlsx
+
+Processing: Reserve_Level_Plotting_Variables_HEE_2020.xlsx
+  -- Missing rows on sheet *Flags*, has 4 needs 5
+      * 1 flag added
+   ---Checking res_bounding_box ---
+   ! -- Bounding_Box ERROR: Specified coordinates of
+       -74.6597, 40.9675 for lower left, and 
+       -73.3173, 42.0003 for upper right.,
+     Do not work for gis geographic limits: 
+       -157.8233, 21.4242 for lower left, and 
+       -157.7861, 21.4478 for upper right.,
+  * --- For a relative 20% buffer around shapefile, try: 
+       -157.8299, 21.4178 for lower left, and 
+       -157.7795, 21.4543 for upper right.
+  New BBOX written to spreadsheet
+
+   ---Checking SK_bounding_box ---
+   ! -- Bounding_Box ERROR: Specified coordinates of
+       -74.0014, 41.9754 for lower left, and 
+       -73.8394, 42.0907 for upper right.,
+     Do not work for gis geographic limits: 
+       -157.8233, 21.4242 for lower left, and 
+       -157.7861, 21.4478 for upper right.,
+  * --- For a relative 10% buffer around shapefile, try: 
+       -157.8266, 21.421 for lower left, and 
+       -157.7828, 21.451 for upper right.
+  New BBOX written to spreadsheet
+
+
+  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
+      * Wind T/F row added
+  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
+      * Free_Y column added
+Workbook passed QA/QC, copying to 
+D:/SWMP/2020_QAQC_reserve_var_sheets/Reserve_Level_Plotting_Variables_HEE_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_HUD_2020.xlsx
   -- Missing rows on sheet *Flags*, has 4 needs 5
@@ -182,8 +249,8 @@ Processing: Reserve_Level_Plotting_Variables_HUD_2020.xlsx
        -73.9861, 41.0139 for lower left, and 
        -73.7632, 42.3618 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -74.9865, 40.2719 for lower left, and 
-       -72.7486, 43.1055 for upper right.
+       -74.3447, 40.7479 for lower left, and 
+       -73.3995, 42.6283 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -194,8 +261,10 @@ Processing: Reserve_Level_Plotting_Variables_HUD_2020.xlsx
        -73.9861, 41.0139 for lower left, and 
        -73.7632, 42.3618 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -74.4863, 40.6429 for lower left, and 
-       -73.2559, 42.7335 for upper right.
+       -74.1654, 40.8809 for lower left, and 
+       -73.5813, 42.495 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -209,8 +278,12 @@ Processing: Reserve_Level_Plotting_Variables_JAC_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -224,8 +297,12 @@ Processing: Reserve_Level_Plotting_Variables_JOB_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -245,8 +322,8 @@ Processing: Reserve_Level_Plotting_Variables_KAC_2020.xlsx
        -151.8877, 59.3399 for lower left, and 
        -150.8928, 59.8218 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -178.8139, 44.0232 for lower left, and 
-       -123.933, 81.0469 for upper right.
+       -152.1216, 59.1959 for lower left, and 
+       -150.6574, 59.9669 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -257,8 +334,10 @@ Processing: Reserve_Level_Plotting_Variables_KAC_2020.xlsx
        -151.8877, 59.3399 for lower left, and 
        -150.8928, 59.8218 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -165.2065, 51.5073 for lower left, and 
-       -137.5496, 68.6241 for upper right.
+       -152.0046, 59.2679 for lower left, and 
+       -150.7751, 59.8943 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -272,8 +351,12 @@ Processing: Reserve_Level_Plotting_Variables_LKS_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -293,8 +376,8 @@ Processing: Reserve_Level_Plotting_Variables_MAR_2020.xlsx
        -97.2866, 27.8322 for lower left, and 
        -96.7638, 28.3191 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -98.6206, 26.6404 for lower left, and 
-       -95.4316, 29.5054 for upper right.
+       -97.3954, 27.7351 for lower left, and 
+       -96.6552, 28.416 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -305,8 +388,10 @@ Processing: Reserve_Level_Plotting_Variables_MAR_2020.xlsx
        -97.2866, 27.8322 for lower left, and 
        -96.7638, 28.3191 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -97.9536, 27.2368 for lower left, and 
-       -96.0978, 28.9127 for upper right.
+       -97.341, 27.7836 for lower left, and 
+       -96.7095, 28.3675 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -326,8 +411,8 @@ Processing: Reserve_Level_Plotting_Variables_NAR_2020.xlsx
        -71.3735, 41.5713 for lower left, and 
        -71.2961, 41.6759 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -72.1329, 41.0106 for lower left, and 
-       -70.5376, 42.2371 for upper right.
+       -71.3987, 41.5527 for lower left, and 
+       -71.2709, 41.6945 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -338,8 +423,10 @@ Processing: Reserve_Level_Plotting_Variables_NAR_2020.xlsx
        -71.3735, 41.5713 for lower left, and 
        -71.2961, 41.6759 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -71.7532, 41.2909 for lower left, and 
-       -70.9168, 41.9564 for upper right.
+       -71.3861, 41.562 for lower left, and 
+       -71.2835, 41.6852 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -353,8 +440,12 @@ Processing: Reserve_Level_Plotting_Variables_NIW_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -374,8 +465,8 @@ Processing: Reserve_Level_Plotting_Variables_NOC_2020.xlsx
        -77.9596, 33.9197 for lower left, and 
        -75.8278, 36.4039 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -78.576, 33.4134 for lower left, and 
-       -75.1915, 36.9088 for upper right.
+       -78.6363, 33.3638 for lower left, and 
+       -75.1292, 36.9582 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -386,8 +477,10 @@ Processing: Reserve_Level_Plotting_Variables_NOC_2020.xlsx
        -77.9596, 33.9197 for lower left, and 
        -75.8278, 36.4039 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -78.2678, 33.6666 for lower left, and 
-       -75.5097, 36.6564 for upper right.
+       -78.298, 33.6418 for lower left, and 
+       -75.4785, 36.6811 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -401,8 +494,12 @@ Processing: Reserve_Level_Plotting_Variables_OWC_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -416,8 +513,12 @@ Processing: Reserve_Level_Plotting_Variables_PDB_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -437,8 +538,8 @@ Processing: Reserve_Level_Plotting_Variables_RKB_2020.xlsx
        -81.7992, 25.8037 for lower left, and 
        -81.4568, 26.0987 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -83.8051, 23.953 for lower left, and 
-       -79.4555, 27.9371 for upper right.
+       -81.874, 25.7349 for lower left, and 
+       -81.3823, 26.1674 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -449,8 +550,10 @@ Processing: Reserve_Level_Plotting_Variables_RKB_2020.xlsx
        -81.7992, 25.8037 for lower left, and 
        -81.4568, 26.0987 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -82.8022, 24.8798 for lower left, and 
-       -80.4564, 27.0191 for upper right.
+       -81.8366, 25.7693 for lower left, and 
+       -81.4196, 26.1331 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -464,8 +567,12 @@ Processing: Reserve_Level_Plotting_Variables_SAP_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -479,8 +586,12 @@ Processing: Reserve_Level_Plotting_Variables_SFB_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -500,8 +611,8 @@ Processing: Reserve_Level_Plotting_Variables_SOS_2020.xlsx
        -124.3418, 43.2661 for lower left, and 
        -124.2683, 43.3162 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -136.3738, 34.611 for lower left, and 
-       -112.234, 52.1089 for upper right.
+       -124.3577, 43.2546 for lower left, and 
+       -124.2524, 43.3277 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -512,8 +623,10 @@ Processing: Reserve_Level_Plotting_Variables_SOS_2020.xlsx
        -124.3418, 43.2661 for lower left, and 
        -124.2683, 43.3162 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -130.3465, 38.9371 for lower left, and 
-       -118.2648, 47.6775 for upper right.
+       -124.3497, 43.2603 for lower left, and 
+       -124.2604, 43.3219 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -533,8 +646,8 @@ Processing: Reserve_Level_Plotting_Variables_TJR_2020.xlsx
        -117.1331, 32.5343 for lower left, and 
        -117.0929, 32.5765 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -124.0504, 26.713 for lower left, and 
-       -110.1782, 38.3441 for upper right.
+       -117.1437, 32.5254 for lower left, and 
+       -117.0823, 32.5853 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -545,8 +658,10 @@ Processing: Reserve_Level_Plotting_Variables_TJR_2020.xlsx
        -117.1331, 32.5343 for lower left, and 
        -117.0929, 32.5765 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -120.5889, 29.6335 for lower left, and 
-       -113.6372, 35.4639 for upper right.
+       -117.1384, 32.5299 for lower left, and 
+       -117.0876, 32.5809 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -560,8 +675,12 @@ Processing: Reserve_Level_Plotting_Variables_WEL_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -581,8 +700,8 @@ Processing: Reserve_Level_Plotting_Variables_WKB_2020.xlsx
        -87.8523, 30.3093 for lower left, and 
        -87.7698, 30.4756 for upper right.,
   * --- For a relative 20% buffer around shapefile, try: 
-       -87.9713, 30.2065 for lower left, and 
-       -87.6508, 30.5783 for upper right.
+       -87.8905, 30.2763 for lower left, and 
+       -87.7316, 30.5086 for upper right.
   New BBOX written to spreadsheet
 
    ---Checking SK_bounding_box ---
@@ -593,8 +712,10 @@ Processing: Reserve_Level_Plotting_Variables_WKB_2020.xlsx
        -87.8523, 30.3093 for lower left, and 
        -87.7698, 30.4756 for upper right.,
   * --- For a relative 10% buffer around shapefile, try: 
-       -87.9118, 30.2579 for lower left, and 
-       -87.7103, 30.527 for upper right.
+       -87.8714, 30.2928 for lower left, and 
+       -87.7507, 30.4921 for upper right.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
@@ -608,8 +729,12 @@ Processing: Reserve_Level_Plotting_Variables_WQB_2020.xlsx
       * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
+  New BBOX written to spreadsheet
+
 
   -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
       * Wind T/F row added
