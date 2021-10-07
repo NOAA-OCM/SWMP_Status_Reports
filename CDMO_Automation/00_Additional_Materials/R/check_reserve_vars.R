@@ -42,13 +42,19 @@ check_make_dir <- function(fname) {
 
 # Calculate new bounding box, buffering gis file by percent % per side
 # 
-buff_bb <- function(gis_shape, percent){
+buff_bb <- function(gis_shape, percent, aspect = 1.0){
   gis_5072 <- st_transform(gis_shape, crs = 5072) 
   bb_5072 <- st_bbox(gis_5072)
-  buff_dist <- (max(abs(bb_5072[2] - bb_5072[1]),   # Horizontal distance
-                    abs(bb_5072[2] - bb_5072[1])) * # Vertical distance
+  xdist <- abs(bbf_5072[3] - bbf_5072[1])
+  buff_dist <- (max(abs(bb_5072[3] - bb_5072[1]),   # Horizontal distance
+                    abs(bb_5072[4] - bb_5072[2])) * # Vertical distance
                   percent)                          # * percentage%
   buff_5072 <- st_buffer(gis_5072, buff_dist)
+  bbf_5072 <- st_bbox(buff_5072)
+  xdist <- abs(bbf_5072[3] - bbf_5072[1])
+  ydist <- abs(bbf_5072[4] - bbf_5072[2])
+  if(xdist > ydist*aspect)
+  
   bb_buff_4092 <- st_bbox(st_transform(buff_5072, crs = 4269))
   return(bb_buff_4092)
 }
@@ -92,6 +98,9 @@ bb_check <- function(xlbbx, gis_shape, percent, bb_buff_4092) {
 }
 
 # Constant declarations ----
+rbb_percent <- 0.30
+sbbpercent <- 0.15
+
 site_files <- (list.files(path = reserve_updates_path, pattern = "xlsx"))
 
 test_year <- 2020
@@ -203,11 +212,11 @@ for(wb_name in site_files) {
       
       #### Reserve bounding box
       res_bbox <- wks[[1]] %>% .[complete.cases(.)]
-      msg2 <- bb_check(res_bbox, res_spatial, 0.20, newbb1) 
+      msg2 <- bb_check(res_bbox, res_spatial, rbb_percent, newbb1) 
       
       #### SK Bounding box
       sk_bbox <- wks[[2]] %>% .[complete.cases(.)]
-      msg3 <- bb_check(sk_bbox, res_spatial, 0.10) 
+      msg3 <- bb_check(sk_bbox, res_spatial, sbb_percent, newbb2) 
       
       
       # If either bbox is incorrect, update it with the buffered one
@@ -215,10 +224,10 @@ for(wb_name in site_files) {
         newbb1 <- NULL
         newbb2 <- NULL
         if(substr(msg2,4,4) == "!"){
-          newbb1 <- buff_bb(res_spatial, 0.20)
+          newbb1 <- buff_bb(res_spatial, rbb_percent)
         } else
           if(substr(msg3,4,4) == "!"){
-            newbb2 <- buff_bb(res_spatial, 0.10)
+            newbb2 <- buff_bb(res_spatial, sbb_percent)
           }
         # wb <- loadWorkbook(xl_path)
         if(!is.null(newbb1)) {
