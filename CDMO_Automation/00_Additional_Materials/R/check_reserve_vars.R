@@ -20,8 +20,8 @@ suppressPackageStartupMessages({
 # when they have passed QA/QC.  That should be a cleaner process.
 # 
 reserve_updates_path <- "C:/SWMP/2019_raw_spreadsheets"
-# reserve_updates_path <- "D:/SWMP/prelim_reserve_var_sheets"
-good_reserve_updates_path <- "D:/SWMP/2020_QAQC_reserve_var_sheets"
+# reserve_updates_path <- "D:/SWMP/2020_QAQC_reserve_var_sheetsV2"
+good_reserve_updates_path <- "D:/SWMP/2020_QAQC_reserve_var_sheetsV3"
 
 # Path for shapefiles after they have gone through 
 # the qaqc_gis.R process
@@ -40,28 +40,59 @@ check_make_dir <- function(fname) {
   }
 }
 
+# Fix aspect ratio ----
+#  aspect is width/height
+fix_aspect <- function(bb, aspect) {
+  newbb <- bb
+  xdist <- abs(bb[3] - bb[1])
+  ydist <- abs(bb[4] - bb[2])
+  # Difference in desired aspect ratio in projected units
+  dist_diff <- (aspect * xdist) - ydist 
+  if(dist_diff < 0) { # Too wide, increase ydist
+    # y_cent <- (bb[4] - bb[2])/2
+    adj <- ((xdist/aspect) - ydist)/2
+    newbb[2] <- bb[2] - adj
+    newbb[4] <- bb[4] + adj
+  } else {                       # Too narrow, increase x
+    adj <- ((ydist*aspect) - xdist)/2
+    newbb[1] <- bb[1] - adj
+    newbb[3] <- bb[3] + adj
+  }
+  # new_aspect <- abs(newbb[3] - newbb[1])/abs(newbb[4] - newbb[2])
+  return(newbb)
+}
+
+# Create polygon from bounding box. ----
+bb_to_poly <- function(bb){
+  pol = st_sfc(st_polygon(
+    list(cbind(c(bb[1],bb[3],bb[3],bb[1],bb[1]),
+               c(bb[2],bb[2],bb[4],bb[4],bb[2])))))
+  pol_sf = st_sf(r = 5, pol)
+  return(pol_sf)
+}
+
 # Calculate new bounding box, buffering gis file by percent % per side
+#  and then enlarged in one dimension to desired to aspect ratio ----
 # 
 buff_bb <- function(gis_shape, percent, aspect = 1.0){
   gis_5072 <- st_transform(gis_shape, crs = 5072) 
   bb_5072 <- st_bbox(gis_5072)
-  xdist <- abs(bbf_5072[3] - bbf_5072[1])
   buff_dist <- (max(abs(bb_5072[3] - bb_5072[1]),   # Horizontal distance
                     abs(bb_5072[4] - bb_5072[2])) * # Vertical distance
                   percent)                          # * percentage%
   buff_5072 <- st_buffer(gis_5072, buff_dist)
-  bbf_5072 <- st_bbox(buff_5072)
-  xdist <- abs(bbf_5072[3] - bbf_5072[1])
-  ydist <- abs(bbf_5072[4] - bbf_5072[2])
-  if(xdist > ydist*aspect)
-  
-  bb_buff_4092 <- st_bbox(st_transform(buff_5072, crs = 4269))
+  bbfixed_5072 <- fix_aspect(st_bbox(buff_5072), aspect)
+  # Make bounding box into a polygon, and project that back into 
+  #  desired projection.
+  fixed_poly <- bb_to_poly(bbfixed_5072)
+  st_crs(fixed_poly) <-  5072
+  bb_buff_4092 <- st_bbox(st_transform(fixed_poly, crs = 4269))
   return(bb_buff_4092)
 }
 # 
 # Make bbox check ----
 # 
-bb_check <- function(xlbbx, gis_shape, percent, bb_buff_4092) { 
+bb_check <- function(xlbbx, gis_shape, percent, aspect = 1) { 
   this_bbox <- c(min(xlbbx[1], xlbbx[3]), min(xlbbx[2], xlbbx[4]),
                  max(xlbbx[1], xlbbx[3]), max(xlbbx[2], xlbbx[4]))
   
@@ -73,7 +104,7 @@ bb_check <- function(xlbbx, gis_shape, percent, bb_buff_4092) {
         this_bbox[3] >= gisbbx[3] &  # specified LL-long is correct
         this_bbox[4] >= gisbbx[4])   # specified LL-lat is correct
   ) { 
-    bb_buff_4092 <- buff_bb(gis_shape, percent)
+    bb_buff_4092 <- buff_bb(gis_shape, percent, aspect)
     msg <- paste0("   ! -- Bounding_Box ERROR: Specified coordinates of\n",
                   "       ", round(this_bbox[1], 4), ", ", 
                   round(this_bbox[2], 4), " for lower left, and \n", 
@@ -99,7 +130,9 @@ bb_check <- function(xlbbx, gis_shape, percent, bb_buff_4092) {
 
 # Constant declarations ----
 rbb_percent <- 0.30
-sbbpercent <- 0.15
+sbb_percent <- 0.15
+force_bb_replacement <- TRUE
+bb_aspect <- 1.0
 
 site_files <- (list.files(path = reserve_updates_path, pattern = "xlsx"))
 
@@ -200,7 +233,6 @@ for(wb_name in site_files) {
     
     # Compare bounding boxes given vs. shapefile bounding boxes ----
     
-    
     if(sheet == "Mapping") {
       res <- str_extract(string = wb_name, pattern = "_..._") %>% 
         substr(2,4)
@@ -212,52 +244,58 @@ for(wb_name in site_files) {
       
       #### Reserve bounding box
       res_bbox <- wks[[1]] %>% .[complete.cases(.)]
-      msg2 <- bb_check(res_bbox, res_spatial, rbb_percent, newbb1) 
+      msg2 <- bb_check(res_bbox, res_spatial, rbb_percent, bb_aspect) 
       
       #### SK Bounding box
       sk_bbox <- wks[[2]] %>% .[complete.cases(.)]
-      msg3 <- bb_check(sk_bbox, res_spatial, sbb_percent, newbb2) 
-      
+      msg3 <- bb_check(sk_bbox, res_spatial, sbb_percent, bb_aspect) 
       
       # If either bbox is incorrect, update it with the buffered one
-      if(substr(msg2,4,4) == "!" | substr(msg3,4,4) == "!"){
+      if(substr(msg2,4,4) == "!" | substr(msg3,4,4) == "!" |
+         force_bb_replacement){
         newbb1 <- NULL
         newbb2 <- NULL
-        if(substr(msg2,4,4) == "!"){
-          newbb1 <- buff_bb(res_spatial, rbb_percent)
-        } else
-          if(substr(msg3,4,4) == "!"){
-            newbb2 <- buff_bb(res_spatial, sbb_percent)
-          }
+        if(substr(msg2,4,4) == "!" | force_bb_replacement){
+          newbb1 <- buff_bb(res_spatial, rbb_percent, bb_aspect)
+        } 
+        if(substr(msg3,4,4) == "!" | force_bb_replacement){
+          newbb2 <- buff_bb(res_spatial, sbb_percent, bb_aspect)
+        }
         # wb <- loadWorkbook(xl_path)
         if(!is.null(newbb1)) {
           wks[ , 1] <- c(round(newbb1, 4), rep(NA, length(wks[ , 1]) - 4))
-          msg2 <- paste0(msg2, "\n  New BBOX written to spreadsheet\n")
+          if(force_bb_replacement){
+            msg2 <- paste0(msg2, "\n  Forced New BBOX written to spreadsheet")
+          }
+          else{
+            msg2 <- paste0(msg2, "\n  New BBOX written to spreadsheet")
+          }
         }
         if(!is.null(newbb2)) {
           wks[ , 2] <- c(round(newbb2, 4), rep(NA, length(wks[ , 2]) - 4))
-          msg3 <- paste0(msg3, "\n  New BBOX written to spreadsheet\n")
+          if(force_bb_replacement){
+            msg3 <- paste0(msg3, "\n  Forced New BBOX written to spreadsheet")
+          }
+          else{
+            msg3 <- paste0(msg3, "\n  New BBOX written to spreadsheet")
+          }
         }
-        writeData(wb, sheet = "Mapping", wks, rowNames = FALSE)
       }
-      
-      
-      msg <- paste0("   ---Checking res_bounding_box ---\n", msg2,"\n",
-                    "   ---Checking SK_bounding_box ---\n", msg3,"\n")
+      writeData(wb, sheet = "Mapping", wks, rowNames = FALSE)
+      msg <- paste0("   ---Checking res_bounding_box ---\n", msg2,
+                    "\n   ---Checking SK_bounding_box ---\n", msg3)
       write.table(msg, report_file, col.names = FALSE,
                   row.names = FALSE, quote = FALSE, append = TRUE)
-      
     }
   }
-  
   #
   # Write out results ----
   # Add sheets that were not used to preserve correct structure
-      wks <- (read.xlsx(xl_path, "Global_Decisions-->") )
-      writeData(wb, sheet = "Global_Decisions-->", wks, rowNames = FALSE)
-      wks <- (read.xlsx(xl_path, "Analyses-->") )
-      writeData(wb, sheet = "Analyses-->", wks, rowNames = FALSE)
-
+  wks <- (read.xlsx(xl_path, "Global_Decisions-->") )
+  writeData(wb, sheet = "Global_DecisionsX-->", wks, rowNames = FALSE)
+  wks <- (read.xlsx(xl_path, "Analyses-->") )
+  writeData(wb, sheet = "AnalysesX-->", wks, rowNames = FALSE)
+  
   if(good_sheets) {
     qaqced_xl_path <- paste0(good_reserve_updates_path, "/", wb_name)    
     msg <- paste0("Workbook passed QA/QC, copying to \n",
@@ -268,7 +306,7 @@ for(wb_name in site_files) {
                   qaqced_xl_path, "")
     
   }
-
+  
   write.table(msg, report_file, col.names = FALSE,
               row.names = FALSE, quote = FALSE, append = TRUE)
   
