@@ -243,10 +243,14 @@ for(wb_name in site_files) {
   
   #
   # Write out results ----
-  # 
+  # Add sheets that were not used to preserve correct structure
+      wks <- (read.xlsx(xl_path, "Global_Decisions-->") )
+      writeData(wb, sheet = "Global_Decisions-->", wks, rowNames = FALSE)
+      wks <- (read.xlsx(xl_path, "Analyses-->") )
+      writeData(wb, sheet = "Analyses-->", wks, rowNames = FALSE)
+
   if(good_sheets) {
-    qaqced_xl_path <- paste0(good_reserve_updates_path, "/", wb_name)
-    
+    qaqced_xl_path <- paste0(good_reserve_updates_path, "/", wb_name)    
     msg <- paste0("Workbook passed QA/QC, copying to \n",
                   qaqced_xl_path)
   } else {
@@ -255,6 +259,7 @@ for(wb_name in site_files) {
                   qaqced_xl_path, "")
     
   }
+
   write.table(msg, report_file, col.names = FALSE,
               row.names = FALSE, quote = FALSE, append = TRUE)
   
