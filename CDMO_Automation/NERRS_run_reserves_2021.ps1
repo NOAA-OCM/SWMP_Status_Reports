@@ -264,7 +264,8 @@ Write-Output "    End of Reserve-level processing error check"
 Write-Output "---------------------------------------------------------"
 Write-Output ""
 
-break  ####   NOTE: Skipping National Processing for now   DLE on 8/31/2020
+# Stop-Transcript
+# break  ####   NOTE: Skipping National Processing for now   DLE on 8/31/2020
 
 #-----------------------------------------------------------------------
 # Run national level analyses (based on reserve-specific output):
