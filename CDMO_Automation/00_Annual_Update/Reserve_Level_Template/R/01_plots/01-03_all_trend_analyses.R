@@ -88,6 +88,6 @@ for(i in 1:length(par)) {
                        , shp = res_spatial)
   
   new_dir_result <- check_make_dir(sk_map_ttl)
-  ggsave(plot = sk_map, filename = sk_map_ttl, width = 5, height = 5, units = "in")
+  tmap_save(sk_map, file = sk_map_ttl, width = 5, height = 5, units = "in")
 }
 message("all_trend_analysis completed")
