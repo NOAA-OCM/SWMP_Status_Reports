@@ -41,7 +41,7 @@ for(i in 1:length(ls_par)) {
     # Determine plot conversion
     converted_par <- ifelse(convert_temp && (par_inst[j] == 'atemp' || par_inst[j] == 'temp'), TRUE,
                             ifelse(convert_wind && (par_inst[j] == 'wspd' || par_inst[j] == 'maxwspd'), TRUE,
-                            ifelse(convert_depth && par_inst[j] == 'depth', TRUE, FALSE)))
+                                   ifelse(convert_depth && par_inst[j] == 'depth', TRUE, FALSE)))
     
     if(is.na(par_threshold[j])) par_threshold[j] <- list(NULL)
     
@@ -68,7 +68,7 @@ for(i in 1:length(ls_par)) {
     message("Creating boxplot_seasonal")
     # Make plot name
     seasonal_box_ttl <- paste('output/', data_type, '/boxplot_seasonal/seasonal_boxplot_', sta, '_', par_inst[j], '_yr.png', sep = '')
-
+    
     seasonal_box <- seasonal_boxplot(dat
                                      , param = par_inst[j]
                                      , hist_rng = year_range
@@ -93,7 +93,7 @@ for(i in 1:length(ls_par)) {
     message("Creating boxplot_seasonal_w_target_yr")
     # Make plot name
     seasonal_yr_box_ttl <- paste('output/', data_type, '/boxplot_seasonal_w_target_yr/seasonal_boxplot_', sta, '_', par_inst[j], '_yr.png', sep = '')
-
+    
     seasonal_yr_box <- seasonal_boxplot(dat
                                         , param = par_inst[j]
                                         , hist_rng = year_range
@@ -113,7 +113,7 @@ for(i in 1:length(ls_par)) {
     # ANNUAL RANGE ----
     message("Creating range_annual")
     annual_rng_ttl <- paste('output/', data_type, '/range_annual/annual_range_', sta, '_', par_inst[j], '_yr.png', sep = '')
-
+    
     annual_range <- annual_range(dat
                                  , param = par[j]
                                  , target_yr = target_year
@@ -135,7 +135,7 @@ for(i in 1:length(ls_par)) {
     message("Creating range_historical_daily")
     if(data_type != 'nut') {
       hist_daily_rng_ttl <- paste('output/', data_type, '/range_historical_daily/historical_daily_', sta, '_', par_inst[j], '_yr.png', sep = '')
-
+      
       hist_daily_rng <- historical_daily_range(dat
                                                , param = par_inst[j]
                                                , hist_rng = year_range
@@ -158,7 +158,7 @@ for(i in 1:length(ls_par)) {
     # HISTORICAL SEASONAL RANGE ----
     message("Creating range_historical_seasonal")
     hist_seas_rng_ttl <- paste('output/', data_type, '/range_historical_seasonal/historical_seasonal_', sta, '_', par_inst[j], '.png', sep = '')
-
+    
     hist_seas_rng <- historical_range(dat
                                       , param = par_inst[j]
                                       , hist_rng = year_range
@@ -183,7 +183,7 @@ for(i in 1:length(ls_par)) {
       # THRESHOLD PLOTS for TARGET YEAR ----
       message("Creating threshold_criteria for target year")
       threshold_yr_ttl <- paste('output/', data_type, '/threshold_criteria/threshold_criteria_plot_', sta, '_', par_inst[j], '_yr.png', sep = '')
-
+      
       threshold_crit_plt_yr <- threshold_criteria_plot(dat
                                                        , param = par_inst[j]
                                                        , rng = target_year
@@ -192,7 +192,7 @@ for(i in 1:length(ls_par)) {
                                                        , threshold_cols = as.character(par_criteria_cols[j, ])
                                                        , crit_threshold = par_crit_threshold[j]
                                                        , log_trans = par_log_transform[j]
-#                                                       , free_y = par_free_y[j]
+                                                       #                                                       , free_y = par_free_y[j]
                                                        , monthly_smooth = par_month_smooth[j]
                                                        , plot_title = include_station_ttl)
       
@@ -201,32 +201,35 @@ for(i in 1:length(ls_par)) {
       
       
       # THRESHOLD PLOTS for TIME SERIES ----
-      message("Creating threshold_criteria all years")
-      threshold_ts_ttl <- paste('output/', data_type, '/threshold_criteria/threshold_criteria_plot_', sta, '_', par_inst[j], '_ts.png', sep = '')
-
-      threshold_crit_plt_ts <- threshold_criteria_plot(dat
-                                                       , param = par_inst[j]
-                                                       , rng = year_range
-                                                       , thresholds = as.numeric(par_criteria[j, ])
-                                                       , threshold_labs = as.character(par_criteria_labs[j, ])
-                                                       , threshold_cols = as.character(par_criteria_cols[j, ])
-                                                       , crit_threshold = par_crit_threshold[j]
-                                                       , log_trans = par_log_transform[j]
-                                                       , monthly_smooth = par_month_smooth[j]
-#                                                       , free_y = par_free_y[j]
-                                                       , plot_title = include_station_ttl)
-      
-      new_dir_result <- check_make_dir(threshold_ts_ttl)
-      ggsave(filename = threshold_ts_ttl, plot = threshold_crit_plt_ts, height = 4, width = 6, units = 'in', dpi = 300)
-      
+      if(as.numeric(year_range[2]) - as.numeric(year_range[1]) > 1 ) {
+        message("Creating threshold_criteria all years")
+        threshold_ts_ttl <- paste('output/', data_type, '/threshold_criteria/threshold_criteria_plot_', sta, '_', par_inst[j], '_ts.png', sep = '')
+        
+        threshold_crit_plt_ts <- threshold_criteria_plot(dat
+                                                         , param = par_inst[j]
+                                                         , rng = year_range
+                                                         , thresholds = as.numeric(par_criteria[j, ])
+                                                         , threshold_labs = as.character(par_criteria_labs[j, ])
+                                                         , threshold_cols = as.character(par_criteria_cols[j, ])
+                                                         , crit_threshold = par_crit_threshold[j]
+                                                         , log_trans = par_log_transform[j]
+                                                         , monthly_smooth = par_month_smooth[j]
+                                                         #                                                       , free_y = par_free_y[j]
+                                                         , plot_title = include_station_ttl)
+        
+        new_dir_result <- check_make_dir(threshold_ts_ttl)
+        ggsave(filename = threshold_ts_ttl, plot = threshold_crit_plt_ts, height = 4, width = 6, units = 'in', dpi = 300)
+      } else {
+        message("N.B.: Not enough data for threshold_criteria all years")
+      }
     }
     
     if(par_criteria_type[j] == 'percentile') {
       
-      # THRESHOLD PLOTS for TARGET YEAR ---
+      # THRESHOLD PLOTS for TARGET YEAR ----
       message("Creating threshold_percentile target year")
       threshold_perc_ttl <- paste('output/', data_type, '/threshold_percentile/threshold_percentile_', sta, '_', par_inst[j], '_yr.png', sep = '')
-
+      
       threshold_perc_plt_yr <- threshold_percentile_plot(dat
                                                          , param = par_inst[j]
                                                          , hist_rng = year_range
@@ -241,22 +244,27 @@ for(i in 1:length(ls_par)) {
       new_dir_result <- check_make_dir(threshold_perc_ttl)
       ggsave(filename = threshold_perc_ttl, plot = threshold_perc_plt_yr, height = 4, width = 6, units = 'in', dpi = 300)
       
-      # THRESHOLD PLOTS for TIME SERIES ----
-      message("Creating threshold_percentile all years")
-      threshold_perc_ttl <- paste('output/', data_type, '/threshold_percentile/threshold_percentile_', sta, '_', par_inst[j], '_ts.png', sep = '')
-
-      threshold_perc_plt_ts <- threshold_percentile_plot(dat
-                                                         , param = par_inst[j]
-                                                         , hist_rng = year_range
-                                                         , percentiles = as.numeric(par_criteria[j, ]) %>% .[complete.cases(.)]
-                                                         , by_month = par_monthly[j]
-                                                         , log_trans = par_log_transform[j]
-                                                         , converted = converted_par
-                                                         , free_y = par_free_y[j]
-                                                         , plot_title = include_station_ttl)
+      # THRESHOLD PLOTS for ALL YEARS TIME SERIES ----
+      if(as.numeric(year_range[2]) - as.numeric(year_range[1]) > 1 ) {
+        message("Creating threshold_percentile all years")
+        threshold_perc_ttl <- paste('output/', data_type, '/threshold_percentile/threshold_percentile_', sta, '_', par_inst[j], '_ts.png', sep = '')
+        
+        threshold_perc_plt_ts <- threshold_percentile_plot(dat
+                                                           , param = par_inst[j]
+                                                           , hist_rng = year_range
+                                                           , percentiles = as.numeric(par_criteria[j, ]) %>% .[complete.cases(.)]
+                                                           , by_month = par_monthly[j]
+                                                           , log_trans = par_log_transform[j]
+                                                           , converted = converted_par
+                                                           , free_y = par_free_y[j]
+                                                           , plot_title = include_station_ttl)
+        
+        new_dir_result <- check_make_dir(threshold_perc_ttl)
+        ggsave(filename = threshold_perc_ttl, plot = threshold_perc_plt_ts, height = 4, width = 6, units = 'in', dpi = 300)
+      } else {
+        message("N.B.: Not enough data for threshold_percentile all years")
+      }
       
-      new_dir_result <- check_make_dir(threshold_perc_ttl)
-      ggsave(filename = threshold_perc_ttl, plot = threshold_perc_plt_ts, height = 4, width = 6, units = 'in', dpi = 300)
     }
     
     
@@ -265,7 +273,7 @@ for(i in 1:length(ls_par)) {
       # THRESHOLD IDENTIFICATION ----
       message("Creating threshold_identification year")
       threshold_id_ttl <- paste('output/', data_type, '/threshold_identification/threshold_id_', sta, '_', par_inst[j], '.csv', sep = '')
-
+      
       # a temporary data frame is used for setstep
       if(data_type != 'nut') {
         df_temp <- dat
@@ -362,7 +370,7 @@ if(length(par_cumulative) > 0) {
       
       # Determine plot conversion
       converted_par <- ifelse(convert_temp && par_cumulative[j] == 'totprcp', TRUE, FALSE)
-
+      
       message("Create barplot_seasonal")      
       seas_bar_stack_ttl <- paste('output/', data_type, '/barplot_seasonal/seas_bar_stack_', sta, '_', par_cumulative[j], '_yr.png', sep = '')
       
@@ -376,7 +384,7 @@ if(length(par_cumulative) > 0) {
                                          , bar_position = 'stack'
                                          , season_facet = FALSE
                                          , plot_title = include_station_ttl
-#                                         , free_y = par_free_y[j]
+                                         #                                         , free_y = par_free_y[j]
                                          , converted = converted_par)
       
       new_dir_result <- check_make_dir(seas_bar_stack_ttl)
@@ -395,7 +403,7 @@ if(length(par_cumulative) > 0) {
                                          , hist_avg = include_hist_avg
                                          , bar_position = 'dodge'
                                          , season_facet = FALSE
-#                                         , free_y = par_free_y[j]
+                                         #                                         , free_y = par_free_y[j]
                                          , plot_title = include_station_ttl
                                          , converted = converted_par)
       
@@ -415,7 +423,7 @@ if(length(par_cumulative) > 0) {
                                          , hist_avg = include_hist_avg
                                          , season_facet = TRUE
                                          , plot_title = include_station_ttl
-#                                         , free_y = par_free_y[j]
+                                         #                                         , free_y = par_free_y[j]
                                          , converted = converted_par)
       
       new_dir_result <- check_make_dir(seas_bar_facet_ttl)

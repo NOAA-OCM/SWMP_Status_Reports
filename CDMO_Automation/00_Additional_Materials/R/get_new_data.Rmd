@@ -1,0 +1,38 @@
+---
+title: "Download All SWMP data"
+author: "Dave Eslinger"
+date: "9/28/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries}
+library(XML)
+```
+
+```{r define_resources}
+cdmo_url <- "http://cdmo.baruch.sc.edu/waf/swmp_data_archives/"
+
+local_dir <- "E:/SWMP/data2020/"
+if(!dir.exists(local_dir)) {
+  dir.create(local_dir, recursive = TRUE)
+}
+
+```
+
+URL is defined and local directory exists
+
+```{r get_all_file_names}
+doc <- htmlParse(cdmo_url)
+links <- xpathApply(doc, "//@href")
+wanted <- links[grepl(".csv", links)]
+wanted <- basename(wanted)
+GetMe <- paste(cdmo_url, wanted, sep = "")
+putHere <- paste0(local_dir, (wanted))
+lapply(seq_along(GetMe), 
+       function(x) download.file(GetMe[x], putHere[x], mode = "wb"))
+```
+

@@ -4,7 +4,7 @@ suppressPackageStartupMessages({
   library(dplyr)
   library(tidyr)
   library(lubridate)
-  library(mapview)
+  library(tmap)
   library(readxl)
 })
 

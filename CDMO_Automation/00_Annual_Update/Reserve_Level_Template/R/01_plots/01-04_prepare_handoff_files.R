@@ -12,8 +12,16 @@ message("Begin prepare_handoff_files")
 
 suppressPackageStartupMessages(library(tidyr))
 
-vars <- c('wq', 'met', 'nut')
+pot_vars <- c('wq', 'met', 'nut')
 sites <- list(wq_sites, met_sites, nut_sites)
+
+vars <- NULL
+for (i in seq_along(sites)) {
+  if(nchar(sites[i]) > 1) {
+    print(pot_vars[i])
+    vars <- c(vars, pot_vars[i])
+  }
+}
 
 for(i in 1:length(vars)){
   

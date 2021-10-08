@@ -26,16 +26,39 @@ the year in which the processing occurs.
 
 2) Check contents.  There should be:
     a) Two top-level directories
-        1) 00_Additional_Materials,which contains 4 files:
-            a) 00_initial_R_package_install_V2.R
-            b) CDMO_Automation_Documentation.pdf WARNING: The pdf document is outdated, follow this 
+        1) 00_Additional_Materials, which should be used before submitting package to CDMO for production.
+            This directory contains 3 subdirectories and 2 files:
+            Subdirectories:
+            a) check_results, which contains results of preliminary QA/QC checks.  Should be
+                self-explanatory.
+            b) R, which contains RMarkdown and R scripts for preprocessing GIS and Excel spreadsheets to
+               ensure consistency prior to CDMO submission of Status Report package:
+                - 00_initial_installation_for_QAQC.R: loads needed libraries
+                - check_reserve_vars.R: an R script to make sure all the reserve-specific variable 
+                    spreadsheets have the correct number of columns and rows, and their bounding
+                    box definitions cover the GIS boundary area.
+                - copy_zipped_report_files.R: USED BY CDMO in NERRS_run_reserve_2021.ps1 script;
+                    gets needed files (images and excel spreadsheets) from
+                    previous zipped up results.
+                - get_new_data.Rmd: Gets all raw data files from a CDMO directory
+                - move_old_report_files.R: preliminary version of copy_zipped_report_files.R; 
+                    may not be needed anymore.
+                - qaqc_gis.R: Performs checks on all GIS files, reprojects into standard projection and 
+                    moves good files into new location.  They may need to be manually copied into the correct
+                    location in 00_Annual_Update/Reserve_Level_Plotting_Template/inst/gis, depending on how the
+                    internal paths are defined.
+            c) src, contains a PowerShell script to move GIS files into a flatter directory structure. 
+                - move_gis_files.ps1: File used to simplify the directory structure for GIS files.
+            Files:
+            e) CDMO_Automation_Documentation.pdf WARNING: The pdf document is outdated, follow this 
                 text document instead. However, the pdf document has useful information on the 
                 processing of the data and creation of plots.
-            c) check_reserve_vars.R: an R script to make sure all the reserve-specific variable 
-                spreadsheets have the correct number of columns and rows.
-            d) move_gis_files.ps1: File used to simplify the directory structure for GIS files.
-    NOTE:  Only the 00_initial_R-Package_install_V2.R should possibly be required to run an update.
-        That will only be required if the installed R setup needs updating (which is recommended).
+            f) 00_Additional_Materials.Rproj: RStudio project file for preliminary QA/QC.
+
+    NOTE:  Prior to a CDMO run, only the 00_initial_installation_for_QAQC.R may be required 
+        to run an update. That will only be required if the installed R setup needs 
+        updating (which is recommended).  Other needed files will be called from the 
+        NERRS_run_reserve_2021.ps1 script.
 
         2) 00_Annual_Update, which contains three subdirectories:
             a) National_Level_Template (R project for National report)
@@ -45,23 +68,23 @@ the year in which the processing occurs.
                     Reserve_Level_Plotting_Variables_XXX_YYYY.xlsx, where
                     XXX is the 3 letter reserve abbreviation, in UPPERCASE, and
                     YYYY is the full year for the data report, e.g. 2019 for the 2020 run.
-    b) Seven files
+    b) Six files
         1) NERRS_run.bat (batch file to run the whole process.)
-        2) NERRS_run_reserves.ps1.OLD (Original version from LimnoTech), replaced by
-        3) NERRS_run_reserves_V2.ps1 (actual script to run everything.)
-        4) NERRS_sites.csv (list of 3-letter abbreviations for reserves to be run.)
-        5) NERRS_sites_all_backup.csv (complete list of 3-letter abbreviations for reserves)
-        6) NERRS_years.csv (csv file defining target year and time range for comparison.)
-        7) README_CDMO_Run_2021.TXT (this file)
+        2) NERRS_run_reserves_2021.ps1 (actual script to run everything.)
+        3) NERRS_sites.csv (list of 3-letter abbreviations for reserves to be run.)
+        4) NERRS_sites_all_backup.csv (complete list of 3-letter abbreviations for reserves)
+        5) NERRS_years.csv (csv file defining target year and time range for comparison.)
+        6) README_CDMO_Run_2021.TXT (this file)
             
-3) Copy all the new Reserve_Level_Plotting_Template files (from separate zip archive) to the 
+3) If needed, copy all the new Reserve_Level_Plotting_Template files (from separate zip archive) to the 
     00_Annual_Update/Updated_reserve_var_sheets subdirectory.  They should be named
     "Reserve_Level_Plotting_Template_xxx_YYYY.xlsx", where xxx is the reserve abbreviation (in
     lower case) and YYYY is the year.  This naming convention will make it easier for reserves to 
-    identify their different analyses.  For the 2020 data, I have made spreadsheets for all reserves.
+    identify their different analyses.  
+** For the 2020 data, I have made spreadsheets for all reserves and already put them in the correct location.
 
-4) Edit the NERRS_run_reserves_V2.ps1 file to set variables:
-    a) $previous_year_path, on line 27, which specifies the absolute path to a folder containing UNCOMPRESSED directories 
+4) Edit the NERRS_run_reserves_2021.ps1 file to set variables:
+    a) $old_zip_dir, on line 27, which specifies the absolute path to a folder containing COMPRESSED directories 
     from the previous year's run (or any recent run)
     b) $data_path, on line 28, which specifies where ALL csv-formatted data files are for all reserves.
 
