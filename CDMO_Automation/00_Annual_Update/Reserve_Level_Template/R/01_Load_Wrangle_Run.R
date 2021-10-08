@@ -34,21 +34,24 @@ data_type <- 'wq'
 source('R/00_setup/00_Load_Analyses_Variables.R')
 
 wq_sites <- check_site_validity(wq_sites_pot, year_range)
-
-ls_par <- lapply(wq_sites, SWMPr::import_local, path = 'data')
-ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
-ls_par <- lapply(ls_par, subset, subset = c(start, end), select = par)
-
-## convert select parameters
-if(convert_temp) ls_par <- lapply(ls_par, function(x) {x$temp <- x$temp * 9 / 5 + 32; x})
-if(convert_depth) ls_par <- lapply(ls_par, function(x) {x$depth <- x$depth * 3.28; x})
-
-# Do water quality analyses ---------
-source('R/01_plots/01-02_all_plot_analyses.R')
-source('R/01_plots/01-03_all_trend_analyses.R')
-
-# Unload the water quality data -----
-rm(ls_par)
+if(max(nchar((wq_sites))) > 1) {
+  ls_par <- lapply(wq_sites, SWMPr::import_local, path = 'data')
+  ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
+  ls_par <- lapply(ls_par, subset, subset = c(start, end), select = par)
+  
+  ## convert select parameters
+  if(convert_temp) ls_par <- lapply(ls_par, function(x) {x$temp <- x$temp * 9 / 5 + 32; x})
+  if(convert_depth) ls_par <- lapply(ls_par, function(x) {x$depth <- x$depth * 3.28; x})
+  
+  # Do water quality analyses ---------
+  source('R/01_plots/01-02_all_plot_analyses.R')
+  source('R/01_plots/01-03_all_trend_analyses.R')
+  
+  # Unload the water quality data -----
+  rm(ls_par)
+} else {
+  message("!!! No water valid water quality sites")
+}
 message("End wq -------------------------------------------")
 
 # ----------------------------------------------
@@ -58,27 +61,30 @@ message("Begin met -------------------------------------------")
 data_type <- 'met'
 source('R/00_setup/00_Load_Analyses_Variables.R')
 met_sites <- check_site_validity(met_sites_pot, year_range)
-
-ls_par <- lapply(met_sites, SWMPr::import_local, path = 'data')
-ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
-ls_par <- lapply(ls_par, subset, subset = c(start, end), select = par)
-
-if(convert_temp) ls_par <- lapply(ls_par, function(x) {x$atemp <- x$atemp * 9 / 5 + 32; x})
-if(convert_precip) ls_par <- lapply(ls_par, function(x) {x$totprcp <- x$totprcp / 25.4; x})
-if(convert_wind) {
-  ls_par <- lapply(ls_par, function(x) {x$wspd <- x$wspd * 2.23694; x})
-  ls_par <- lapply(ls_par, function(x) {x$maxwspd <- x$maxwspd * 2.23694; x})
-} 
-
-
-# Do meteorological analyses ---------
-message("All plots")
-source('R/01_plots/01-02_all_plot_analyses.R')
-
-source('R/01_plots/01-03_all_trend_analyses.R')
-
-# Unload the meteorological data -----
-rm(ls_par)
+if(max(nchar((met_sites))) > 1) {
+  ls_par <- lapply(met_sites, SWMPr::import_local, path = 'data')
+  ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
+  ls_par <- lapply(ls_par, subset, subset = c(start, end), select = par)
+  
+  if(convert_temp) ls_par <- lapply(ls_par, function(x) {x$atemp <- x$atemp * 9 / 5 + 32; x})
+  if(convert_precip) ls_par <- lapply(ls_par, function(x) {x$totprcp <- x$totprcp / 25.4; x})
+  if(convert_wind) {
+    ls_par <- lapply(ls_par, function(x) {x$wspd <- x$wspd * 2.23694; x})
+    ls_par <- lapply(ls_par, function(x) {x$maxwspd <- x$maxwspd * 2.23694; x})
+  } 
+  
+  
+  # Do meteorological analyses ---------
+  message("All plots")
+  source('R/01_plots/01-02_all_plot_analyses.R')
+  
+  source('R/01_plots/01-03_all_trend_analyses.R')
+  
+  # Unload the meteorological data -----
+  rm(ls_par)
+} else {
+  message("!!! No valid met sites")
+}
 message("End met -------------------------------------------")
 
 # ----------------------------------------------
@@ -89,32 +95,35 @@ message("Begin nut -------------------------------------------")
 data_type <- 'nut'
 source('R/00_setup/00_Load_Analyses_Variables.R')
 nut_sites <- check_site_validity(nut_sites_pot, year_range)
-
-ls_par <- lapply(nut_sites, import_local_nut, path = 'data', collMethd = 1)
-ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
-ls_par <- lapply(ls_par, subset, subset = c(start, end))
-ls_par <- lapply(ls_par, rem_reps)
-
-if('dip' %in% par) ls_par <- lapply(ls_par, function(x) {x$dip <- x$po4f; x})
-
-if('din' %in% par) {
-  if(calc_no23) {
-    ls_par <- lapply(ls_par, function(x) {x$din <- x$no23f + x$nh4f; x})
-  } else {
-    ls_par <- lapply(ls_par, function(x) {x$din <- x$no2f + x$no2f + x$nh4f; x})
+if(max(nchar((nut_sites))) > 1) {
+  ls_par <- lapply(nut_sites, import_local_nut, path = 'data', collMethd = 1)
+  ls_par <- lapply(ls_par, qaqc, qaqc_keep = keep_flags)
+  ls_par <- lapply(ls_par, subset, subset = c(start, end))
+  ls_par <- lapply(ls_par, rem_reps)
+  
+  if('dip' %in% par) ls_par <- lapply(ls_par, function(x) {x$dip <- x$po4f; x})
+  
+  if('din' %in% par) {
+    if(calc_no23) {
+      ls_par <- lapply(ls_par, function(x) {x$din <- x$no23f + x$nh4f; x})
+    } else {
+      ls_par <- lapply(ls_par, function(x) {x$din <- x$no2f + x$no2f + x$nh4f; x})
+    }
+  } 
+  
+  for(i in 1:length(ls_par)) {
+    attr(ls_par[[i]], 'parameters') <- c(attr(ls_par[[i]], 'parameters'), 'din', 'dip')
   }
-} 
-
-for(i in 1:length(ls_par)) {
-  attr(ls_par[[i]], 'parameters') <- c(attr(ls_par[[i]], 'parameters'), 'din', 'dip')
+  
+  # Do nutrient analyses ---------
+  source('R/01_plots/01-02_all_plot_analyses.R')
+  source('R/01_plots/01-03_all_trend_analyses.R')
+  
+  # Unload the nutrient data -----
+  rm(ls_par)
+} else {
+  message("!!! No valid nutrient sites")
 }
-
-# Do nutrient analyses ---------
-source('R/01_plots/01-02_all_plot_analyses.R')
-source('R/01_plots/01-03_all_trend_analyses.R')
-
-# Unload the nutrient data -----
-rm(ls_par)
 message("End nut -------------------------------------------")
 
 # ----------------------------------------------
