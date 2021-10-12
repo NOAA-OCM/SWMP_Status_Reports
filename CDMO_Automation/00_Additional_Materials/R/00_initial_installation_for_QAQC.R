@@ -22,7 +22,7 @@ pkg_data_wrangle <- c('broom', 'janitor', 'lubridate', 'openxlsx', 'readxl' 'XML
 
 pkg_analysis <- c('EnvStats', 'ggthemes', 'RColorBrewer')
 
-pkg_map <- c('sf', 'tmap', 'tmaptools')
+pkg_map <- c('sf', 'ggmap')
 
 pkg_reporting <- c('flextable', 'officer')
 

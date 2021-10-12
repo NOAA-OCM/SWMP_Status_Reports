@@ -15,9 +15,9 @@ suppressPackageStartupMessages({
   library(sf)
   library(SWMPrExtension)
   library(tmap)
-  library(tidycensus)
+  # library(tidycensus)
 })  
-options(tigris_use_cache = TRUE)
+# options(tigris_use_cache = TRUE)
 tmap_mode("view")
 
 # Path for new data ----
