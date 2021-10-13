@@ -3,7 +3,6 @@ suppressPackageStartupMessages({
   library(SWMPrExtension)
   library(dplyr)
   library(tidyr)
-  library(tmap)
   library(readxl)
 })
 
@@ -51,14 +50,14 @@ sheets <- c('Flags', 'Years_of_Interest', 'Seasons', 'Mapping', 'Bonus_Settings'
             , 'Basic_Plotting', 'Threshold_Plots', 'Threshold_Identification')
 
 ## DEFINE YEARS OF INTEREST ---- DLE, 10/17/2020: Only read if not already defined. Otherwise, doesn't work in batch mode.
-if(!exists('year_range')) {year_range <- read_xlsx(path = wb_name, sheet = sheets[2])[[1]]}
-if(!exists('target_year')) {target_year <- read_xlsx(path = wb_name, sheet = sheets[2])[[2]][1]}
+if(!exists('year_range')) {year_range <- readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[1]]}
+if(!exists('target_year')) {target_year <- readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[2]][1]}
 
 # DEFINE FLAGS TO KEEP ----
-keep_flags <- read_xlsx(path = wb_name, sheet = sheets[1])[[1]]
+keep_flags <- readxl::read_xlsx(path = wb_name, sheet = sheets[1])[[1]]
 
 ## DETERMINE CALCULATED & CONVERTED PARAMETERS ----
-wb <- read_xlsx(path = wb_name, sheet = sheets[5])
+wb <- readxl::read_xlsx(path = wb_name, sheet = sheets[5])
 
 #### Convert temperature values from C to F?
 convert_temp <- wb[[2]][1] %>% as.logical
@@ -90,7 +89,7 @@ include_station_ttl <- wb[[2]][4] %>% as.logical
 include_hist_avg <- wb[[2]][5] %>% as.logical
 
 # Set mapping variables ----
-wb <- read_xlsx(path = wb_name, sheet = sheets[4])
+wb <- readxl::read_xlsx(path = wb_name, sheet = sheets[4])
 
 #### Reserve bounding box
 res_bbox <- wb[[1]] %>% .[complete.cases(.)]
@@ -115,3 +114,7 @@ map_labels <- wb[[3]] %>% .[complete.cases(.)]
 wq_trend_labs <- wb[[4]] %>% .[complete.cases(.)]
 met_trend_labs <- wb[[5]] %>% .[complete.cases(.)]
 nut_trend_labs <- wb[[6]] %>% .[complete.cases(.)]
+
+# Create background maps ----
+res_background <- base_map(res_bbox)
+sk_background <- base_map(sk_bbox)

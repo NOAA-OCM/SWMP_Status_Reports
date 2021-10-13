@@ -27,13 +27,13 @@ res_map_ttl <- paste(getwd(), '/output/maps/', res_abb, '_reserve_map.png', sep 
 
 res_map <- res_local_map(nerr_site_id = res_abb
                          , stations = sites_to_map
-                         , bbox = res_bbox
                          , shp = res_spatial
                          , station_labs = res_map_station_labels
                          , lab_loc = map_labels
-                         # , scale_pos = scale_pos
+                         , bg_map = res_background
+                         , bbox = res_bbox
                          )
 
 new_dir_result <- check_make_dir(res_map_ttl)
-tmap_save(res_map, file = res_map_ttl, width = 5, height = 5, units = "in")
+ggsave(res_map, file = res_map_ttl, width = 5, height = 5, units = "in")
 message("End of maps")
