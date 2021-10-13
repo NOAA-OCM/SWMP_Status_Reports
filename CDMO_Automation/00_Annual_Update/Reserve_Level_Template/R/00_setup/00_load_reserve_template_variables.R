@@ -5,8 +5,8 @@ wb_name <- 'figure_files/Reserve_Level_Plotting_Variables.xlsx'
 sheets <- c('Flags', 'Years_of_Interest', 'Seasons', 'Mapping', 'Bonus_Settings'
             , 'Basic_Plotting', 'Threshold_Plots', 'Threshold_Identification')
 			
-if(!exists('year_range')) {year_range <- read_xlsx(path = wb_name, sheet = sheets[2])[[1]]}
-if(!exists('target_year')) {target_year <- read_xlsx(path = wb_name, sheet = sheets[2])[[2]][1]}
+if(!exists('year_range')) {year_range <- readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[1]]}
+if(!exists('target_year')) {target_year <- readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[2]][1]}
 
 # Load reserve name and abbreviation based on data files in the data folder
 res <- get_reserve('data/')

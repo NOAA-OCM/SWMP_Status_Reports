@@ -1,9 +1,16 @@
+# Make sure all needed packages are installed ----
+source('R/00_initial_installation_V3.R')
+
+# Send all console output into log files. ----
+# COMMENT OUT THIS SECTION TO VIEW PROGRESS LIVE
 this_dir <- getwd()
 log_prefix <- substring(this_dir, nchar(this_dir) - 2)
 logout <- file(paste0(log_prefix,"_output.log"), open = "wt")
 logmess <- file(paste0(log_prefix,"_message.log"), open = "wt")
 sink(logout, append = FALSE, type = "output", split = FALSE)
 sink(logmess, append = FALSE, type = "message", split = FALSE)
+
+# DON'T comment anything below here.
 
 # Source files ------------
 source('R/00_setup/00_load_global_decisions_variables.R')
