@@ -1,40 +1,26 @@
-Begin check at 2021-10-07 11:07:47
+Begin check at 2021-10-26 09:47:49
 
 Processing: Reserve_Level_Plotting_Variables_ACE_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_ACE_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_ACE_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_APA_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_APA_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_APA_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_CBM_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -76.767, 38.277 for lower left, and 
@@ -53,48 +39,48 @@ Processing: Reserve_Level_Plotting_Variables_CBM_2020.xlsx
      Do not work for gis geographic limits: 
        -76.7307, 38.1861 for lower left, and 
        -75.793, 39.455 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -77.0652, 38.1453 for lower left, and 
-       -75.2577, 39.532 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -77.1546, 38.0755 for lower left, and 
+       -75.166, 39.6011 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_CBM_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_CBM_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_CBV_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_CBV_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_CBV_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_DEL_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
-   Bounding box is appropriate.
+   ! -- Bounding_Box ERROR: Specified coordinates of
+       -121.7981, 36.7957 for lower left, and 
+       -121.7194, 36.8471 for upper right.,
+     Do not work for gis geographic limits: 
+       -75.6607, 39.0616 for lower left, and 
+       -75.3694, 39.4051 for upper right.,
+  * --- For a relative 30% buffer around shapefile, try: 
+       -75.8787, 38.9503 for lower left, and 
+       -75.1437, 39.5112 for upper right.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
-   Bounding box is appropriate.
+   ! -- Bounding_Box ERROR: Specified coordinates of
+       -121.7981, 36.7957 for lower left, and 
+       -121.7194, 36.8471 for upper right.,
+     Do not work for gis geographic limits: 
+       -75.6607, 39.0616 for lower left, and 
+       -75.3694, 39.4051 for upper right.,
+  * --- For a relative 20% buffer around shapefile, try: 
+       -75.8301, 38.9876 for lower left, and 
+       -75.1927, 39.474 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_DEL_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_DEL_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_ELK_2020.xlsx
   -- Missing rows on sheet *Flags*, has 4 needs 5
@@ -105,16 +91,10 @@ Processing: Reserve_Level_Plotting_Variables_ELK_2020.xlsx
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_ELK_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_ELK_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_GND_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -88.5002, 30.3154 for lower left, and 
@@ -133,85 +113,34 @@ Processing: Reserve_Level_Plotting_Variables_GND_2020.xlsx
      Do not work for gis geographic limits: 
        -88.4804, 30.3169 for lower left, and 
        -88.3961, 30.4288 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -88.5061, 30.3134 for lower left, and 
-       -88.3687, 30.4321 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -88.5134, 30.307 for lower left, and 
+       -88.3614, 30.4384 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_GND_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_GND_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_GRB_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_GRB_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_GRB_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_GTM_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_GTM_2020.xlsx
-
-Processing: Reserve_Level_Plotting_Variables_HEE_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
-! -- Missing rows on sheet *Mapping*, has 4 needs 5
-   ---Checking res_bounding_box ---
-   ! -- Bounding_Box ERROR: Specified coordinates of
-       -74.6597, 40.9675 for lower left, and 
-       -73.3173, 42.0003 for upper right.,
-     Do not work for gis geographic limits: 
-       -157.8233, 21.4242 for lower left, and 
-       -157.7861, 21.4478 for upper right.,
-  * --- For a relative 30% buffer around shapefile, try: 
-       -157.8401, 21.4008 for lower left, and 
-       -157.7702, 21.4695 for upper right.
-  Forced New BBOX written to spreadsheet
-   ---Checking SK_bounding_box ---
-   ! -- Bounding_Box ERROR: Specified coordinates of
-       -74.0014, 41.9754 for lower left, and 
-       -73.8394, 42.0907 for upper right.,
-     Do not work for gis geographic limits: 
-       -157.8233, 21.4242 for lower left, and 
-       -157.7861, 21.4478 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -157.8333, 21.4075 for lower left, and 
-       -157.7771, 21.4628 for upper right.
-  Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
-!!!  Workbook FAILED QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/needs_checking/Reserve_Level_Plotting_Variables_HEE_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_GTM_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_HUD_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -74.6597, 40.9675 for lower left, and 
@@ -230,52 +159,34 @@ Processing: Reserve_Level_Plotting_Variables_HUD_2020.xlsx
      Do not work for gis geographic limits: 
        -73.9861, 41.0139 for lower left, and 
        -73.7632, 42.3618 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -74.3967, 41.2906 for lower left, and 
-       -73.3164, 42.0884 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -74.5044, 41.2104 for lower left, and 
+       -73.2071, 42.1683 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_HUD_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_HUD_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_JAC_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_JAC_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_JAC_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_JOB_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_JOB_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_JOB_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_KAC_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -151.9519, 59.4102 for lower left, and 
@@ -294,40 +205,28 @@ Processing: Reserve_Level_Plotting_Variables_KAC_2020.xlsx
      Do not work for gis geographic limits: 
        -151.8877, 59.3399 for lower left, and 
        -150.8928, 59.8218 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -152.3113, 59.0341 for lower left, and 
-       -150.4509, 60.18 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -152.3929, 58.9844 for lower left, and 
+       -150.3699, 60.2304 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_KAC_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_KAC_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_LKS_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_LKS_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_LKS_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_MAR_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
-       -97.4638, 27.8221 for lower left, and 
-       -96.7676, 28.3286 for upper right.,
+       -121.7981, 36.7957 for lower left, and 
+       -121.7194, 36.8471 for upper right.,
      Do not work for gis geographic limits: 
        -97.2866, 27.8322 for lower left, and 
        -96.7638, 28.3191 for upper right.,
@@ -337,25 +236,19 @@ Processing: Reserve_Level_Plotting_Variables_MAR_2020.xlsx
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
-       -97.4638, 27.8221 for lower left, and 
-       -96.7676, 28.3286 for upper right.,
+       -121.7981, 36.7957 for lower left, and 
+       -121.7194, 36.8471 for upper right.,
      Do not work for gis geographic limits: 
        -97.2866, 27.8322 for lower left, and 
        -96.7638, 28.3191 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -97.3705, 27.7659 for lower left, and 
-       -96.6795, 28.3829 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -97.3982, 27.7413 for lower left, and 
+       -96.6523, 28.4073 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_MAR_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_MAR_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_NAR_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -71.4297, 41.5738 for lower left, and 
@@ -374,36 +267,24 @@ Processing: Reserve_Level_Plotting_Variables_NAR_2020.xlsx
      Do not work for gis geographic limits: 
        -71.3735, 41.5713 for lower left, and 
        -71.2961, 41.6759 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -71.4183, 41.5612 for lower left, and 
-       -71.246, 41.6885 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -71.426, 41.5555 for lower left, and 
+       -71.2383, 41.6942 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_NAR_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_NAR_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_NIW_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_NIW_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_NIW_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_NOC_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -78.3839, 33.8003 for lower left, and 
@@ -422,52 +303,50 @@ Processing: Reserve_Level_Plotting_Variables_NOC_2020.xlsx
      Do not work for gis geographic limits: 
        -77.9596, 33.9197 for lower left, and 
        -75.8278, 36.4039 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -78.3756, 33.9687 for lower left, and 
-       -75.4151, 36.3582 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -78.5739, 33.8038 for lower left, and 
+       -75.2079, 36.5204 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_NOC_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_NOC_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_OWC_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_OWC_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_OWC_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_PDB_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
-   Bounding box is appropriate.
+   ! -- Bounding_Box ERROR: Specified coordinates of
+       -121.7981, 36.7957 for lower left, and 
+       -121.7194, 36.8471 for upper right.,
+     Do not work for gis geographic limits: 
+       -122.5609, 48.4482 for lower left, and 
+       -122.4656, 48.5743 for upper right.,
+  * --- For a relative 30% buffer around shapefile, try: 
+       -122.634, 48.4277 for lower left, and 
+       -122.3881, 48.5945 for upper right.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
-   Bounding box is appropriate.
+   ! -- Bounding_Box ERROR: Specified coordinates of
+       -121.7981, 36.7957 for lower left, and 
+       -121.7194, 36.8471 for upper right.,
+     Do not work for gis geographic limits: 
+       -122.5609, 48.4482 for lower left, and 
+       -122.4656, 48.5743 for upper right.,
+  * --- For a relative 20% buffer around shapefile, try: 
+       -122.609, 48.4446 for lower left, and 
+       -122.413, 48.5775 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_PDB_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_PDB_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_RKB_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -81.8097, 25.8104 for lower left, and 
@@ -486,52 +365,50 @@ Processing: Reserve_Level_Plotting_Variables_RKB_2020.xlsx
      Do not work for gis geographic limits: 
        -81.7992, 25.8037 for lower left, and 
        -81.4568, 26.0987 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -81.8674, 25.7247 for lower left, and 
-       -81.4021, 26.1533 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -81.8886, 25.705 for lower left, and 
+       -81.3807, 26.1728 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_RKB_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_RKB_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_SAP_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
-   Bounding box is appropriate.
+   ! -- Bounding_Box ERROR: Specified coordinates of
+       -121.7981, 36.7957 for lower left, and 
+       -121.7194, 36.8471 for upper right.,
+     Do not work for gis geographic limits: 
+       -81.3078, 31.3779 for lower left, and 
+       -81.2551, 31.5005 for upper right.,
+  * --- For a relative 30% buffer around shapefile, try: 
+       -81.3614, 31.3726 for lower left, and 
+       -81.2009, 31.5092 for upper right.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
-   Bounding box is appropriate.
+   ! -- Bounding_Box ERROR: Specified coordinates of
+       -121.7981, 36.7957 for lower left, and 
+       -121.7194, 36.8471 for upper right.,
+     Do not work for gis geographic limits: 
+       -81.3078, 31.3779 for lower left, and 
+       -81.2551, 31.5005 for upper right.,
+  * --- For a relative 20% buffer around shapefile, try: 
+       -81.3448, 31.3868 for lower left, and 
+       -81.2175, 31.4951 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_SAP_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_SAP_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_SFB_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_SFB_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_SFB_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_SOS_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -124.3688, 43.273 for lower left, and 
@@ -550,20 +427,14 @@ Processing: Reserve_Level_Plotting_Variables_SOS_2020.xlsx
      Do not work for gis geographic limits: 
        -124.3418, 43.2661 for lower left, and 
        -124.2683, 43.3162 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -124.3646, 43.2505 for lower left, and 
-       -124.2482, 43.3347 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -124.3695, 43.2469 for lower left, and 
+       -124.2432, 43.3383 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_SOS_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_SOS_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_TJR_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -117.1701, 32.5349 for lower left, and 
@@ -582,36 +453,24 @@ Processing: Reserve_Level_Plotting_Variables_TJR_2020.xlsx
      Do not work for gis geographic limits: 
        -117.1331, 32.5343 for lower left, and 
        -117.0929, 32.5765 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -117.144, 32.5305 for lower left, and 
-       -117.0799, 32.5842 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -117.1472, 32.5279 for lower left, and 
+       -117.0768, 32.5869 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_TJR_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_TJR_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_WEL_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_WEL_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_WEL_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_WKB_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    ! -- Bounding_Box ERROR: Specified coordinates of
        -87.9332, 30.3093 for lower left, and 
@@ -630,31 +489,21 @@ Processing: Reserve_Level_Plotting_Variables_WKB_2020.xlsx
      Do not work for gis geographic limits: 
        -87.8523, 30.3093 for lower left, and 
        -87.7698, 30.4756 for upper right.,
-  * --- For a relative 15% buffer around shapefile, try: 
-       -87.8859, 30.329 for lower left, and 
-       -87.7362, 30.4582 for upper right.
+  * --- For a relative 20% buffer around shapefile, try: 
+       -87.8962, 30.32 for lower left, and 
+       -87.7259, 30.4671 for upper right.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_WKB_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_WKB_2020.xlsx
 
 Processing: Reserve_Level_Plotting_Variables_WQB_2020.xlsx
-  -- Missing rows on sheet *Flags*, has 4 needs 5
-      * 1 flag added
    ---Checking res_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
    ---Checking SK_bounding_box ---
    Bounding box is appropriate.
   Forced New BBOX written to spreadsheet
-  -- Missing rows on sheet *Bonus_Settings*, has 10 needs 11
-      * Wind T/F row added
-  -- Missing columns on sheet *Basic_Plotting*, has 5 needs 6
-      * Free_Y column added
 Workbook passed QA/QC, copying to 
-D:/SWMP/2020_QAQC_reserve_var_sheetsV3/Reserve_Level_Plotting_Variables_WQB_2020.xlsx
+E:/SWMP/2020_QAQC_reserve_var_sheets10-26/Reserve_Level_Plotting_Variables_WQB_2020.xlsx
 
 ====== END of Spreadsheet QA/QC processing ======

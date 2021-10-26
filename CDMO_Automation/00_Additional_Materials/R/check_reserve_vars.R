@@ -19,9 +19,10 @@ suppressPackageStartupMessages({
 # ../../00_Annual_Update/Updated_reserve_var_sheets directory 
 # when they have passed QA/QC.  That should be a cleaner process.
 # 
-reserve_updates_path <- "C:/SWMP/2019_raw_spreadsheets"
+# reserve_updates_path <- "C:/SWMP/2019_raw_spreadsheets"
+reserve_updates_path <- "E:/SWMP/2020_SWMP_Updated_reserve_var_sheets"
 # reserve_updates_path <- "D:/SWMP/2020_QAQC_reserve_var_sheetsV2"
-good_reserve_updates_path <- "D:/SWMP/2020_QAQC_reserve_var_sheetsV3"
+good_reserve_updates_path <- "E:/SWMP/2020_QAQC_reserve_var_sheets10-26"
 
 # Path for shapefiles after they have gone through 
 # the qaqc_gis.R process
@@ -29,7 +30,7 @@ gis_final_base <- "../00_Annual_Update/Reserve_level_template/inst/gis"
 
 # Location for data files.  Beginning year will be taken from available data.
 #
-data_dir <- "d:/SWMP/data2020"
+data_dir <- "E:/SWMP/data2020"
 
 # Functions ----
 #
@@ -130,11 +131,11 @@ bb_check <- function(xlbbx, gis_shape, percent, aspect = 1) {
 
 # Constant declarations ----
 rbb_percent <- 0.30
-sbb_percent <- 0.15
+sbb_percent <- 0.20
 force_bb_replacement <- TRUE
 bb_aspect <- 1.0
 
-site_files <- (list.files(path = reserve_updates_path, pattern = "xlsx"))
+site_files <- (list.files(path = reserve_updates_path, pattern = "2020.xlsx"))
 
 test_year <- 2020
 report_file <- paste0("check_results/reserve_var_checks_", test_year,".txt")
