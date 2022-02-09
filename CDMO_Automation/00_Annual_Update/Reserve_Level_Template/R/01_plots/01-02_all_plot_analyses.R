@@ -369,10 +369,10 @@ if(length(par_cumulative) > 0) {
     for(j in 1:length(par_cumulative)) {
       
       # Determine plot conversion
-      converted_par <- ifelse(convert_temp && par_cumulative[j] == 'totprcp', TRUE, FALSE)
+      converted_par <- ifelse(convert_precip && par_cumulative[j] == 'totprcp', TRUE, FALSE)
       
       message("Create barplot_seasonal")      
-      seas_bar_stack_ttl <- paste('output/', data_type, '/barplot_seasonal/seas_bar_stack_', sta, '_', par_cumulative[j], '_yr.png', sep = '')
+      seas_bar_stack_ttl <- paste('output/', data_type, '/barplot_seasonal/seas_bar_stack_', sta, '_', par_cumulative[j], '.png', sep = '')
       
       seas_bar_stack <- seasonal_barplot(dat
                                          , param = par_cumulative[j]
@@ -392,7 +392,7 @@ if(length(par_cumulative) > 0) {
       
       message("Create barplot_seasonal dodge")      
       
-      seas_bar_dodge_ttl <- paste('output/', data_type, '/barplot_seasonal/seas_bar_dodge_', sta, '_', par_cumulative[j], '_yr.png', sep = '')
+      seas_bar_dodge_ttl <- paste('output/', data_type, '/barplot_seasonal/seas_bar_dodge_', sta, '_', par_cumulative[j], '.png', sep = '')
       
       seas_bar_dodge <- seasonal_barplot(dat
                                          , param = par_cumulative[j]
@@ -412,7 +412,7 @@ if(length(par_cumulative) > 0) {
       
       
       message("Create barplot_seasonal facet")      
-      seas_bar_facet_ttl <- paste('output/', data_type, '/barplot_seasonal/raw_boxplot_', sta, '_', par_cumulative[j], '_yr.png', sep = '')
+      seas_bar_facet_ttl <- paste('output/', data_type, '/barplot_seasonal/seas_bar_facet_', sta, '_', par_cumulative[j], '.png', sep = '')
       
       seas_bar_facet <- seasonal_barplot(dat
                                          , param = par_cumulative[j]
