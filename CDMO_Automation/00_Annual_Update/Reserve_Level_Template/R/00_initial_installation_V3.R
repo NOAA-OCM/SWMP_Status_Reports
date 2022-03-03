@@ -11,7 +11,7 @@ using <- function(...) {
     }
     libsmsg <- paste("The following packages could not be found: ",libsmsg,
                      "\n\r\n\rInstall missing packages?", collapse="")
-    if(winDialog(type = c("yesno"), libsmsg)=="YES"){       
+    if(tcltk::tk_messageBox(type = c("yesno"), libsmsg) == "yes"){       
       install.packages(need, repos = "http://cran.us.r-project.org")
       lapply(need, require, character.only=TRUE)
     }
