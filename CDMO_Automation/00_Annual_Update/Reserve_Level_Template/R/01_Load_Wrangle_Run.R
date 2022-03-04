@@ -1,15 +1,17 @@
 # Make sure all needed packages are installed ----
 source('R/00_initial_installation_V3.R')
+if(!exists('log_progress')) log_progress <- FALSE
 
-# Send all console output into log files. ----
-# COMMENT OUT THIS SECTION TO VIEW PROGRESS LIVE
-this_dir <- getwd()
-log_prefix <- substring(this_dir, nchar(this_dir) - 2)
-logout <- file(paste0(log_prefix,"_output.log"), open = "wt")
-logmess <- file(paste0(log_prefix,"_message.log"), open = "wt")
-sink(logout, append = FALSE, type = "output", split = FALSE)
-sink(logmess, append = FALSE, type = "message", split = FALSE)
-
+if(log_progress) {
+  # Send all console output into log files. ----
+  # COMMENT OUT THIS SECTION TO VIEW PROGRESS LIVE
+  this_dir <- getwd()
+  log_prefix <- substring(this_dir, nchar(this_dir) - 2)
+  logout <- file(paste0(log_prefix,"_output.log"), open = "wt")
+  logmess <- file(paste0(log_prefix,"_message.log"), open = "wt")
+  sink(logout, append = FALSE, type = "output", split = FALSE)
+  sink(logmess, append = FALSE, type = "message", split = FALSE)
+}
 # DON'T comment anything below here.
 
 # Source files ------------
@@ -140,11 +142,13 @@ message("End nut -------------------------------------------")
 source('R/01_plots/01-04_prepare_handoff_files.R')
 
 message("End load_wrangle_run, closing log files ===================")
-# End output and message redirection
-sink(NULL, type = "output")
-sink(NULL, type = "message")
-for(i in seq_len(sink.number())){  # Just in case there are more
-  sink(NULL)
+if(log_progress) {
+  # End output and message redirection
+  sink(NULL, type = "output")
+  sink(NULL, type = "message")
+  for(i in seq_len(sink.number())){  # Just in case there are more
+    sink(NULL)
+  }
+  close(logout)
+  close(logmess)
 }
-close(logout)
-close(logmess)
