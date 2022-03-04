@@ -50,8 +50,8 @@ sheets <- c('Flags', 'Years_of_Interest', 'Seasons', 'Mapping', 'Bonus_Settings'
             , 'Basic_Plotting', 'Threshold_Plots', 'Threshold_Identification')
 
 ## DEFINE YEARS OF INTEREST ---- DLE, 10/17/2020: Only read if not already defined. Otherwise, doesn't work in batch mode.
-if(!exists('year_range')) {year_range <- readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[1]]}
-if(!exists('target_year')) {target_year <- readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[2]][1]}
+if(!exists('year_range')) {year_range <- as.numeric(readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[1]])}
+if(!exists('target_year')) {target_year <- as.numeric(readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[2]][1])}
 
 # DEFINE FLAGS TO KEEP ----
 keep_flags <- readxl::read_xlsx(path = wb_name, sheet = sheets[1])[[1]]

@@ -1,6 +1,6 @@
 # Make sure all needed packages are installed ----
 source('R/00_initial_installation_V3.R')
-if(!exists('log_progress')) log_progress <- FALSE
+if(!exists('log_progress')) {log_progress <- FALSE}
 
 if(log_progress) {
   # Send all console output into log files. ----
