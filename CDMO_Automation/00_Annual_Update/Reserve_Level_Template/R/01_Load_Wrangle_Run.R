@@ -6,7 +6,7 @@ if(log_progress) {
   # Send all console output into log files. ----
   # COMMENT OUT THIS SECTION TO VIEW PROGRESS LIVE
   this_dir <- getwd()
-  log_prefix <- substring(this_dir, nchar(this_dir) - 2)
+  log_prefix <- basename(this_dir)
   logout <- file(paste0(log_prefix,"_output.log"), open = "wt")
   logmess <- file(paste0(log_prefix,"_message.log"), open = "wt")
   sink(logout, append = FALSE, type = "output", split = FALSE)

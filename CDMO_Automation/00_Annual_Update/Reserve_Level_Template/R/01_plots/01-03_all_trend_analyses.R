@@ -77,6 +77,21 @@ write.csv(sk_reformat
 ## generate maps for each parameter
 for(i in 1:length(par)) {
   sk_res <- combined_sk_results %>% dplyr::filter(parameter == par[i])
+  # Check that sites and labels agree, if not, fix them so they do, 
+  # print a warning, and proceed.
+  
+  if(length(sk_res$sig.trend) != length(par_trend_labs)) {
+    if(length(sk_res$sig.trend) > length(par_trend_labs)) {
+      warning("More sites than map label locations.  Locations will be repeated.\n",
+              "Check the Reserve_Level_Plotting_Variables.xlsx Mapping tab to fix.\n")
+      par_trend_labs <- rep(par_trend_labs,5)[1:length(sk_res$sig.trend)]
+    } else {
+      warning("More map label locations than sites.  Locations will be truncated.\n",
+              "Check the Reserve_Level_Plotting_Variables.xlsx Mapping tab to fix.\n")
+      par_trend_labs <- par_trend_labs[1:length(sk_res$sig.trend)]
+    }
+  }
+  
   
   sk_map_ttl <- paste(getwd(), '/output/', data_type, '/trend_sk_maps/', res_abb, '_', par[i], '.png', sep = '')
   

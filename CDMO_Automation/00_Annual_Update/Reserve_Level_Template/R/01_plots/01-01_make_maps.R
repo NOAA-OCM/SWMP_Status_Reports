@@ -23,6 +23,22 @@ new_dir_result <- check_make_dir(us_map_ttl)
 ggsave(filename = us_map_ttl, plot = us_map, width = 6, height = 4, units = 'in', dpi = 300)
 
 # Reserve level map
+
+# Check that sites and labels agree, if not, fix them so they do, print a warning,
+# and proceed.
+
+if(length(sites_to_map) != length(map_labels)) {
+  if(length(sites_to_map) > length(map_labels)) {
+    warning("More sites than map label locations.  Locations will be repeated.\n",
+            "Check the Reserve_Level_Plotting_Variables.xlsx Mapping tab to fix.\n")
+    map_labels <- rep(map_labels,5)[1:length(sites_to_map)]
+  } else {
+    warning("More map label locations than sites.  Locations will be truncated.\n",
+            "Check the Reserve_Level_Plotting_Variables.xlsx Mapping tab to fix.\n")
+    map_labels <- map_labels[1:length(sites_to_map)]
+  }
+}
+
 res_map_ttl <- paste(getwd(), '/output/maps/', res_abb, '_reserve_map.png', sep = '')
 
 res_map <- res_local_map(nerr_site_id = res_abb
