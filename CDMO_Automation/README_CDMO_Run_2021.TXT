@@ -5,7 +5,6 @@
                       David Eslinger
                       dave.eslinger@noaa.gov
 
-
 The current batch process is fairly straight forward.  The user needs to modify two lines 
 in the NERRS_run_reserves_v2.ps1 script and to copy one directory. The lines to be changed 
 are near the top of the code (just after the logging setup) and define the FULL PATH to a) 
@@ -130,9 +129,4 @@ the year in which the processing occurs.
         "previous_year_path" directory for the next year's processing.
     Note: There may be additional "Backup" directories with an "01" prefix if the batch process is 
         run more than once.  These can be discarded.
-
-
-
-
-
-    
+          

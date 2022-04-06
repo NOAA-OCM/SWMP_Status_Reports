@@ -114,6 +114,8 @@ Import-Csv $root\NERRS_years.csv |
 # Create Content ArrayList for Running Reserve Sequence:
 #-----------------------------------------------------------------------
 $Rlines = New-Object System.Collections.ArrayList
+log_progress
+[void]$Rlines.Add("log_progress = TRUE")
 [void]$Rlines.Add("target_year = c(" + $targ_year + ")")
 [void]$Rlines.Add("year_range = c(" + $year_start + "," + $year_end + ")")
 #[void]$Rlines.Add("source('R/00_load_global_decisions_variables.R')")
