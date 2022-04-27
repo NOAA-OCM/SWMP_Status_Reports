@@ -14,140 +14,100 @@ format_plot_caption <- fp_text(color = '#404040', font.size = 12, font.family = 
 
 # Add elements to template ----
 # Sampling map
-doc <- doc %>% ph_with(value = external_img(src = img_map, width = 3.3, height = 3.15),
-                       use_loc_size = FALSE,
-                       location = ph_location(left = 5, top = 0.29))
+doc <- ph_with(doc, value = external_img(src = img_map,  
+                                         width = 3.3,height = 3.15),
+               use_loc_size = FALSE,
+               location = ph_location(left = 5, top = 0.29))
 # Left-hand plot
-doc <- doc %>% ph_with(value = external_img(src = img_plot_1, width = 3.25, height = 2),
-                       use_loc_size = FALSE,
-                       location = ph_location(left = 0.25, top = 8.07))
+doc <- ph_with(doc, value = external_img(src = img_plot_1, 
+                                         width = 3.25, height = 2),
+               use_loc_size = FALSE,
+               location = ph_location(left = 0.25, top = 8.07))
 # Right hand plot
-doc <- doc %>% ph_with(value = external_img(src = img_plot_2, width = 3.25, height = 2),
-                       use_loc_size = FALSE,
-                       location = ph_location(left = 3.56, top = 8.07))
+doc <- ph_with(doc, value = external_img(src = img_plot_2, 
+                                         width = 3.25, height = 2),
+               use_loc_size = FALSE,
+               location = ph_location(left = 3.56, top = 8.07))
+
 # Add trend title
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.15, top = 0.33, 
-                                              width = 4.6, height = 0.51))
-doc <- doc %>% ph_with(value = fpar(id_chr = "5")) %>% 
-  ph_with(value = fpar(str = txt_trend_ttl, type = 'body', id_chr = "5", 
-                       style = format_trend_ttl))
+doc <- ph_with(doc, value = fpar(str = txt_trend_ttl, fp_t = format_trend_ttl),
+               location = ph_location(left = 0.15, top = 0.33, 
+                                      width = 4.6, height = 0.51))
 
 #Add trend facts
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.15, top = 0.79,
-                                              width = 4.8, height = 0.55))
-doc <- doc %>% ph_with(value = fpar(id_chr = "6")) %>%
-  ph_with(value = fpar(str = txt_trend_1_b, type = 'body', id_chr = "6", 
-                       style = format_trend_b)) %>%
-  ph_with(value = fpar(str = txt_trend_1_a, type = 'body', id_chr = "6", 
-                       style = format_trend_a))
+fact1 <- fpar(ftext(txt_trend_1_a, prop = format_trend_a),
+              ftext(txt_trend_1_b, prop = format_trend_b))
+doc <- ph_with(doc, value = fact1,
+               location = ph_location(left = 0.15, top = 0.79,
+                                      width = 4.8, height = 0.55))
 
-# doc <- ph_with(doc, fpar(ftext(txt_trend_1_a,format_trend_a)," ", ftext(txt_trend_1_b,format_trend_b)),
-#                # location = ph_location_label("Content Placeholder 17")[[1]])
-#                location = foobar)
+fact2 <- fpar(ftext(txt_trend_2_a, prop = format_trend_a),
+              ftext(txt_trend_2_b, prop = format_trend_b))
+doc <- ph_with(doc, value = fact2,
+               location = ph_location(left = 0.15, top = 1.34, 
+                                      width = 4.8, height = 0.55))
 
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.15, top = 1.32, 
-                                              width = 4.8, height = 0.55))
-doc <- doc %>% ph_with(value = fpar(id_chr = "7")) %>% 
-  ph_with(value = fpar(str = txt_trend_2_b, type = 'body', id_chr = "7", 
-                       style = format_trend_b)) %>% 
-  ph_with(value = fpar(str = txt_trend_2_a, type = 'body', id_chr = "7", 
-                       style = format_trend_a))
+fact3 <- fpar(ftext(txt_trend_3_a, prop = format_trend_a),
+              ftext(txt_trend_3_b, prop = format_trend_b))
+doc <- ph_with(doc, value = fact3,
+               location = ph_location(left = 0.15, top = 1.82, 
+                                      width = 4.8, height = 0.55))
 
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.15, top = 1.85, 
-                                              width = 4.8, height = 0.55))
-doc <- doc %>% ph_with(value = fpar(id_chr = "8")) %>% 
-  ph_with(value = fpar(str = txt_trend_3_b, type = 'body', id_chr = "8", 
-                       style = format_trend_b)) %>% 
-  ph_with(value = fpar(str = txt_trend_3_a, type = 'body', id_chr = "8", 
-                       style = format_trend_a))
-  
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.15, top = 2.37, 
-                                              width = 4.8, height = 0.55))
-doc <- doc %>% ph_with(value = fpar(id_chr = "9")) %>% 
-  ph_with(value = fpar(str = txt_trend_4_b, type = 'body', id_chr = "9", 
-                       style = format_trend_b)) %>% 
-  ph_with(value = fpar(str = txt_trend_4_a, type = 'body', id_chr = "9", 
-                       style = format_trend_a))
+fact4 <- fpar(ftext(txt_trend_4_a, prop = format_trend_a),
+              ftext(txt_trend_4_b, prop = format_trend_b))
+doc <- ph_with(doc, value = fact4,
+               location = ph_location(left = 0.15, top = 2.36, 
+                                      width = 4.8, height = 0.55))
 
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.15, top = 2.89, 
-                                              width = 4.8, height = 0.55))
-doc <- doc %>% ph_with(value = fpar(id_chr = "10")) %>% 
-  ph_with(value = fpar(str = txt_trend_5_b, type = 'body', id_chr = "10", 
-                       style = format_trend_b)) %>% 
-  ph_with(value = fpar(str = txt_trend_5_a, type = 'body', id_chr = "10", 
-                       style = format_trend_a))
+fact5 <- fpar(ftext(txt_trend_5_a, prop = format_trend_a),
+              ftext(txt_trend_5_b, prop = format_trend_b))
+doc <- ph_with(doc, value = fact5,
+               location = ph_location(left = 0.15, top = 2.84, 
+                                      width = 4.8, height = 0.55))
+
 
 # Add trend table title
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.14, top = 3.46, 
-                                              width = 4.8, height = 0.4))
-doc <- doc %>% ph_with(value = fpar(id_chr = "11")) %>% 
-  ph_with(value = fpar(str = txt_table_ttl, type = 'body', id_chr = "11", 
-                       style = format_table_ttl))
+doc <- ph_with(doc, value = fpar(str = txt_table_ttl, fp_t = format_table_ttl),
+               location = ph_location(left = 0.14, top = 3.46, 
+                                      width = 4.8, height = 0.4))
 
 # Add trend table caption (highlights years of data used)
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 2.88, top = 6.58,
-                                              width = 2.2, height = 0.2))
-doc <- doc %>% ph_with(value = fpar(id_chr = "12")) %>% 
-  ph_with(value = fpar(str = txt_table_caption, type = 'body', id_chr = "12", 
-                       style = format_table_caption))
+doc <- ph_with(doc, value = fpar(str = txt_table_caption, fp_t = format_table_caption),
+               location = ph_location(left = 2.88, top = 6.58,
+                                      width = 2.2, height = 0.2))
 
 # Add map title to sampling map
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 4.95, top = 0.31, 
-                                              width = 3.4, height = 0.66))
-doc <- doc %>% ph_with(value = fpar(id_chr = "13")) %>% 
-  ph_with(value = fpar(str = txt_map_ttl, type = 'body', id_chr = "13", 
-                       style = format_map_ttl))
-
+doc <- ph_with(doc, value = fpar(str = txt_map_ttl, fp_t = format_map_ttl),
+               location = ph_location(left = 4.95, top = 0.31, 
+                                      width = 3.4, height = 0.66))
 # Add plot title
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.15, top = 7.39, 
-                                              width = 7.3, height = 0.4))
-doc <- doc %>% ph_with(value = fpar(id_chr = "14")) %>% 
-  ph_with(value = fpar(str = txt_plot_ttl, type = 'body', id_chr = "14", 
-                       style = format_plot_ttl)) 
+doc <- ph_with(doc, value = fpar(str = txt_plot_ttl, fp_t = format_plot_ttl),
+               location = ph_location(left = 0.15, top = 7.39, 
+                                      width = 7.3, height = 0.4))
 
 # Add plot subtitle
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.16, top = 7.68, 
-                                              width = 7.3, height = 0.34))
-
-doc <- doc %>% ph_with(value = fpar(id_chr = "15")) %>% 
-  ph_with(value = fpar(str = txt_plot_subttl, type = 'body', id_chr = "15", 
-                       style = format_plot_subttl) )
+doc <- ph_with(doc, fpar(str = txt_plot_subttl, fp_t = format_plot_subttl),
+               location = ph_location(left = 0.16, top = 7.68, 
+                                      width = 7.3, height = 0.34))
 
 # Add plot captions
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 0.16, top = 10.08, 
-                                              width = 3.1, height = 0.75))
-doc <- doc %>% ph_with(value = fpar(id_chr = "16")) %>% 
-  ph_with(value = fpar(str = txt_plot_caption_1, type = 'body', id_chr = "16", 
-                       style = format_plot_caption)) 
+doc <- ph_with(doc, value = fpar(str = txt_plot_caption_1, fp_t = format_plot_caption),
+               location = ph_location(left = 0.16, top = 10.08, 
+                                      width = 3.1, height = 0.75))
 
-doc <- doc %>% ph_with(value = empty_content(),
-                       location = ph_location(left = 3.48, top = 10.08, 
-                                              width = 3.1, height = 0.75))
-doc <- doc %>% ph_with(value = fpar(id_chr = "17")) %>% 
-  ph_with(value = fpar(str = txt_plot_caption_2, type = 'body', id_chr = "17", 
-                       style = format_plot_caption)) 
+doc <- ph_with(doc, value = fpar(str = txt_plot_caption_2, fp_t = format_plot_caption),
+               location = ph_location(left = 3.48, top = 10.08, 
+                                      width = 3.1, height = 0.75))
 
 # Add flextables for trends
 ## met table
-doc <- doc %>% ph_with(value = ls_met_ft[[1]], location = ph_location(left = 0.27, top = 3.86))
-doc <- doc %>% ph_with(value = ls_met_ft[[2]], location = ph_location(left = 1.94, top = 3.86))
+doc <- ph_with(doc, value = ls_met_ft[[1]], location = ph_location(left = 0.27, top = 3.86))
+doc <- ph_with(doc, value = ls_met_ft[[2]], location = ph_location(left = 1.94, top = 3.86))
 
 ## wq table
-doc <- doc %>% ph_with(value = ls_wq_ft[[1]], location = ph_location(left = 0.27, top = 4.38))
-doc <- doc %>% ph_with(value = ls_wq_ft[[2]], location = ph_location(left = 1.94, top = 4.38))
+doc <- ph_with(doc, value = ls_wq_ft[[1]], location = ph_location(left = 0.27, top = 4.38))
+doc <- ph_with(doc, value = ls_wq_ft[[2]], location = ph_location(left = 1.94, top = 4.38))
 
 ## nut table
-doc <- doc %>% ph_with(value = ls_nut_ft[[1]], location = ph_location(left = 0.27, top = 5.5))
-doc <- doc %>% ph_with(value = ls_nut_ft[[2]], location = ph_location(left = 1.94, top = 5.5))
+doc <- ph_with(doc, value = ls_nut_ft[[1]], location = ph_location(left = 0.27, top = 5.5))
+doc <- ph_with(doc, value = ls_nut_ft[[2]], location = ph_location(left = 1.94, top = 5.5))

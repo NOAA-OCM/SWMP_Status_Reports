@@ -19,5 +19,5 @@ source('R/02_report/02-03_Template_generate_page_2.R')
 source('R/02_report/02-04_Template_generate_page_3.R')
 source('R/02_report/02-05_Template_generate_page_4.R')
 
-print(doc, target = 'template_files/annual_report_rawV4tp1b.pptx')
+print(doc, target = 'template_files/annual_report_raw.pptx')
 

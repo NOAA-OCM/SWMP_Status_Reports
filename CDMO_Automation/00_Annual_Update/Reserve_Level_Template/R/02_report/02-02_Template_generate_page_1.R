@@ -46,7 +46,6 @@ doc <- ph_with(doc, fpar(str = paste(target_year, txt_highlight_ttl),
                                       width = 3.6, height = 0.9))
 
 # add highlights
-# doc <- doc %>% ph_with(value = empty_content())
 doc <- ph_with(doc, value = fpar(str = txt_highlight_1, fp_t = format_highlight), 
           location = ph_location(left = 4.32, top = 5.9, 
                                  width = 3.6, height = 0.62))
