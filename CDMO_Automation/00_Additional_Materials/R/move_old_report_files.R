@@ -7,11 +7,17 @@ suppressPackageStartupMessages({
   library(readxl)
 })
 
-# Copy and update needed files from previous years zip archives
-# This is preliminary step to check_reserve_vars.R
-#
+# This is preliminary step to check_reserve_vars.R  It will copy and
+# rename plotting variable files from previous years zip archives
 
-# Libraries ----
+# THIS IS ONLY NEEDED IF THERE IS NO COPY OF THE PREVIOUS YEAR'S
+# Reserve_Level_Plotting_Variables.xlsx FILES FOR ALL RESERVES.
+# 
+# I suggest keeping the past year's files, then just using that directory 
+# in the next step: check_reserve_vars.R
+
+
+ # Libraries ----
 library(dplyr)
 
 # Internal functions for workflow -----------
@@ -28,7 +34,7 @@ check_make_dir <- function(fname) {
 # This is where the XXX.zip files are, out of which *needed* will be copied  
 if(!exists('old_zip_dir')) {old_zip_dir <- "D:/SWMP/2019_Version1"}
 print(paste0("Old_zip_dir is ", old_zip_dir))
-# Destination root
+# Destination root: to be used in check_reserve_vars.R
 if(!exists('dest_dir_root')) {dest_dir_root <- "C:/SWMP/2019_raw_spreadsheets"}
 
 print(paste0("dest_dir_root is ", dest_dir_root))

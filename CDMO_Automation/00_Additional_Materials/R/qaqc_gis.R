@@ -1,10 +1,6 @@
-# Check all Shapefiles and bounding boxes in Excel spreadsheets
+# Check all Shapefiles for validity, repair if possible. Also, produce
+# a list of counties that intersect or are adjacent to Reserve boundaries.
 #
-# N.B.: The source paths for non-qaqced files are hard coded, since there is no
-# expectation that annual updates will reside within this package during the
-# QA/QC process. In fact, I recommend against it.  Instead this process will copy them into the
-# ../../00_Annual_Update/Updated_reserve_var_sheets and the appropriate gis  directory when they have
-# passed QA/QC.  That should be a cleaner process, IMO.
 
 # Libraries ----
 suppressPackageStartupMessages({
@@ -15,7 +11,7 @@ suppressPackageStartupMessages({
   library(sf)
   library(SWMPrExtension)
   library(tmap)
-  # library(tidycensus)
+ library(tidycensus)
 })  
 # options(tigris_use_cache = TRUE)
 tmap_mode("view")
@@ -24,7 +20,7 @@ tmap_mode("view")
 #--  THIS NEEDS DEFINITION!!
 #
 #gis_init_base <- "C:/Users/davee/Downloads/Nerrs_GIS/GIS_Process/"
-gis_init_base <- "D:/SWMP/CDMO_GIS_2021/GIS_Process/"
+gis_init_base <- "E:/SWMP/2022_GIS/ReserveBoundaries/"
 
 # Internal functions for workflow -----------
 
@@ -36,15 +32,18 @@ check_make_dir <- function(fname) {
 }
 
 #
-# Paths ------
+# Parameters and paths ------
 #   Below here are standardized directory paths, assuming this program is
 #   launched from an Rproject.
 #
-test_year <- 2020
+test_year <- 2021
+EPSG_4269 <- TRUE
 
 gis_final_base <- "../00_Annual_Update/Reserve_level_template/inst/gis/"
 report_file <- paste0("check_results/gis_boundary_checks_",test_year,".log")
 county_file <- paste0("check_results/reserve-county_intersections_",test_year,".csv")
+
+check_make_dir(report_file)
 
 #
 # Get state outlines ------
@@ -94,7 +93,8 @@ for(res in reserves) {
   
   # shapefile section ----
   
-  res_gis_loc <- paste0(gis_init_base, toupper(res),"/Boundaries/Reserve_Boundaries")
+  ##****  CHECK THIS PATH AND SUBDIRECTOPRY STRUCTURE.
+  res_gis_loc <- paste0(gis_init_base, toupper(res))
   res_gis_shp <- list.files(path = res_gis_loc, pattern = '.shp$')
   
   # Load spatial data
@@ -158,7 +158,12 @@ for(res in reserves) {
   # Write out good shapefile into new location -----
   
   if(file_is_good) {
-    fixed_name <- paste0(gis_final_base, res, "/qa_",res_gis_shp) 
+    if(EPSG_4269) {
+      fixed_name <- paste0(gis_final_base, res, "/qa_4269_",res_gis_shp) 
+      res_spatial <- st_transform(res_spatial, 4269)
+    } else {
+      fixed_name <- paste0(gis_final_base, res, "/qa_",res_gis_shp) 
+    }
     new_dir_result <- check_make_dir(fixed_name)
     msg <- paste0("   Saving good shapefile as \n       ", fixed_name)
     write(msg, file = report_file,  append = TRUE)
@@ -192,16 +197,6 @@ for(res in reserves) {
     
     map
   }
-  # 
-  # # Compare bounding boxes ----
-  # 
-  # wb_name <- paste0(reserve_updates_path,"Reserve_Level_Plotting_Variables_", res, "_", test_year, ".xlsx") 
-  # wb <- read_xlsx(path = wb_name, sheet = "Mapping")
-  # #### Reserve bounding box
-  # res_bbox <- wb[[1]] %>% .[complete.cases(.)]
-  # sk_bbox <- wb[[2]] %>% .[complete.cases(.)]
-  # 
-  # 
 }
 msg <- paste0("QA/QC successful.  Writing csv file of county intersections.\n")
 write(msg, file = report_file,  append = TRUE)

@@ -13,6 +13,12 @@ knitr::opts_chunk$set(echo = TRUE)
 library(XML)
 ```
 
+## Purpose
+
+This file is just a helper file to download all of the raw data files CDMO. 
+They are generally exposed via HTTP and, since there are 5500+ of them, having
+an automated way to download them is convenient.
+
 ```{r define_resources}
 cdmo_url <- "http://cdmo.baruch.sc.edu/waf/swmp_data_archives/"
 
