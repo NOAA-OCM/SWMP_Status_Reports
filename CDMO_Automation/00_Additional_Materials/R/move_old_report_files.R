@@ -3,7 +3,6 @@ suppressPackageStartupMessages({
   library(SWMPrExtension)
   library(dplyr)
   library(tidyr)
-  library(tmap)
   library(readxl)
 })
 

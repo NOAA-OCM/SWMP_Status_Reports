@@ -245,12 +245,12 @@ for(wb_name in site_files) {  # Workbook loop ----
                     row.names = FALSE, quote = FALSE, append = TRUE)
       }
       
-      if(sheet == "Years_of_interest") { # Find years ----
+      if(sheet == "Years_of_Interest") { # Find years ----
         res_abb <- tolower(substr(wb_name, 34, 36))
         years_avail <- list.files(data_dir, pattern = res_abb) %>% 
           str_sub(-8, -5) %>% 
           range(na.rm = TRUE)
-        wks[ ,1] <- as.numeric(c(max(2000, years_avail[1]), test_year))
+        wks[ ,1] <- c(max(2000, as.numeric(years_avail[1])), as.numeric(test_year))
         wks[1, 2] <- as.numeric(test_year)
         # writeData(new_wb, sheet = "Years_of_Interest", wks, rowNames = FALSE)
       }
