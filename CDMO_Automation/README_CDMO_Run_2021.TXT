@@ -54,7 +54,7 @@ the year in which the processing occurs.
                 processing of the data and creation of plots.
             f) 00_Additional_Materials.Rproj: RStudio project file for preliminary QA/QC.
 
-    NOTE:  Prior to a CDMO run, only the 00_initial_installation_for_QAQC.R may be required 
+    NOTE:  Prior to a CDMO run, only the 00_initial_installation_V3.R may be required 
         to run an update. That will only be required if the installed R setup needs 
         updating (which is recommended).  Other needed files will be called from the 
         NERRS_run_reserve_2021.ps1 script.

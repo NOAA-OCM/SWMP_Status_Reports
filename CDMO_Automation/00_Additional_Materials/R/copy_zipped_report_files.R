@@ -11,14 +11,12 @@ suppressPackageStartupMessages({
   library(tidyr)
   library(tmap)
   library(readxl)
+  library(dplyr)
+  library(stringr)
 })
 
 # Copy needed files from previous years zip archives
 #
-
-# Libraries ----
-library(dplyr)
-
 # Internal functions for workflow -----------
 
 check_make_dir <- function(fname) {
@@ -31,10 +29,10 @@ check_make_dir <- function(fname) {
 # Parameters ----
 #
 # This is where the XXX.zip files are, out of which *needed* will be copied  
-if(!exists('old_zip_dir')) {old_zip_dir <- "D:/SWMP/2019_Version1"}
+if(!exists('old_zip_dir')) {old_zip_dir <- "E:/SWMP/Old/2020_runs/new_zips"}
 print(paste0("Old_zip_dir is ", old_zip_dir))
 # Destination root
-if(!exists('dest_dir_root')) {dest_dir_root <- "C:/SWMP/2019_status_input"}
+if(!exists('dest_dir_root')) {dest_dir_root <- "E:/SWMP/2021_status_input"}
 
 print(paste0("dest_dir_root is ", dest_dir_root))
 
@@ -64,7 +62,30 @@ for (archive in zips) {
   }
   print(needed$Name)
   unzip(asource,  files = needed$Name, exdir = adest,
-        overwrite = TRUE) 
+        junkpaths = TRUE,
+        overwrite = TRUE)
+  # Create correct directory structure
+  
+  fnames <- list.files(adest)
+  to_keep <- c()
+  for(file in fnames) {
+    if(grepl("jpg",tolower(file)) || grepl("logo",tolower(file))){
+      to_keep <- c(to_keep, paste0(adest, "/template_files/images/", file))
+    } else if (file == "Reserve_Level_Template_Text_Entry.xlsx") {
+      to_keep <- c(to_keep, paste0(adest, "/template_files/text/", file))
+    } else if (file == "Reserve_Level_Plotting_Variables.xlsx") {
+      to_keep <- c(to_keep, paste0(adest, "/figure_files/", file))
+    }
+  }
+  
+  for(kept in to_keep) {
+    check_make_dir(kept)
+    file.copy(paste0(adest, "/", basename(kept)), kept)
+  }
+  
+  for(file in fnames) {
+    file.remove(paste0(adest, "/", file))
+  }
 }
 
 message("End move_old_report_files, closing log files ===================")

@@ -15,8 +15,7 @@ suppressPackageStartupMessages({
 # I suggest keeping the past year's files, then just using that directory 
 # in the next step: check_reserve_vars.R
 
-
- # Libraries ----
+# Libraries ----
 library(dplyr)
 
 # Internal functions for workflow -----------

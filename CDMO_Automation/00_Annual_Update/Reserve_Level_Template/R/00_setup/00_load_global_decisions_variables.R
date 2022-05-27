@@ -49,8 +49,15 @@ wb_name <- 'figure_files/Reserve_Level_Plotting_Variables.xlsx'
 sheets <- c('Flags', 'Years_of_Interest', 'Seasons', 'Mapping', 'Bonus_Settings'
             , 'Basic_Plotting', 'Threshold_Plots', 'Threshold_Identification')
 
-## DEFINE YEARS OF INTEREST ---- DLE, 10/17/2020: Only read if not already defined. Otherwise, doesn't work in batch mode.
-if(!exists('year_range')) {year_range <- as.numeric(readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[1]])}
+## DEFINE YEARS OF INTEREST ---- DLE, 10/17/2020: 
+## Let defined MINIMUM range superseded the Batch defined minimum
+defined_year_range <- as.numeric(readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[1]])
+if(!exists('year_range')) {
+  year_range <- c(max(year_range[1], defined_year_range[1]), year_range[2])
+} else {
+  year_range <- defined_year_range
+}
+# Target year always from batch when defined
 if(!exists('target_year')) {target_year <- as.numeric(readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[2]][1])}
 
 # DEFINE FLAGS TO KEEP ----
