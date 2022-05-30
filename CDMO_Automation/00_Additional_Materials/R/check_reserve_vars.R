@@ -41,7 +41,7 @@ bb_aspect <- 1.0
 site_files <- (list.files(path = preliminary_updated_spreadsheet_path, pattern = "2021.xlsx"))
 
 test_year <- 2021
-report_file <- paste0("./check_results/reserve_var_checks_", test_year,".txt")
+report_file <- paste0("./results/reserve_var_checks_", test_year,".txt")
 sampling_location_file <- "E:/SWMP/2022_GIS/sampling_stations.csv"
 
 sheets <- c('Global_Decisions-->','Flags', 'Years_of_Interest', 'Seasons', 'Mapping',

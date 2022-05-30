@@ -40,8 +40,8 @@ test_year <- 2021
 EPSG_4269 <- TRUE
 
 gis_final_base <- "../00_Annual_Update/Reserve_level_template/inst/gis/"
-report_file <- paste0("check_results/gis_boundary_checks_",test_year,".log")
-county_file <- paste0("check_results/reserve-county_intersections_",test_year,".csv")
+report_file <- paste0("results/gis_boundary_checks_",test_year,".log")
+county_file <- paste0("results/reserve-county_intersections_",test_year,".csv")
 
 check_make_dir(report_file)
 
