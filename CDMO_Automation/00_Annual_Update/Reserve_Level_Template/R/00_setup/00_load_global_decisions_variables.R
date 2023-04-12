@@ -52,7 +52,7 @@ sheets <- c('Flags', 'Years_of_Interest', 'Seasons', 'Mapping', 'Bonus_Settings'
 ## DEFINE YEARS OF INTEREST ---- DLE, 10/17/2020: 
 ## Let defined MINIMUM range superseded the Batch defined minimum
 defined_year_range <- as.numeric(readxl::read_xlsx(path = wb_name, sheet = sheets[2])[[1]])
-if(!exists('year_range')) {
+if(exists('year_range')) {
   year_range <- c(max(year_range[1], defined_year_range[1]), year_range[2])
 } else {
   year_range <- defined_year_range
